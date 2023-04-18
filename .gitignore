@@ -16,3 +16,4 @@ website/i18n/*
 
 build/*
 yarn.lock
+*:Zone.Identifier
