@@ -4,8 +4,8 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.Software Development": {
-    "message": "Métricas de engenharia",
-    "description": "The label for category Software Development in sidebar docs"
+    "message": "Desenvolvimento de Software",
+    "description": "The label for category Desenvolvimento de Software in sidebar docs"
   },
   "sidebar.docs.category.Best Practices": {
     "message": "Práticas recomendadas",
