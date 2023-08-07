@@ -18,21 +18,11 @@ export default function Intro() {
             __html: translate({message: "intro.title"}),
           }}
         ></div>
-        {/* <div className={`${component}__image`}>
-          <img
-            className={`${component}__image-bg`}
-            src={useBaseUrl("img/ic-intro.svg")}
-          />
-          <img
-            className={`${component}__image-img`}
-            src={useBaseUrl("img/img-boilerplate-intro@2x.png")}
-          />
-        </div> */}
         <div className={`${component}__content`}>{translate({message: "intro.description"})}</div>
         <Button
           componentClass={component}
           label={translate({message: "intro.button-start"})}
-          href={useBaseUrl("/docs/engineering-metrics")}
+          href={useBaseUrl("/docs/db1-way")}
         />
       </Container>
     </div>

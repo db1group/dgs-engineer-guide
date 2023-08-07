@@ -1,7 +1,7 @@
 module.exports = {
   docs: {
-    'Engineering Metrics': [
-      'engineering-metrics'
+    'Software Development': [
+      'db1-way'
     ],
     'Best Practices': [
       'best-practices/architecture-drawing',

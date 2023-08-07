@@ -23,7 +23,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/engineering-metrics',
+          to: 'docs/db1-way',
           activeBasePath: 'pages',
           label: 'The Guide',
           position: 'right',

@@ -1,6 +1,6 @@
 ---
-id: engineering-metrics
-title: Métricas
+id: db1-way
+title: DB1 Way
 ---
 
 Una métrica de software es una medida de las características del software que son cuantificables o contables. Las métricas de software son importantes por muchas razones, incluyendo la medición del **rendimiento, seguridad, mantenibilidad, calidad** del software, etc...
