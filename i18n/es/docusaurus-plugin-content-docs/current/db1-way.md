@@ -1,6 +1,6 @@
 ---
 id: db1-way
-title: DB1 Way
+title: Forma DB1
 ---
 
 Nuestra intención en esta publicación es describir la forma DB1 de desarrollar software, o al menos cómo lo ven nuestros ingenieros.

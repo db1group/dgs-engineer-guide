@@ -1,6 +1,6 @@
 ---
 id: db1-way
-title: DB1 Way
+title: Jeito DB1
 ---
 
 Nossa intenção neste post é descrever a maneira DB1 de desenvolver software, ou pelo menos como nossos engenheiros o veem.
