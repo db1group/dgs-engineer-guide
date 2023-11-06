@@ -11,6 +11,10 @@
     "message": "Buenas prácticas",
     "description": "The label for category Best Practices in sidebar docs"
   },
+  "sidebar.docs.category.Career": {
+    "message": "Carrera",
+    "description": "The label for category Carrera in sidebar docs"
+  },
   "sidebar.docs.category.Technology Radar": {
     "message": "Radar tecnológico",
     "description": "The label for category Technology Radar in sidebar docs"
