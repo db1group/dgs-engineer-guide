@@ -60,6 +60,6 @@ Los postmortems son más que una práctica técnica; son un testimonio del compr
 
 
 Créditos:
-[Google Workbook - Cultura Post Mortem](https://sre.google/workbook/postmortem-culture/)
-[Google SRE Book - Cultura Post Mortem](https://sre.google/sre-book/postmortem-culture/)
-[Google SRE Book - Plantilla PostMortem](https://sre.google/sre-book/example-postmortem/)
+- [Google Workbook - Cultura Post Mortem](https://sre.google/workbook/postmortem-culture/)
+- [Google SRE Book - Cultura Post Mortem](https://sre.google/sre-book/postmortem-culture/)
+- [Google SRE Book - Plantilla PostMortem](https://sre.google/sre-book/example-postmortem/)

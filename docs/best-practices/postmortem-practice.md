@@ -60,6 +60,6 @@ Postmortems are more than just a technical practice; they are a testament to the
 
 
 Credits:
-[Google Workbook - Postmortem Culture](https://sre.google/workbook/postmortem-culture/)
-[Google SRE Book - Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)
-[Google SRE Book - Template PostMortem](https://sre.google/sre-book/example-postmortem/)
+- [Google Workbook - Postmortem Culture](https://sre.google/workbook/postmortem-culture/)
+- [Google SRE Book - Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)
+- [Google SRE Book - Template PostMortem](https://sre.google/sre-book/example-postmortem/)
