@@ -5,7 +5,7 @@ title: Postmortem Practice
 
 *What is Postmortem?*
 
-![Post Mortem Practice](/static/img/docs/best-practices/postmortem-practice.png)
+![Post Mortem Practice](/img/docs/best-practices/postmortem-practice.png)
 
 **Introduction:**
 In a digital world where complex systems drive our daily operations, incidents inevitably occur. The term "postmortem" is more than a kind of "autopsy"; it's an essential practice to understand, correct, and learn from failures. This article teaches us by exploring what they are, why they are crucial, and how they can be effectively conducted.
