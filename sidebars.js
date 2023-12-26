@@ -10,6 +10,7 @@ module.exports = {
       'best-practices/code-review',
       'best-practices/code-style',
       'best-practices/observability',
+      'best-practices/postmortem-practice',
       'best-practices/SOLID',
       'best-practices/technical-agreements',
       'best-practices/versioning-strategy'
