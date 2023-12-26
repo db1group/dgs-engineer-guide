@@ -3,7 +3,7 @@ id: postmortem-practice
 title: Postmortem Practice
 ---
 
-*What is Postmortem?*
+# What is Postmortem?
 
 ![Post Mortem Practice](/img/docs/best-practices/postmortem-practice.png)
 
@@ -36,27 +36,27 @@ Postmortems transcend simple problem resolution; they are the backbone of a cult
 Postmortems are more than just a technical practice; they are a testament to the ongoing commitment to operational excellence and continuous improvement. By effectively integrating these analyses into our practices, we are shaping a more resilient and efficient future for our digital systems.
 
 
-*Postmortem Template*
+# Postmortem Template
 
-**Postmortem:** [Problem Name]
-**Date:** [Date when the problem occurred]
-**Authors:** [Your Name(s)]
-**Status:** [Current status of the postmortem, such as "Complete" or "In Progress"]
-**Summary:** [A brief overview of the problem that occurred and its impact]
-**Impact:**
+- **Postmortem:** [Problem Name]
+- **Date:** [Date when the problem occurred]
+- **Authors:** [Your Name(s)]
+- **Status:** [Current status of the postmortem, such as "Complete" or "In Progress"]
+- **Summary:** [A brief overview of the problem that occurred and its impact]
+- **Impact:**
     • Duration: [Duration of the problem, in minutes, hours, etc.]
     • Financial Impact: [Description of the financial impact, if any]
     • Other Impacts: [Other relevant impacts, such as data loss, reputation impact, etc.]
-**Root Causes:** [Description of the root causes that led to the problem]
-**Trigger:** [Description of the event or action that triggered the problem]
-**Resolution:** [Description of the actions taken to resolve the problem]
-**Detection:** [Description of how the problem was detected, including monitoring systems used]
-**Action Items:** [List of recommended actions to prevent similar problems in the future, including responsible owner and reference to bugs or tasks]
-**Lessons Learned:**
-    • What Went Right: [Description of things that worked well during the incident]
-    • What Went Wrong: [Description of problems and failures that occurred]
-    • Where We Got Lucky: [Description of any lucky factors or favorable circumstances]
-**Timeline:** (All times are in UTC) [Details of the schedule, including important events that occurred during the incident, with dates, times, and descriptions]
+- **Root Causes:** [Description of the root causes that led to the problem]
+- **Trigger:** [Description of the event or action that triggered the problem]
+- **Resolution:** [Description of the actions taken to resolve the problem]
+- **Detection:** [Description of how the problem was detected, including monitoring systems used]
+- **Action Items:** [List of recommended actions to prevent similar problems in the future, including responsible owner and reference to bugs or tasks]
+- **Lessons Learned:**
+    - What Went Right: [Description of things that worked well during the incident]
+    - What Went Wrong: [Description of problems and failures that occurred]
+    - Where We Got Lucky: [Description of any lucky factors or favorable circumstances]
+- **Timeline:** (All times are in UTC) [Details of the schedule, including important events that occurred during the incident, with dates, times, and descriptions]
 
 
 Credits:

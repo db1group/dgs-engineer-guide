@@ -53,9 +53,9 @@ Os postmortems são mais do que apenas uma prática técnica; são um testemunho
 - **Detecção:** [Descrição de como o problema foi detectado, incluindo sistemas de monitoramento utilizados]
 - **Itens de ação:** [Lista de ações recomendadas para prevenir problemas semelhantes no futuro, incluindo proprietário responsável e referência a bugs ou tarefas]
 - **Lições Aprendidas:**
-    • O que deu certo: [Descrição das coisas que funcionaram bem durante o incidente]
-    • O que deu errado: [Descrição dos problemas e falhas que ocorreram]
-    • Onde tivemos sorte: [Descrição de quaisquer fatores de sorte ou circunstâncias favoráveis]
+    - O que deu certo: [Descrição das coisas que funcionaram bem durante o incidente]
+    - O que deu errado: [Descrição dos problemas e falhas que ocorreram]
+    - Onde tivemos sorte: [Descrição de quaisquer fatores de sorte ou circunstâncias favoráveis]
 - **Linha do tempo:** (Todos os horários estão em UTC) [Detalhes do cronograma, incluindo os eventos importantes que ocorreram durante o incidente, com data, horários e descrições]
 
 

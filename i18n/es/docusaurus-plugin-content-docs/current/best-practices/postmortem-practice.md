@@ -3,7 +3,7 @@ id: postmortem-practice
 title: Práctica de Postmortem
 ---
 
-*¿Qué es un Postmortem?*
+# ¿Qué es un Postmortem?
 
 ![Práctica de Postmortem](/img/docs/best-practices/postmortem-practice.png)
 
@@ -36,27 +36,27 @@ Los postmortems trascienden la simple resolución de problemas; son la columna v
 Los postmortems son más que una práctica técnica; son un testimonio del compromiso continuo con la excelencia operativa y la mejora continua. Al integrar eficazmente estos análisis en nuestras prácticas, estamos dando forma a un futuro más resiliente y eficiente para nuestros sistemas digitales.
 
 
-*Plantilla Postmortem*
+# Plantilla Postmortem
 
-**Postmortem:** [Nombre del Problema]
-**Fecha:** [Fecha en que ocurrió el problema]
-**Autores:** [Su(s) Nombre(s)]
-**Estado:** [Estado actual del postmortem, como "Completo" o "En Progreso"]
-**Resumen:** [Un breve resumen del problema que ocurrió y su impacto]
-**Impacto:**
-    • Duración: [Duración del problema, en minutos, horas, etc.]
-    • Impacto Financiero: [Descripción del impacto financiero, si lo hay]
-    • Otros Impactos: [Otros impactos relevantes, como pérdida de datos, impacto en la reputación, etc.]
-**Causas Raíz:** [Descripción de las causas fundamentales que llevaron al problema]
-**Desencadenante:** [Descripción del evento o acción que desencadenó el problema]
-**Resolución:** [Descripción de las acciones tomadas para resolver el problema]
-**Detección:** [Descripción de cómo se detectó el problema, incluidos los sistemas de monitoreo utilizados]
-**Acciones Sugeridas:** [Lista de acciones recomendadas para prevenir problemas similares en el futuro, incluido el propietario responsable y referencia a errores o tareas]
-**Lecciones Aprendidas:**
-    • Lo que salió bien: [Descripción de las cosas que funcionaron bien durante el incidente]
-    • Lo que salió mal: [Descripción de los problemas y fallas que ocurrieron]
-    • Donde Tuvimos Suerte: [Descripción de cualquier factor de suerte o circunstancia favorable]
-**Línea de Tiempo:** (Todos los tiempos están en UTC) [Detalles del cronograma, incluidos los eventos importantes que ocurrieron durante el incidente, con fechas, horas y descripciones]
+- **Postmortem:** [Nombre del Problema]
+- **Fecha:** [Fecha en que ocurrió el problema]
+- **Autores:** [Su(s) Nombre(s)]
+- **Estado:** [Estado actual del postmortem, como "Completo" o "En Progreso"]
+- **Resumen:** [Un breve resumen del problema que ocurrió y su impacto]
+- **Impacto:**
+    - Duración: [Duración del problema, en minutos, horas, etc.]
+    - Impacto Financiero: [Descripción del impacto financiero, si lo hay]
+    - Otros Impactos: [Otros impactos relevantes, como pérdida de datos, impacto en la reputación, etc.]
+- **Causas Raíz:** [Descripción de las causas fundamentales que llevaron al problema]
+- **Desencadenante:** [Descripción del evento o acción que desencadenó el problema]
+- **Resolución:** [Descripción de las acciones tomadas para resolver el problema]
+- **Detección:** [Descripción de cómo se detectó el problema, incluidos los sistemas de monitoreo utilizados]
+- **Acciones Sugeridas:** [Lista de acciones recomendadas para prevenir problemas similares en el futuro, incluido el propietario responsable y referencia a errores o tareas]
+- **Lecciones Aprendidas:**
+    - Lo que salió bien: [Descripción de las cosas que funcionaron bien durante el incidente]
+    - Lo que salió mal: [Descripción de los problemas y fallas que ocurrieron]
+    - Donde Tuvimos Suerte: [Descripción de cualquier factor de suerte o circunstancia favorable]
+- **Línea de Tiempo:** (Todos los tiempos están en UTC) [Detalles del cronograma, incluidos los eventos importantes que ocurrieron durante el incidente, con fechas, horas y descripciones]
 
 
 Créditos:
