@@ -4,6 +4,14 @@ module.exports = {
       'db1-way'
     ],
     'Best Practices': [
+      {
+        type: 'category',
+        label: 'Tests',
+        items:[
+          'best-practices/tests/bug-documentation',
+          'best-practices/tests/test-report',
+        ]
+      },
       'best-practices/architecture-drawing',
       'best-practices/automated-test',
       'best-practices/ci-cd',
