@@ -1,0 +1,13 @@
+# Technical Agreements
+Technical agreements are nothing more than conventions that you and your team should adopt in order to have consistent actions in your project. Considering this is a very generic advice, let's see how this could fit in practical examples:
+
+1. **Resource Naming:** software development will make us name a lot of things in the journey: variables, classes, projects, infrastructure resources, repositories, and so on. There are a bunch of best practices that will tell you how to name things but there advice here is: pick one and stick to it. Consistency on naming things always the same way, will decrease the cognitive load to understand and find things throughout the project;
+2. **Code Style:** code style or standards are necessary in order to have a pattern for every code we write. There's a post [here](code-style.md) explaining a little bit more, but the advice here is to register and communicate the chosen code style for the project so everyone in the team knows it;
+3. **Software Architecture:** let's imagine you're working on a software migration from an architecture pattern to the other, let's say monolith to microservices (which is very common these days). There are a lot of code components that will exists within this transition. How the target code should look like? If we ever have to change anything in the monolith before it gets migrated, how deep you that change be? what should be refactored and what should remain the same? The point here is to define these agreements with the team so everyone can access them (including newcomers);
+4. **Software Design:** we have a 6 developer team and everyone will write and change some code in the current software. How does the software design look like now? Do we have a target to make it look different in the future? What is the request flow through the layers it has? What is the purpose of each one of them? Why does it exist? By doing that, you prevent your software to have different shapes than it was supposed to.
+
+There's a big sign here: do not turn your documentation into a holy bible. Taking away all the religious aspect of this sentence, it doesn't have to be big! Since the [agile manifesto](https://agilemanifesto.org/) we know that working software is more valuable than comprehensive documentation, and as the authors themselves say: "While there is value in the items on the right, we value the items on the left more", so: what are the agreements that you have to make with your team to maintain order in your project? Think about it.
+
+Credits
+
+- [Agile Manifesto](https://agilemanifesto.org/)
