@@ -1,4 +1,4 @@
-# Code Review
+# Revisão de código
 
 Uma etapa **imprescindível** em seu processo de desenvolvimento de software é a revisão de código. Ela permite que os desenvolvedores **melhorem a qualidade e a segurança do código** e também pode ser uma **ferramenta de transferência de conhecimento**. Como qualquer processo, ele pode ser bom ou ruim, e a DB1 reuniu algumas características de um bom processo de revisão de código.
 

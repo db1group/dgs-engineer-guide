@@ -5,6 +5,9 @@ export const es = defineConfig({
 
   themeConfig: {
     nav: nav(),
+    outline: {
+      label: "Esta página",
+    },
     sidebar: {
       "/es/docs/": {
         base: "/es/docs/",
@@ -12,7 +15,7 @@ export const es = defineConfig({
           {
             text: "La Guía",
             collapsed: false,
-            items: [{ text: "DB1 Way", link: "best-practices/db1-way" }],
+            items: [{ text: "Camino DB1", link: "best-practices/db1-way" }],
           },
           {
             text: "Prácticas Recomendadas",

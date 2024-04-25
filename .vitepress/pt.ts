@@ -4,6 +4,9 @@ export const pt = defineConfig({
   lang: "pt-BR",
 
   themeConfig: {
+    outline: {
+      label: "Nesta página",
+    },
     nav: nav(),
     sidebar: {
       "/docs/": {
@@ -24,8 +27,8 @@ export const pt = defineConfig({
                 link: "best-practices/architecture-drawing",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
-              { text: "Code Review", link: "best-practices/code-review" },
-              { text: "Code style", link: "best-practices/code-style" },
+              { text: "Revisão de código", link: "best-practices/code-review" },
+              { text: "Guia de estilos", link: "best-practices/code-style" },
               { text: "Observabilidade", link: "best-practices/observability" },
               { text: "Solid", link: "best-practices/solid" },
               {
