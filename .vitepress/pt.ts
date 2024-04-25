@@ -13,7 +13,7 @@ export const pt = defineConfig({
             text: "O Guia",
             collapsed: false,
 
-            items: [{ text: "DB1 Way", link: "best-practices/db1-way" }],
+            items: [{ text: "Jeito DB1", link: "best-practices/db1-way" }],
           },
           {
             text: "Práticas Recomendadas",
