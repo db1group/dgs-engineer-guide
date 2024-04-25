@@ -6,6 +6,7 @@ import { pt } from "./pt";
 export default defineConfig({
   title: "Engineering Guide",
   srcDir: "src",
+  cleanUrls: true,
   head: [
     [
       "link",
