@@ -2,13 +2,15 @@
 outline: deep
 ---
 
+# Testes automatizados
+
 Se você não está convencido de que os testes automatizados são um recurso valioso para sua estratégia de desenvolvimento de software, esta publicação não é para você. De agora em diante, vamos considerar que você não apenas sabe [o que é, os tipos de testes automatizados existentes](https://www.atlassian.com/continuous-delivery/software-testing/automated-testing), mas também vê valor neles.
 
-Quando falamos em escrever testes de código, há armadilhas que precisam ser consideradas. O código que você cria para executar os testes também é código. Isso pode parecer óbvio, mas quantas vezes você já pensou em procurar [cheiros de teste](http://xunitpatterns.com/TestSmells.html) em seu código? Quanto mais você codificar os testes, mais esforço terá para mantê-los.
+Quando falamos em escrever testes de código, há armadilhas que precisam ser consideradas. O código que você cria para executar os testes também é código. Isso pode parecer óbvio, mas quantas vezes você já pensou em procurar [Test Smells](http://xunitpatterns.com/TestSmells.html) em seu código? Quanto mais você codificar os testes, mais esforço terá para mantê-los.
 
 Então, se houver uma troca aqui, o que devo fazer?
 
-![Tests TradeOff](/img/docs/best-practices/test-tradeoff.png)
+![Tests TradeOff](/img/docs/test-tradeoff.png)
 
 Como podemos ver acima, a maior compensação é equilibrar a quantidade de testes em relação ao custo de tê-los, e a pirâmide acima expressa o que achamos que você deve fazer.
 

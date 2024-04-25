@@ -23,10 +23,14 @@ export const en = defineConfig({
                 link: "best-practices/architecture-drawing",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
+              {
+                text: "Automated Test",
+                link: "best-practices/automated-test.md",
+              },
               { text: "Code Review", link: "best-practices/code-review" },
               { text: "Code Style", link: "best-practices/code-style" },
               { text: "Observability", link: "best-practices/observability" },
-              { text: "SOLID", link: "best-practices/solid" },
+              { text: "SOLID", link: "best-practices/SOLID" },
               {
                 text: "Version Control Strategy",
                 link: "best-practices/versioning-strategy",

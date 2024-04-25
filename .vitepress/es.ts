@@ -27,12 +27,16 @@ export const es = defineConfig({
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
               {
+                text: "Pruebas automatizadas",
+                link: "best-practices/automated-test.md",
+              },
+              {
                 text: "Revisión de código",
                 link: "best-practices/code-review",
               },
               { text: "Estilo de código", link: "best-practices/code-style" },
               { text: "Observabilidad", link: "best-practices/observability" },
-              { text: "Solid", link: "best-practices/solid" },
+              { text: "Solid", link: "best-practices/SOLID" },
               {
                 text: "Estrategia de control de versiones",
                 link: "best-practices/versioning-strategy",

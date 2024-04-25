@@ -6,6 +6,15 @@ import { pt } from "./pt";
 export default defineConfig({
   title: "Engineering Guide",
   srcDir: "src",
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/img/favicon.ico",
+      },
+    ],
+  ],
   description: "Guia de engenharia da DB1 - Em busca da excelência técnica",
   ignoreDeadLinks: [/^http?:\/\/localhost/],
   locales: {

@@ -27,10 +27,14 @@ export const pt = defineConfig({
                 link: "best-practices/architecture-drawing",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
+              {
+                text: "Testes automatizados",
+                link: "best-practices/automated-test.md",
+              },
               { text: "Revisão de código", link: "best-practices/code-review" },
               { text: "Guia de estilos", link: "best-practices/code-style" },
               { text: "Observabilidade", link: "best-practices/observability" },
-              { text: "Solid", link: "best-practices/solid" },
+              { text: "Solid", link: "best-practices/SOLID" },
               {
                 text: "Estratégia de controle de versão",
                 link: "best-practices/versioning-strategy",
