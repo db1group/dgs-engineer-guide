@@ -1,0 +1,15 @@
+{
+  "name": "engineering-guide",
+  "version": "2.0.0",
+  "description": "A guide for engineering at DB1 Group.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.1.3"
+  }
+}
