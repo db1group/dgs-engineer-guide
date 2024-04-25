@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Desenho de arquitetura
 
 A arquitetura da solução pode ser expressa por meio de muitas ferramentas e métodos. A [Linguagem de modelagem unificada (UML)](https://en.wikipedia.org/wiki/Unified_Modeling_Language) é uma linguagem de modelagem de desenvolvimento de uso geral no campo da engenharia de software que tem como objetivo fornecer uma maneira padrão de visualizar o projeto de um sistema.

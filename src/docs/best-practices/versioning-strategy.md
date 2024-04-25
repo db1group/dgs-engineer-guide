@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Estratégia de controle de versão
 
 Há muitas maneiras de versionar nossa infraestrutura e nosso aplicativo. O que vamos incentivá-lo nesta postagem é escolher uma delas. De acordo com [flow canon](https://flowcanon.com/software/versioning-strategy/): "Usar uma estratégia de controle de versão de software para suas compilações pode reduzir a carga cognitiva de todos que desenvolvem e usam seu software. As estratégias de controle de versão permitem que você identifique cada artefato de construção de forma rápida e fácil".
