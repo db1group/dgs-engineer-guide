@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Pratica de Post Mortem
 
 ## O que é Postmortem?

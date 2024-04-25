@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # SOLID
 
 Agora que chamamos sua atenção com o título "SOLID", é hora de dizer que há vários princípios que o setor de software considerou muito úteis e aplicáveis ao desenvolvimento de software corporativo, usando OOP (programação orientada a objetos).

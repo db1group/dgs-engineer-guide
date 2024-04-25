@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Observabilidade
 
 Incidentes em ambientes de produção, bugs que nunca conseguimos entender ou reproduzir em ambientes de teste, comportamentos diferentes dos esperados que alteram o estado dos dados de uma forma que não entendemos. Bem, a falta de uma observabilidade madura pode nos levar a isso.

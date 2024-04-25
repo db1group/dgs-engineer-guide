@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Guia de estilos
 
 Um padrão ou estilo de código é um conjunto consistente, porém flexível, de "práticas recomendadas" projetado para melhorar a qualidade e a legibilidade e, ao mesmo tempo, facilitar as alterações e a manutenção do código. Ele

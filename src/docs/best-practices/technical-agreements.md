@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Acordos técnicos
 
 Os acordos técnicos nada mais são do que convenções que você e sua equipe devem adotar para ter ações consistentes em seu projeto. Considerando que esse é um conselho muito genérico, vamos ver como ele pode se encaixar em exemplos práticos:

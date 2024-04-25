@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # CI/CD
 
 A integração contínua, a entrega contínua e a implantação são práticas de desenvolvimento do movimento DevOps. A ideia é tornar o processo de criação, teste e entrega de produtos muito mais eficiente, trazendo a automação para a mesa, a fim de entregar o software nas mãos dos usuários mais rapidamente do que os métodos comuns e tradicionais.
