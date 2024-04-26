@@ -21,7 +21,12 @@ jobs:
         run: yarn install
       - name: Build Application
         run: yarn build
-        continue-on-error: true
+      - name: Remove .html Extension
+        run: find . -type f -name '*.html' -exec sh -c 'mv "$0" "${0%.html}"' {} \;
+        working-directory: .vitepress/dist
+        # This step removes the .html extension from all files in the specified directory
+        # this is important to avoid 404 errors when accessing the pages and keep retrocompatibility with the old URLs
+        
       - uses: jakejarvis/s3-sync-action@master
         name: Upload App to S3 Bucket
         with:
