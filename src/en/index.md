@@ -8,15 +8,15 @@ hero:
   actions:
     - theme: brand
       text: The Guide
-      link: /es/docs/best-practices/db1-way
+      link: /en/docs/best-practices/db1-way
     # - theme: alt
     #   text: Our Components
-    #   link: /es/docs/best-practices/db1-way
+    #   link: /en/docs/best-practices/db1-way
 
 features:
   - title: Our Engineering Guide
     details: Here we share our way of making software, best practices, and what we expect from our engineers
-    link: /es/docs/best-practices/db1-way
+    link: /en/docs/best-practices/db1-way
   - title: Tech Radar
     details: Enjoy and check out our technology radar, with our opinions about language, frameworks and tools
     link: https://techradar.db1.com.br
