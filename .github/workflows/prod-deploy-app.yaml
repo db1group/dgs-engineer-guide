@@ -20,6 +20,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Build Application
+        run: yarn build     
         
       - uses: jakejarvis/s3-sync-action@master
         name: Upload App to S3 Bucket
