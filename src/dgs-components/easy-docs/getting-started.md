@@ -15,8 +15,7 @@ Sistema operacional Linux compatível:
 2. Acesso de superusuário ou permissões de sudo.
 3. Conhecimento básico de linha de comando linux
 4. Git instalado no seu sistema.
-5. Docker e Docker Compose instalados no seu sistema.
-6. (Para criar os templates) Node.js e npm instalados no seu sistema.
+5. (Para criar os templates) Node.js e npm instalados no seu sistema.
 
 ## Passos para começar:
 
@@ -83,8 +82,54 @@ Para rodar o prjeto em modo desenvolvimento, você pode executar o seguinte coma
     npm run dev
 ```
 
-ou 
+ou
 
 ```bash
     yarn dev
 ```
+
+Em modo desenvolvimento, vamos precisar instalar algumas dependencias em nosso ambiente.
+
+### Instalando dependências
+
+Para instalar as dependências do projeto, você pode executar o seguinte comando:
+
+```bash
+   export WKTHMLTOPDF_ARCH=$(case "$(arch)" in "aarch64" | "arm64") echo "arm64" ;; *) echo "amd64" ;; esac)
+```
+
+```bash
+    export WKTHMLTOPDF_URL=$(echo "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_$WKTHMLTOPDF_ARCH.deb")
+```
+
+```bash
+    sudo apt update
+```
+
+```bash
+    sudo apt install -y libfontenc1 xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils
+```
+
+```bash
+    curl -L $WKTHMLTOPDF_URL > /tmp/wkhtmltopdf.deb
+```
+
+```bash
+    dpkg -i /tmp/wkhtmltopdf.deb
+```
+
+```bash
+    sudo apt --fix-broken install -y
+```
+
+```bash
+    sudo apt install wkhtmltopdf
+```
+
+### Importante
+
+Essas dependências são necessárias somente em modo desenvolvimento, mas você pode utilizar
+o docker para rodar o projeto sem precisar instalar essas dependências.
+
+Em modo de produção, essas dependências não são necessárias, pois o projeto roda em um container docker
+que já possui essas dependências instaladas.

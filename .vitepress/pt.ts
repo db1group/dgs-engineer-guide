@@ -109,8 +109,12 @@ export const pt = defineConfig({
                 link: "easy-docs/first-component",
               },
               {
-                text: "FAQ",
-                link: "easy-docs/faq",
+                text: "Temas & Customização",
+                link: "easy-docs/themes",
+              },
+              {
+                text: "Deploy",
+                link: "easy-docs/deploy",
               },
             ],
           },
