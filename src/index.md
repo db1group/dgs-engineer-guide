@@ -14,13 +14,13 @@ hero:
       link: /dgs-components/easy-monitor/introduction
 
 features:
-  - title: Nosso guia de engenharia
-    details: Aqui copmpartilhamos nosso jeito de fazer software, boas práticas e o que esperamos de nossos engenheiros
-    link: /docs/best-practices/db1-way
   - title: Radar de tecnologia
     details: Aproveite e confira nosso radar de tecnologia, com nossas opiniões sobre o linguagem, frameworks e ferramentas
     link: https://techradar.db1.com.br
   - title: Easy Monitor
     details: Componente que com poucos comandos, você consegue subir uma stack completa de observabilidade
     link: /dgs-components/easy-monitor/introduction
+  - title: Easy Docs
+    details: Componente para facilitar a criação de PDFs com base em templates React.
+    link: /dgs-components/easy-docs/introduction
 ---
