@@ -4,6 +4,9 @@ export const en = defineConfig({
   lang: "en-US",
 
   themeConfig: {
+    outline: {
+      label: "On this page",
+    },
     nav: nav(),
     sidebar: {
       "/en/docs/": {
@@ -12,6 +15,7 @@ export const en = defineConfig({
           {
             text: "The Guide",
             collapsed: false,
+
             items: [{ text: "DB1 Way", link: "best-practices/db1-way" }],
           },
           {
@@ -19,24 +23,24 @@ export const en = defineConfig({
             collapsed: false,
             items: [
               {
-                text: "Architecture Design",
+                text: "Architecture Drawing",
                 link: "best-practices/architecture-drawing",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
               {
-                text: "Automated Test",
+                text: "Automated Testing",
                 link: "best-practices/automated-test.md",
               },
               { text: "Code Review", link: "best-practices/code-review" },
-              { text: "Code Style", link: "best-practices/code-style" },
+              { text: "Code Style Guide", link: "best-practices/code-style" },
               { text: "Observability", link: "best-practices/observability" },
               { text: "SOLID", link: "best-practices/SOLID" },
               {
-                text: "Version Control Strategy",
+                text: "Versioning Strategy",
                 link: "best-practices/versioning-strategy",
               },
               {
-                text: "Post Mortem Practice",
+                text: "Postmortem Practice",
                 link: "best-practices/postmortem-practice",
               },
               {
@@ -56,8 +60,61 @@ export const en = defineConfig({
             collapsed: false,
             items: [
               {
-                text: "Seniority Evaluation",
+                text: "Seniority Assessment",
                 link: "career/seniorities",
+              },
+            ],
+          },
+        ],
+      },
+      "/en/dgs-components/": {
+        base: "/en/dgs-components/",
+        items: [
+          {
+            text: "Easy Monitor",
+            collapsed: false,
+            items: [
+              {
+                text: "Introduction",
+                link: "easy-monitor/introduction",
+              },
+              {
+                text: "Getting Started",
+                link: "easy-monitor/getting-started",
+              },
+              {
+                text: "Installing ELK",
+                link: "easy-monitor/elk-install",
+              },
+              {
+                text: "FAQ",
+                link: "easy-monitor/faq",
+              },
+            ],
+          },
+          {
+            text: "Easy Docs",
+            collapsed: false,
+            items: [
+              {
+                text: "Introduction",
+                link: "easy-docs/introduction",
+              },
+              {
+                text: "Getting Started",
+                link: "easy-docs/getting-started",
+              },
+              {
+                text: "First Component",
+                link: "easy-docs/first-component",
+              },
+              {
+                text: "Themes & Customization",
+                link: "easy-docs/themes",
+              },
+              {
+                text: "Deploy",
+                link: "easy-docs/deploy",
               },
             ],
           },
@@ -70,7 +127,7 @@ export const en = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: "Tech Radar",
+      text: "Technology Radar",
       link: "https://techradar.db1.com.br/",
     },
   ];

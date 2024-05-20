@@ -4,24 +4,23 @@ layout: home
 hero:
   name: "DB1 Global Software"
   text: "Engineering Guide"
-  tagline: to share and, moreover, express our strong opinion on how software should be made
+  tagline: To share and, moreover, express our strong opinion on how software should be made
   actions:
     - theme: brand
       text: The Guide
-      link: /en/docs/best-practices/db1-way
-    # - theme: alt
-    #   text: Our Components
-    #   link: /en/docs/best-practices/db1-way
+      link: /docs/best-practices/db1-way
+    - theme: alt
+      text: Our Components
+      link: /en/dgs-components/easy-monitor/introduction
 
 features:
-  - title: Our Engineering Guide
-    details: Here we share our way of making software, best practices, and what we expect from our engineers
-    link: /en/docs/best-practices/db1-way
-  - title: Tech Radar
-    details: Enjoy and check out our technology radar, with our opinions about language, frameworks and tools
+  - title: Technology Radar
+    details: Take advantage and check out our technology radar, with our opinions on languages, frameworks, and tools
     link: https://techradar.db1.com.br
-  # - title: Easy Monitor
-  #   details: A component that with a few commands lets you set up a complete observability stack
-  # - title: Easy Connect
-  #   details: A component that allows you to make integrations quickly using Low Code
+  - title: Easy Monitor
+    details: A component that allows you to set up a complete observability stack with just a few commands
+    link: /en/dgs-components/easy-monitor/introduction
+  - title: Easy Docs
+    details: A component to facilitate the creation of PDFs based on React templates.
+    link: /en/dgs-components/easy-docs/introduction
 ---
