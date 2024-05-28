@@ -4,9 +4,9 @@
 
  # FAQ 
 
- ## component "/home/user@db1.com.br/tools/db1-stack/user" does not exists. 
+ ## component "/home/user@db1.com.br/tools/easy-monitor/user" does not exists. 
 
- Looks like you tried to run the DB1-Stack script with a ** user ** parameter, but the script has not recognized this command as one of the available commands. 
+ Looks like you tried to run the EASY-Monitor script with a ** user ** parameter, but the script has not recognized this command as one of the available commands. 
 
  This is because the script is designed to accept only certain specific commands such as Elk, Mon, Node-Exp, Wazuh and Rancher. If you try to use any other command, it will display this error message. 
 

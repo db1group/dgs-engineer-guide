@@ -44,7 +44,7 @@
   FIRST, You Need to Clone The Easy Monitor Repository for Your System. You can by this by running the following command at your terminal: 
 
   `` `Bash 
-  $ git clone https://github.com/db1group/db1-stack 
+  $ git clone https://github.com/db1group/easy-monitor 
 
   `` ` 
 
@@ -53,11 +53,11 @@
   After Cloning The Repository, Navigate to the Directory: 
 
   `` `Bash 
-  $ cd db1-stack 
+  $ cd easy-monitor 
   `` ` 
 
   Running The DB1-Stacklist Script: 
-  BROWSE TO THE DB1-STACK DIRECTORY AND RUN THE DB1-STACKLIST SCRIPT TO CHECK AND INSTALL DOCKER AND DOCKER COMPOSIT. This script will detect its Linux Distribution and Install the Necessary Tools Automatically. 
+  BROWSE TO THE EASY-MONITOR DIRECTORY AND RUN THE DB1-STACKLIST SCRIPT TO CHECK AND INSTALL DOCKER AND DOCKER COMPOSIT. This script will detect its Linux Distribution and Install the Necessary Tools Automatically. 
 
   `` `Bash 
   $ chmod +x db1-stacklist 
@@ -79,7 +79,7 @@
   If you run the script with any parameter, it will display a hell Message and List Available Commands. 
 
   `` `Bash 
-  $ ./db1-stack 
+  $ ./easy-monitor 
 
   `` ` 
 

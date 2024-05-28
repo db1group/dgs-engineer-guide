@@ -33,10 +33,8 @@ $ sudo apt install git
 Se você estiver usando um sistema baseado em RedHat, CebtOS, Amazon Linux ou derivados, pode instalar o Git usando o comando:
 
 ```bash
-
 $ sudo yum update
 $ sudo yum install git
-
 ```
 
 ### Clone o projeto:
@@ -44,25 +42,36 @@ $ sudo yum install git
 Primeiro, você precisa clonar o repositório do easy monitor para o seu sistema. Você pode fazer isso executando o seguinte comando no seu terminal:
 
 ```bash
-$ git clone https://github.com/db1group/db1-stack
-
+$ git clone https://github.com/db1group/easy-monitor
 ```
 
-![Git Clone Easy monitor](/img/components/easy-monitor/easy-monitor-git-clone.png)
+![Git Clone Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-git-clone.png)
 
 Após clonar o repositório, navegue para o diretório:
 
 ```bash
-$ cd db1-stack
+$ cd easy-monitor
 ```
 
-Executando o script db1-stacklist:
-Navegue até o diretório db1-stack e execute o script db1-stacklist para verificar e instalar o Docker e o Docker Compose. Este script detectará sua distribuição Linux e instalará as ferramentas necessárias automaticamente.
+Executando o Health Checking easy-monitor
+Navegue até o diretório easy-monitor e execute o comando easy-monitor hc para verificar e instalar o Docker e o Docker Compose. Este comando detectará sua distribuição Linux e instalará as ferramentas necessárias automaticamente.
 
 ```bash
-$ chmod +x db1-stacklist
-$ ./db1-stacklist
+$ chmod +x easy-monitor
+$ ./easy-monitor hc
 ```
+
+![Healt Chacking Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-hc.png)
+
+### Verificando a instalação do Docker e Docker Compose
+
+Execute os seguintes comando abaixo:
+
+```bash
+$ ./easy-monitor hc
+```
+
+![Healt Chacking After Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-after-hc.png)
 
 ### Verificando a versão do Docker e Docker Compose
 
@@ -71,16 +80,18 @@ Execute os seguintes comando abaixo:
 ```bash
 $ docker -v
 $ docker-compose -v
-
 ```
 
-### Executando o script db1-stack
+![Docker and Docker Compose Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-docker-compose.png)
+
+### Executando o comando easy-monitor
 
 Se você executar o script sem nenhum parâmetro, ele irá exibir uma mensagem de ajuda e listar os comandos disponíveis.
 
 ```bash
-$ ./db1-stack
-
+$ ./easy-monitor
 ```
+
+![Help Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-help.png)
 
 Pronto, agora a ferramenta está pronta para uso!
