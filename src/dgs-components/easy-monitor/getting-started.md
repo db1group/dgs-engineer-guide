@@ -45,7 +45,7 @@ Primeiro, você precisa clonar o repositório do easy monitor para o seu sistema
 $ git clone https://github.com/db1group/easy-monitor
 ```
 
-![Git Clone Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-git-clone.png)
+![Git Clone Easy monitor](/img/components/easy-monitor/easy-monitor-git-clone.png)
 
 Após clonar o repositório, navegue para o diretório:
 
@@ -61,7 +61,7 @@ $ chmod +x easy-monitor
 $ ./easy-monitor hc
 ```
 
-![Healt Chacking Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-hc.png)
+![Healt Chacking Easy monitor](/img/components/easy-monitor/easy-monitor-hc.png)
 
 ### Verificando a instalação do Docker e Docker Compose
 
@@ -71,7 +71,7 @@ Execute os seguintes comando abaixo:
 $ ./easy-monitor hc
 ```
 
-![Healt Chacking After Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-after-hc.png)
+![Healt Chacking After Easy monitor](/img/components/easy-monitor/easy-monitor-after-hc.png)
 
 ### Verificando a versão do Docker e Docker Compose
 
@@ -82,7 +82,7 @@ $ docker -v
 $ docker-compose -v
 ```
 
-![Docker and Docker Compose Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-docker-compose.png)
+![Docker and Docker Compose Easy monitor](/img/components/easy-monitor/easy-monitor-docker-compose.png)
 
 ### Executando o comando easy-monitor
 
@@ -92,6 +92,6 @@ Se você executar o script sem nenhum parâmetro, ele irá exibir uma mensagem d
 $ ./easy-monitor
 ```
 
-![Help Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-help.png)
+![Help Easy monitor](/img/components/easy-monitor/easy-monitor-help.png)
 
 Pronto, agora a ferramenta está pronta para uso!

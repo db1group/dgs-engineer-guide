@@ -18,7 +18,7 @@ Localize as variáveis relacionadas às senhas, como
 - KIBANA_SYSTEM_PASSWORD
 - e assim para as outras.
 
-![ENV para o ELK](/src/public/img/components/easy-monitor/easy-monitor-elk-env.png)
+![ENV para o ELK](/img/components/easy-monitor/easy-monitor-elk-env.png)
 
 Defina uma senha para cada uma dessas variáveis, atribuindo um valor entre aspas simples (' '). Por exemplo, para a variável ELASTIC_PASSWORD, você pode definir uma senha assim:
 
@@ -39,7 +39,7 @@ Para iniciar o ELK, execute o seguinte comando:
 ```bash
 $ ./easy-monitor elk
 ```
-![ELK Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-elk.png)
+![ELK Easy monitor](/img/components/easy-monitor/easy-monitor-elk.png)
 
 Este comando inicia o stack ELK. O ELK é um conjunto de ferramentas de código aberto para a análise de logs. Ele consiste em três componentes principais:
 
@@ -76,17 +76,17 @@ Agora iremos validar o elasticsearch, abra seu browser e digite http://localhost
 user: elastic
 senha: o que você configurou no arquivo .env no inicio desse tutorial.
 
-![search-first-view](/src/public/img/components/easy-monitor/elastic-search-first-view.png)
+![search-first-view](/img/components/easy-monitor/elastic-search-first-view.png)
 
 Irá aparecer pra você essa tela abaixo, onde indica que o elasticsearch esta operacional.
 
-![elastic-search-running](/src/public/img/components/easy-monitor/elastic-search-running.png)
+![elastic-search-running](/img/components/easy-monitor/elastic-search-running.png)
 
 ### Logstash
 
 Agora iremos validar o logstash, abra seu browser e digite http://localhost:9600 irá pedir user e senha:
 
-![elastic-search-running](/src/public/img/components/easy-monitor/logstash-running.png)
+![elastic-search-running](/img/components/easy-monitor/logstash-running.png)
 
 ### Kibana
 
@@ -95,11 +95,11 @@ user: elastic
 
 senha: o que você configurou no arquivo .env no inicio desse tutorial.
 
-![elastic-search-user-pass](/src/public/img/components/easy-monitor/elastic-search-user-pass.png)
+![elastic-search-user-pass](/img/components/easy-monitor/elastic-search-user-pass.png)
 
 Após digitar user e senha irá aparecer a seguinte tela abaixo pra você:
 
-![elastic-search-user-pass](/src/public/img/components/easy-monitor/kibana-home-screen.png)
+![elastic-search-user-pass](/img/components/easy-monitor/kibana-home-screen.png)
 
 
 Pronto, agora você está com sua stack ELK rodando!

@@ -3,9 +3,9 @@ outline: deep
 ---
 # FAQ
 
-## Component "/home/levi.alves@db1.com.br/Projects/clientes/db1group/easy-monitor/db1" does not exists.
+## Component "/home/$USER/Projects/clientes/db1group/easy-monitor/db1" does not exists.
 
-![Does not exists Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-does-not-exists.png)
+![Does not exists Easy monitor](/img/components/easy-monitor/easy-monitor-does-not-exists.png   )
 
 Parece que você tentou executar o comando easy-monitor com um parâmetro **db1**, mas o comando não reconheceu como um dos comandos disponíveis.
 
@@ -15,7 +15,7 @@ Se você estava tentando executar um comando específico que não está na lista
 
 ## HTTP/1.1 401 Unauthorized
 
-![401 Unauthorized Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-error-401.png)
+![401 Unauthorized Easy monitor](/img/components/easy-monitor/easy-monitor-error-401.png)
 
 ### Error:
 O erro "Failed to connect to host" com o código de status HTTP 401 Unauthorized indica que houve uma falha na conexão com o Elasticsearch devido à falta de credenciais de autenticação. Isso geralmente ocorre quando o Elasticsearch está configurado para exigir autenticação básica e as credenciais fornecidas estão ausentes ou são inválidas.
@@ -25,7 +25,7 @@ Para corrigir esse erro, você precisa configurar as credenciais de autenticaç�
 
 ## docker-compose.yml: version is obsolete
 
-![Version is obsolete Easy monitor](/src/public/img/components/easy-monitor/easy-monitor-version-obsolete.png)
+![Version is obsolete Easy monitor](/img/components/easy-monitor/easy-monitor-version-obsolete.png)
 
 ### Error:
 A mensagem de warning ” docker-compose.yml: `version` is obsolete ” indica que a versão esta obsoleto
