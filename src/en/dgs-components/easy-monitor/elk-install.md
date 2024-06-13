@@ -1,104 +1,105 @@
---- 
- outline: deep 
---- 
+---
+outline: deep
+---
 
-# Installing the elk 
+# Installing ELK
 
- Before running the ./easy-monitor elk command, you need to configure the passwords for the variables in the .env file. 
+Before running the ./easy-monitor elk command, you need to configure the passwords for the variables in the .env file.
 
- Open the .env file in a text editor, as I came or vscode. You can use the following command to open the .env file in VIM: 
+Open the .env file in a text editor, such as vim or vscode. You can use the following command to open the .env file in vim:
 
- `` `Bash 
- $ vi .env 
- `` ` 
+```bash
+$ vi /opt/easy-monitor/elk/.env
+```
 
- Locate password -related variables, such as 
+Locate the variables related to passwords, such as
 
- - Logstash_Internal_Password, 
- - kibana_system_password 
- - And so to the others. 
+- LOGSTASH_INTERNAL_PASSWORD,
+- KIBANA_SYSTEM_PASSWORD,
+- and others.
 
- ! [ENV for ELK] (/IMG/Components/Easy-Monitor/Easy-Monitor-Elk-env.p.png) 
+![ENV for ELK](/img/components/easy-monitor/easy-monitor-elk-env.png)
 
- Set a password for each of these variables, assigning a value between simple quotes (''). For example, for the elastic_password variable, you can set a password like this: 
+Set a password for each of these variables by assigning a value within single quotes (' '). For example, for the ELASTIC_PASSWORD variable, you can set a password like this:
 
- `` `Bash 
- Elastic_password = 'Seu_Senha_Aqui' 
- `` ` 
+```bash
+ELASTIC_PASSWORD='your_password_here'
+```
 
- Do the same to the other password variables, assigning exclusive passwords to each of them. 
+Do the same for the other password variables, assigning unique passwords to each.
 
- After setting all passwords, save and close the .env file. In Vim, you can do this by pressing the ESC: WQ: WARKING KEYS WRITE, WRITE KEYS AND Q. 
+After setting all the passwords, save and close the .env file. In vim, you can do this by pressing the keys ESC :wq (ESC to enter command mode, : to start a command, w to write, and q to quit).
 
- Now, with passwords configured in the .env file, you can run the ./easy-monitor elk safely, knowing that the required passwords are set and ready for use by ELK containers. 
+Now, with the passwords configured in the .env file, you can run the ./easy-monitor elk command securely, knowing that the necessary passwords are set and ready for use by the ELK containers.
 
- ### Starting ELK 
+### Starting ELK
 
- To start the elk, run the following command: 
+To start ELK, run the following command:
 
- `` `Bash 
- $ ./easy-monitor elk 
+```bash
+$ ./easy-monitor elk
+```
 
- `` ` 
+![ELK Easy monitor](/img/components/easy-monitor/easy-monitor-elk.png)
 
- This command starts the stack elk. ELK is an open source tool set for log analysis. It consists of three main components: 
+This command starts the ELK stack. ELK is a set of open-source tools for log analysis. It consists of three main components:
 
- - Elasticsearch: A distributed search and analysis mechanism used to store and research logs. 
- - Logstash: A data processing pipeline that eats, processes and sends logs to elasticsearch. 
- - Kibana: A user interface for elasticsearch, which allows you to view and analyze stored data. 
+- Elasticsearch: A distributed search and analytics engine used to store and search logs.
+- Logstash: A data processing pipeline that ingests, processes, and sends logs to Elasticsearch.
+- Kibana: A user interface for Elasticsearch that allows you to visualize and analyze stored data.
 
- When running $ ./easy-monitor elk, the script begins to configure the ELK environment. During this process, it checks whether ElasticSearch is available, bootes ELK's internal users and creates papers and users needed for system operation. When all steps are completed without errors, you get a message that the configuration has been successful. These messages provide an overview of the progress and state of the configuration process. 
+When you run $ ./easy-monitor elk, the script begins to set up the ELK environment. During this process, it checks if Elasticsearch is available, initializes the internal ELK users, and creates the necessary roles and users for the system's operation. When all steps are completed without errors, you receive a message indicating that the configuration was successful. These messages provide an overview of the progress and state of the setup process.
 
- ### Starting Elk in the background 
+### Starting ELK in the background
 
- Now we will execute the command ./easy-monitor elk up -d 
+Now we will run the following command:
 
- `` `Bash 
- $ ./easy-monitor elk up -d 
- `` ` 
+```bash
+$ ./easy-monitor elk up -d
+```
 
- This command starts Stack Elk in the background. The -D parameter indicates that containers will be executed in deamon mode, ie in the background, without displaying logs at the terminal. 
- Since all containers are running without error, you get a confirmation that the operation has been successfully completed. The messages displayed during the process provide information on the construction of images, the boot of containers and their current state. 
+This command starts the ELK stack in the background. The -d parameter indicates that the containers will run in daemon mode, meaning in the background without displaying logs in the terminal.
 
- ### Checking the containers 
+Once all the containers are running without errors, you receive confirmation that the operation was successfully completed. The messages displayed during the process provide information about building images, starting containers, and their current status.
 
- After completing command execution ./easy-monitor elk up -d, we will check if they succeeded: 
+### Checking the containers
 
- `` `Bash 
- $ docker container ls 
- `` ` 
+After completing the ./easy-monitor elk up -d command, we will check if they have started successfully:
 
- ### Elastic Search 
+```bash
+$ docker container ls
+```
 
- Now we will validate the elasticsearch, open your browser and type http: // localhost: 9200 will ask user and password: 
+### Elasticsearch
 
- User: Elastic 
- Password: What you configured in the .env file at the beginning of this tutorial. 
+Now we will validate Elasticsearch. Open your browser and enter http://localhost:9200. It will ask for a username and password:
 
- ! 
+- Username: elastic
+- Password: the one you configured in the .env file at the beginning of this tutorial.
 
- This screen will appear to you, where it indicates that the elasticsearch is operational. 
+![search-first-view](/img/components/easy-monitor/elastic-search-first-view.png)
 
- ! 
+You will see the following screen, indicating that Elasticsearch is operational.
 
- ### Logstash 
+![elastic-search-running](/img/components/easy-monitor/elastic-search-running.png)
 
- Now we will validate the logstash, open your browser and type http: // localhost: 9600 will ask user and password: 
+### Logstash
 
- ! 
+Now we will validate Logstash. Open your browser and enter http://localhost:9600. It will ask for a username and password:
 
- ### Kibana 
+![elastic-search-running](/img/components/easy-monitor/logstash-running.png)
 
- Now we will validate Kibana, open your browser and type http: // localhost: 5601 will ask user and password: 
- User: Elastic 
+### Kibana
 
- Password: What you configured in the .env file at the beginning of this tutorial. 
+Now we will validate Kibana. Open your browser and enter http://localhost:5601. It will ask for a username and password:
 
- ! [ELASTIC-SEARCH-USER-PASS] 
+- Username: elastic
+- Password: the one you configured in the .env file at the beginning of this tutorial.
 
- After entering user and password will appear the following screen below for you: 
+![elastic-search-user-pass](/img/components/easy-monitor/elastic-search-user-pass.png)
 
- ! 
+After entering the username and password, you will see the following screen:
 
+![elastic-search-user-pass](/img/components/easy-monitor/kibana-home-screen.png)
 
- Okay, now you are with your stack elk running!
+Congratulations! Now your ELK stack is up and running!

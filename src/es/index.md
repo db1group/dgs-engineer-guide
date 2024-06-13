@@ -3,25 +3,24 @@ layout: home
 
 hero:
   name: "DB1 Global Software"
-  text: "Guía de ingeniería"
-  tagline: para compartir y, además, expresar nuestra fuerte opinión sobre cómo debe hacerse el software
+  text: "Guía de Ingeniería"
+  tagline: Para compartir y, además, expresar nuestra fuerte opinión sobre cómo debe hacerse el software
   actions:
     - theme: brand
       text: La Guía
-      link: /es/docs/best-practices/db1-way
-    # - theme: alt
-    #   text: Nuestros Componentes
-    #   link: /es/docs/best-practices/db1-way
+      link: /docs/best-practices/db1-way
+    - theme: alt
+      text: Nuestros Componentes
+      link: /es/dgs-components/easy-monitor/introduction
 
 features:
-  - title: Nuestra guía de ingeniería
-    details: Aquí compartimos nuestra manera de hacer software, buenas prácticas y lo que esperamos de nuestros ingenieros
-    link: /es/docs/best-practices/db1-way
-  - title: Radar tecnológico
-    details: Disfrute y consulte nuestro radar tecnológico, con nuestras opiniones sobre el lenguaje, los frameworks y las herramientas
+  - title: Radar de Tecnología
+    details: Aprovecha y revisa nuestro radar de tecnología, con nuestras opiniones sobre lenguajes, frameworks y herramientas
     link: https://techradar.db1.com.br
-  # - title: Easy Monitor
-  #   details: Componente que con pocos comandos, te permite levantar una pila completa de observabilidad
-  # - title: Easy Connect
-  #   details: Componente para que realices integraciones rápidamente usando Low Code
+  - title: Easy Monitor
+    details: Un componente que te permite configurar una pila completa de observabilidad con solo unos pocos comandos
+    link: /es/dgs-components/easy-monitor/introduction
+  - title: Easy Docs
+    details: Un componente para facilitar la creación de PDFs basados en plantillas de React.
+    link: /es/dgs-components/easy-docs/introduction
 ---
