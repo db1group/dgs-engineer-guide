@@ -2,85 +2,97 @@
   outline: deep 
 --- 
 
-  # Starting 
+# Getting Started
 
-  ## Prerequisitis 
+## Prerequisites
 
-  To Start Using Easy Monitor, disappear items are Required: 
+To start using Easy Monitor, you need the following:
 
-  Prerequisitis: 
-  Linux Compatible Operating System: 
+Prerequisites:
+Compatible Linux operating system:
 
-  1. Debian, Ubuntu, Redhat, Centos, Fedora, Suse, Amazon Linux, Oracle Linux 
-  2. Superuser Access or Sudo Permissions. 
-  3. BASIC LINUX COMMAND LINE KNOWLEDGE 
-  4. Git Installed on Your System. 
-  5. Docker and Docker Compose Installed on Your System. 
+1. Debian, Ubuntu, RedHat, CentOS, Fedora, Suse, Amazon Linux, Oracle Linux
+2. Superuser access or sudo permissions.
+3. Basic knowledge of Linux command line
+4. Git installed on your system.
+5. Docker and Docker Compose installed on your system.
 
-  ## Steps to Start: 
+## Steps to get started:
 
-  ### Installing Git (Using apt) 
+### Installing Git (using apt)
 
-  If you are Using a System Based on Debian or Ubuntu, or Derivatives, You Can Install Git Using the Command: 
+If you are using a Debian or Ubuntu-based system, or derivatives, you can install Git using the command:
 
-  `` `Bash 
-  $ sudo apt update 
-  $ sudo apt install git 
-  `` ` 
+```bash
+$ sudo apt update
+$ sudo apt install git
+```
 
-  ### Installing Git (Using yum) 
+### Installing Git (using yum)
 
-  If you are Using a Redhat, Cebtos, Amazon Linux or Derivative System, You Can Install Git Using the Command: 
+If you are using a RedHat-based system, CentOS, Amazon Linux, or derivatives, you can install Git using the command:
 
-  `` `Bash 
+```bash
+$ sudo yum update
+$ sudo yum install git
+```
 
-  $ SUDO YUM UPDATE 
-  $ SUDO YUM INSTALL GIT 
+### Clone the project:
 
-  `` ` 
+First, you need to clone the easy monitor repository to your system. You can do this by running the following command in your terminal:
 
-  ### Clone The Project: 
+```bash
+$ git clone https://github.com/db1group/easy-monitor
+```
 
-  FIRST, You Need to Clone The Easy Monitor Repository for Your System. You can by this by running the following command at your terminal: 
+![Git Clone Easy monitor](/img/components/easy-monitor/easy-monitor-git-clone.png)
 
-  `` `Bash 
-  $ git clone https://github.com/db1group/easy-monitor 
+After cloning the repository, navigate to the directory:
 
-  `` ` 
+```bash
+$ cd easy-monitor
+```
 
-  ! [Git Clone Easy Monitor] (/img/components/easy-monitor/easy-monitor-git-clone.png) 
+### Running Easy Monitor Health Check
 
-  After Cloning The Repository, Navigate to the Directory: 
+Navigate to the easy-monitor directory and run the easy-monitor hc command to check and install Docker and Docker Compose. This command will detect your Linux distribution and automatically install the necessary tools.
 
-  `` `Bash 
-  $ cd easy-monitor 
-  `` ` 
+```bash
+$ chmod +x easy-monitor
+$ ./easy-monitor hc
+```
 
-  Running The DB1-Stacklist Script: 
-  BROWSE TO THE EASY-MONITOR DIRECTORY AND RUN THE DB1-STACKLIST SCRIPT TO CHECK AND INSTALL DOCKER AND DOCKER COMPOSIT. This script will detect its Linux Distribution and Install the Necessary Tools Automatically. 
+![Health Checking Easy monitor](/img/components/easy-monitor/easy-monitor-hc.png)
 
-  `` `Bash 
-  $ chmod +x db1-stacklist 
-  $ ./db1-stacklist 
-  `` ` 
+### Verifying Docker and Docker Compose installation
 
-  ### Checking the version of docker and docker compose 
+Run the following command below:
 
-  RUN THE FOLLOWING COMMAND BELOW: 
+```bash
+$ ./easy-monitor hc
+```
 
-  `` `Bash 
-  $ docker -v 
-  $ docker -compose -v 
+![Health Checking After Easy monitor](/img/components/easy-monitor/easy-monitor-after-hc.png)
 
-  `` ` 
+### Checking Docker and Docker Compose version
 
-  ### Performing The DB1-Stack Script 
+Run the following commands below:
 
-  If you run the script with any parameter, it will display a hell Message and List Available Commands. 
+```bash
+$ docker -v
+$ docker-compose -v
+```
 
-  `` `Bash 
-  $ ./easy-monitor 
+![Docker and Docker Compose Easy monitor](/img/components/easy-monitor/easy-monitor-docker-compose.png)
 
-  `` ` 
+### Running the easy-monitor command
 
-  Okay, now the Tool is Ready for Use!
+If you run the script without any parameters, it will display a help message and list the available commands.
+
+```bash
+$ ./easy-monitor
+```
+
+![Help Easy monitor](/img/components/easy-monitor/easy-monitor-help.png)
+
+Now the tool is ready to use!

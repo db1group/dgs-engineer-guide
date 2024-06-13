@@ -4,10 +4,10 @@ export const es = defineConfig({
   lang: "es-ES",
 
   themeConfig: {
-    nav: nav(),
     outline: {
-      label: "Esta página",
+      label: "En esta página",
     },
+    nav: nav(),
     sidebar: {
       "/es/docs/": {
         base: "/es/docs/",
@@ -15,34 +15,38 @@ export const es = defineConfig({
           {
             text: "La Guía",
             collapsed: false,
-            items: [{ text: "Camino DB1", link: "best-practices/db1-way" }],
+
+            items: [{ text: "Método DB1", link: "best-practices/db1-way" }],
           },
           {
-            text: "Prácticas Recomendadas",
+            text: "Mejores Prácticas",
             collapsed: false,
             items: [
               {
-                text: "Diseño de arquitectura",
+                text: "Diseño de Arquitectura",
                 link: "best-practices/architecture-drawing",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
               {
-                text: "Pruebas automatizadas",
+                text: "Pruebas Automatizadas",
                 link: "best-practices/automated-test.md",
               },
               {
-                text: "Revisión de código",
+                text: "Revisión de Código",
                 link: "best-practices/code-review",
               },
-              { text: "Estilo de código", link: "best-practices/code-style" },
-              { text: "Observabilidad", link: "best-practices/observability" },
-              { text: "Solid", link: "best-practices/SOLID" },
               {
-                text: "Estrategia de control de versiones",
+                text: "Guía de Estilo de Código",
+                link: "best-practices/code-style",
+              },
+              { text: "Observabilidad", link: "best-practices/observability" },
+              { text: "SOLID", link: "best-practices/SOLID" },
+              {
+                text: "Estrategia de Versionado",
                 link: "best-practices/versioning-strategy",
               },
               {
-                text: "Práctica de Post Mortem",
+                text: "Práctica de Postmortem",
                 link: "best-practices/postmortem-practice",
               },
               {
@@ -50,7 +54,7 @@ export const es = defineConfig({
                 collapsed: true,
                 items: [
                   {
-                    text: "Documentación de Bugs",
+                    text: "Documentación de Errores",
                     link: "best-practices/tests/bug-documentation",
                   },
                 ],
@@ -62,8 +66,61 @@ export const es = defineConfig({
             collapsed: false,
             items: [
               {
-                text: "Evaluación de senioridades",
+                text: "Evaluación de Seniorities",
                 link: "career/seniorities",
+              },
+            ],
+          },
+        ],
+      },
+      "/es/dgs-components/": {
+        base: "/es/dgs-components/",
+        items: [
+          {
+            text: "Easy Monitor",
+            collapsed: false,
+            items: [
+              {
+                text: "Introducción",
+                link: "easy-monitor/introduction",
+              },
+              {
+                text: "Empezando",
+                link: "easy-monitor/getting-started",
+              },
+              {
+                text: "Instalación de ELK",
+                link: "easy-monitor/elk-install",
+              },
+              {
+                text: "FAQ",
+                link: "easy-monitor/faq",
+              },
+            ],
+          },
+          {
+            text: "Easy Docs",
+            collapsed: false,
+            items: [
+              {
+                text: "Introducción",
+                link: "easy-docs/introduction",
+              },
+              {
+                text: "Empezando",
+                link: "easy-docs/getting-started",
+              },
+              {
+                text: "Primer Componente",
+                link: "easy-docs/first-component",
+              },
+              {
+                text: "Temas y Personalización",
+                link: "easy-docs/themes",
+              },
+              {
+                text: "Despliegue",
+                link: "easy-docs/deploy",
               },
             ],
           },
@@ -76,7 +133,7 @@ export const es = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: "Radar tecnológico",
+      text: "Radar de Tecnología",
       link: "https://techradar.db1.com.br/",
     },
   ];
