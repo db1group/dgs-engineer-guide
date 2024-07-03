@@ -191,11 +191,11 @@ export default FirstComponent;
 ### Exemplo de requisição usando Curl
 
 ```sh
-curl -X POST http://localhost:3000/template/render \
+curl -X POST http://localhost:8080/template/render \
   -H "Content-Type: application/json" \
   -H "Accept: application/pdf" \
   -d '{
-    "theme": "Sample",
+    "theme": "sample",
     "templateName": "FirstComponent",
     "templateProps": {
         "title": "First "
