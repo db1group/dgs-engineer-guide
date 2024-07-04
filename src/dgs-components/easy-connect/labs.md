@@ -11,15 +11,16 @@ Preparamos um ambiente para você colocar a mão na massa e aprender na prática
 ::: warning IMPORTANTE
 Para ter acesso ao Labs, você DEVE estar conectado a VPN da DB1.
 :::
-Acesse o link [https://labs-easyconnect.db1.com.br](https://labs-easyconnect.db1.com.br);
+Acesse o link [http://labs-easyconnect.db1group.intranet](http://labs-easyconnect.db1group.intranet);
 
-Logue com o usuário e senha admin@easyconnect.com.br / admin@123\*\*##Easy
+Logue com o usuário e senha admin@easyconnect.com.br / admin##adminEasy123
 
 ::: danger IMPORTANTE
 Essa é uma conta de laboratório compartilhada, ela pode ser resetada a qualquer momento. Por favor, não salve nada importante nela, não use para fluxos de produção e não altere a senha.
 :::
 
 ## Desafio para praticar
+
 Criamos alguns desafios para você praticar e testar a ferramenta. Talvez você demande de conhecimentos adicionais como, tokens, client ids, client secrets, etc. Não se preocupe, existem muitos tutoriais disponíveis na internet para te ajudar.
 
 1. Crie um fluxo que ao receber um evento de um webhook, salve os dados dentro de uma planilha do Google Sheets.
