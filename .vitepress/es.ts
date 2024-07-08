@@ -124,6 +124,28 @@ export const es = defineConfig({
               },
             ],
           },
+          {
+            text: "Easy Connect",
+            collapsed: false,
+            items: [
+              {
+                text: "Introducción",
+                link: "easy-connect/introduction",
+              },
+              {
+                text: "Comenzando",
+                link: "easy-connect/getting-started",
+              },
+              {
+                text: "Laboratorios",
+                link: "easy-connect/labs",
+              },
+              {
+                text: "Buenas Prácticas",
+                link: "easy-connect/best-practices",
+              },
+            ],
+          },
         ],
       },
     },
