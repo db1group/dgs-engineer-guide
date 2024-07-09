@@ -90,6 +90,15 @@ export const pt = defineConfig({
                 text: "FAQ",
                 link: "easy-monitor/faq",
               },
+              {
+                text: "Instrumentação de aplicações",
+                items: [
+                  {
+                    text: "Apache",
+                    link: "easy-monitor/instrumentation/apache/introduction",
+                  },
+                ],
+              },
             ],
           },
           {
