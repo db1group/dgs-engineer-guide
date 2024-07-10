@@ -83,6 +83,10 @@ export const en = defineConfig({
                 link: "easy-monitor/getting-started",
               },
               {
+                text: "Conecting",
+                link: "easy-monitor/connecting-to-your-app.md"
+              },
+              {
                 text: "Installing ELK",
                 link: "easy-monitor/elk-install",
               },
