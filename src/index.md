@@ -10,7 +10,7 @@ hero:
       text: O Guia
       link: /docs/best-practices/db1-way
     - theme: alt
-      text: Nossos Componentes
+      text: Nossos Aceleradores
       link: /dgs-components/easy-monitor/introduction
 
 features:
@@ -18,9 +18,9 @@ features:
     details: Aproveite e confira nosso radar de tecnologia, com nossas opiniões sobre o linguagem, frameworks e ferramentas
     link: https://techradar.db1.com.br
   - title: Easy Monitor
-    details: Componente que com poucos comandos, você consegue subir uma stack completa de observabilidade
+    details: Um Acelerador que com poucos comandos, você consegue subir uma stack completa de observabilidade
     link: /dgs-components/easy-monitor/introduction
   - title: Easy Docs
-    details: Componente para facilitar a criação de PDFs com base em templates React.
+    details: Um Acelerador para facilitar a criação de PDFs com base em templates React.
     link: /dgs-components/easy-docs/introduction
 ---
