@@ -150,7 +150,7 @@ Accede al enlace `http://localhost:6006/` y ve tu componente.
 Debes enviar en el Header de la solicitud el formato que deseas para el documento:
 
 - application/pdf
-- application/html
+- text/html
 
 Easy Docs puede retornar en cualquiera de estos dos formatos, basado en el header enviado.
 
