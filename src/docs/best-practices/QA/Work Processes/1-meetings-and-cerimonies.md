@@ -1,0 +1,7 @@
+# Reuniões e cerimônias
+
+As reuniões e cerimônias do time dependem da metodologia ágil adotada, as metodologias mais comuns são o Scrum e o Kanban. É comum que um time utilize uma dessas no dia a dia, mas realize reuniões de outra. Por exemplo, times que utilizam kanban podem realizar uma retrospectiva, que é do scrum. 
+
+É importante que o QA **participe de todas as reuniões e cerimônias** que envolvem o produto, desde refinamento até as retrospectivas e que seja ativo em todas essas reuniões, fomentando no time o assunto de qualidade.  
+
+Por exemplo, nos refinamentos o QA participa citando possíveis falhas que podem ocorrer, pontos de atenção durante o desenvolvimento e testes que os desenvolvedores podem realizar antes de concluir a tarefa. Nas reuniões de estimativas e planejamento o QA pode apresentar possíveis bloqueios que demandem mais tempo de teste, ou tarefas em que o tempo de desenvolvimento é curto, mas o de teste é longo, dessa forma essas tarefas seriam priorizadas no começo de sprint. Na diária é **importante falar sobre o que foi realizado ontem, o que está sendo feito hoje e se existe algum bloqueio.** Em reuniões de review, é importante analisar se a entrega está de acordo os requisitos e critérios de aceite. Por fim, nas retrospectivas o QA pode levar impedimentos que teve durante o ciclo e os erros encontrados. 
