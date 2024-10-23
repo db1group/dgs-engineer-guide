@@ -100,7 +100,7 @@ Automate repetitive tasks and improve the efficiency of DevOps processes.
 
 ## Useful Links
 
-- [Pipeline Execution](./Work%20Processes/4-pipeline-execution.md)
-- [Pipeline Monitoring](./Work%20Processes/5-pipeline-monitoring.md)
-- [Infrastructure Documentation](./Documentation/infrastructure.md)
-- [Creating Automation Scripts](./Work%20Processes/6-script-creation.md)
+- [Pipeline Execution](./work%20processes/4-pipeline-execution.md)
+- [Pipeline Monitoring](./work%20processes/5-pipeline-monitoring.md)
+- [Infrastructure Documentation](./documentation/infrastructure.md)
+- [Creating Automation Scripts](./work%20processes/6-script-creation.md)
