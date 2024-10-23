@@ -36,11 +36,11 @@ Ensure that all pipelines are executed according to established processes and th
 **Evaluation Criteria:**
 
 - **Pipeline Execution**:
-  - All pipelines are executed according to the [Pipeline Execution](./Work%20Processes/4-pipeline-execution.md) process.
+  - All pipelines are executed according to the [Pipeline Execution](./work%20processes/4-pipeline-execution.md) process.
   - Ensure that pipelines are executed in controlled environments representative of the production environment.
 
 - **Pipeline Monitoring**:
-  - All pipelines are monitored according to the [Pipeline Monitoring](./Work%20Processes/5-pipeline-monitoring.md) process.
+  - All pipelines are monitored according to the [Pipeline Monitoring](./work%20processes/5-pipeline-monitoring.md) process.
   - Pipeline metrics and logs should be analyzed to quickly identify and resolve issues.
 
 **Tools Used:**
