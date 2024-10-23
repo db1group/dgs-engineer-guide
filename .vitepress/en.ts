@@ -44,12 +44,58 @@ export const en = defineConfig({
                 link: "best-practices/postmortem-practice",
               },
               {
-                text: "Testing",
+                text: "QA",
                 collapsed: true,
                 items: [
                   {
-                    text: "Bug Documentation",
-                    link: "best-practices/tests/bug-documentation",
+                    text: "QA Work Guidelines",
+                    link: "best-practices/QA/qa-work-guidelines",
+                  },
+                  {
+                    text: "QA Work Processes",
+                    collapsed: true,
+                    items: [
+                      {
+                        text:"Meetings and Cerimonies",
+                        link:"best-practices/QA/Work Processes/1-meetings-and-cerimonies",
+                      },
+                      {
+                        text:"Creating/writing test cases",
+                        link:"best-practices/QA/Work Processes/2-creating-writing-test-cases",
+                      },
+                      {
+                        text:"Test planning",
+                        link:"best-practices/QA/Work Processes/3-test-planning",
+                      },
+                      {
+                        text:"Test execution",
+                        link:"best-practices/QA/Work Processes/4-test-execution",
+                      },
+                      {
+                        text:"Test evidence",
+                        link:"best-practices/QA/Work Processes/5-test-evidence",
+                      },
+                      {
+                        text:"Test results",
+                        link:"best-practices/QA/Work Processes/6-test-results",
+                      },
+                      {
+                        text:"Bug management and retests",
+                        link:"best-practices/QA/Work Processes/7-bug-management-and-retests",
+                      },
+                      {
+                        text:"Shift-left approach",
+                        link:"best-practices/QA/Work Processes/8-shift-left-approach",
+                      },
+                      {
+                        text:"Test heuristics",
+                        link:"best-practices/QA/Work Processes/9-test-heuristics",
+                      },
+                      {
+                        text:"Testing techniques",
+                        link:"best-practices/QA/Work Processes/10-testing-techniques",
+                      },
+                    ]
                   },
                 ],
               },
