@@ -100,7 +100,7 @@ Automatizar tarefas repetitivas e melhorar a eficiência dos processos de DevOps
 
 ## Links Úteis
 
-- [Execução de Pipelines](./Work%20Processes/4-pipeline-execution.md)
-- [Monitoramento de Pipelines](./Work%20Processes/5-pipeline-monitoring.md)
-- [Documentação de Infraestrutura](./Documentation/infrastructure.md)
-- [Criação de Scripts de Automação](./Work%20Processes/6-script-creation.md)
+- [Execução de Pipelines](./work%20processes/4-pipeline-execution.md)
+- [Monitoramento de Pipelines](./work%20processes/5-pipeline-monitoring.md)
+- [Documentação de Infraestrutura](./documentation/infrastructure.md)
+- [Criação de Scripts de Automação](./work%20Processes/6-script-creation.md)
