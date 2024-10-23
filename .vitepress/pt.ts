@@ -44,6 +44,38 @@ export const pt = defineConfig({
                 link: "best-practices/postmortem-practice",
               },
               {
+                text: "DevOps",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Diretrizes de Trabalho do DevOps",
+                    link: "best-practices/devops/devops-work-guidelines",
+                  },
+                  {
+                    text: "Processos de Trabalho do DevOps",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "Execução de Pipelines",
+                        link: "best-practices/devops/work processes/4-pipeline-execution",
+                      },
+                      {
+                        text: "Monitoramento de Pipelines",
+                        link: "best-practices/devops/work processes/5-pipeline-monitoring",
+                      },
+                      {
+                        text: "Criação de Scripts de Automação",
+                        link: "best-practices/devops/work processes/6-script-creation",
+                      },
+                    ],
+                  },
+                  {
+                    text: "Documentação de Infraestrutura",
+                    link: "best-practices/devops/documentation/infrastructure",
+                  },
+                ],
+              },
+              {
                 text: "QA",
                 collapsed: true,
                 items: [
