@@ -80,6 +80,10 @@ export const pt = defineConfig({
                 collapsed: true,
                 items: [
                   {
+                    text: "Jeito DB1 para QA",
+                    link: "best-practices/QA/qa-db1-way",
+                  },
+                  {
                     text: "Diretizes de trabalho do QA",
                     link: "best-practices/QA/qa-work-guidelines",
                   },
