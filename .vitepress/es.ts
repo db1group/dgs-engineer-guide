@@ -86,6 +86,10 @@ export const es = defineConfig({
                 collapsed: true,
                 items: [
                   {
+                    text: "DB1 Way para QA",
+                    link: "best-practices/QA/qa-db1-way",
+                  },
+                  {
                     text: "Directrices de Trabajo del QA",
                     link: "best-practices/QA/qa-work-guideline",
                   },
