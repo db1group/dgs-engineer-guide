@@ -50,6 +50,10 @@ export const es = defineConfig({
                 link: "best-practices/postmortem-practice",
               },
               {
+                text: "Flujo de desarrollo",
+                link: "best-practices/development-flow",
+              },
+              {
                 text: "DevOps",
                 collapsed: true,
                 items: [
