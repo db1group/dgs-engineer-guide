@@ -35,16 +35,52 @@ Além disso, é importante integrar algumas práticas para garantir que a docume
 ## Estrutura
 
 ### Documentação do Negócio:
-    * Explique o que o negócio faz e quais são os seus objetivos principais dentro do contexto da aplicação.
-    * Inclua diagramas de alto nível (C4 Model – Nível 1) para situar o contexto.
+    
+* Explique o que o negócio faz e quais são os seus objetivos principais dentro do contexto da aplicação.
+* Inclua diagramas de alto nível (C4 Model – Nível 1) para situar o contexto.
 
 ### Arquitetura Técnica:
-    * Mapeie as interações entre componentes, sistemas externos e processos internos.
-    * Utilize diagramas dos Níveis 1 e 2 do C4 Model.
+
+* Mapeie as interações entre componentes, sistemas externos e processos internos.
+* Utilize diagramas dos Níveis 1 e 2 do C4 Model.
 
 ### Onboarding e Padrões:
-    * Crie uma seção clara para onboarding técnico, incluindo links para outras documentações e boas práticas.
-    * Documente padrões técnicos esperados em revisões de código.
+
+* Crie uma seção clara para onboarding técnico, incluindo links para outras documentações e boas práticas.
+* Documente padrões técnicos esperados em revisões de código.
+
+### Bibliotecas e Frameworks:
+
+* Documente aspectos sobre bibliotecas e/ou frameworks utilizados que não sejam triviais ou encontrados facilmente em suas documentações oficiais.
+* Explique como e por que essas bibliotecas e/ou frameworks foram escolhidos, problemas que foram contornados e como eles impactam na solução. 
+
+## Evite
+
+### Documentação desatualizada
+
+Evite deixar a documentação desatualizada. Documentação desatualizada pode ser mais prejudicial do que útil, levando a mal-entendidos e erros.
+
+### Redundância
+
+Evite redundâncias, como documentar aspectos técnicos que já estão bem cobertos nas documentações oficiais de bibliotecas e frameworks.
+
+### Documentação apenas para cumprir requisitos
+
+Evite criar documentação apenas para cumprir requisitos formais ou burocráticos. A documentação deve ser útil e prática.
+
+### Documentação excessiva:
+
+Nem tudo precisa ser documentado, foque em documentar apenas o que é realmente necessário e que agrega valor, como arquitetura, fluxos de comunicação e regras de negócio.
+Evite excesso de texto, diagramas e fluxogramas geralmente trazem mais ganho do que textos longos e detalhados.
+
+### Falta de padrões e consistência
+
+Utilize modelos e checklists para garantir que a documentação siga um padrão e cubra todos os requisitos necessários. 
+Se necessário, crie um guia de estilo para a documentação.
+
+### Documentação sem Feedback e/ou melhoria contínua
+
+Incentive o time a sugerir melhorias e a manter a documentação atualizada, inclua práticas de revisão de documentação no dia a dia da equipe.
 
 ## Ferramentas
 
