@@ -68,7 +68,7 @@ Evite redundâncias, como documentar aspectos técnicos que já estão bem cober
 
 Evite criar documentação apenas para cumprir requisitos formais ou burocráticos. A documentação deve ser útil e prática.
 
-### Documentação excessiva:
+### Documentação excessiva
 
 Nem tudo precisa ser documentado, foque em documentar apenas o que é realmente necessário e que agrega valor, como arquitetura, fluxos de comunicação e regras de negócio.
 Evite excesso de texto, diagramas e fluxogramas geralmente trazem mais ganho do que textos longos e detalhados.
