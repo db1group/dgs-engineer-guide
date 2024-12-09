@@ -24,7 +24,7 @@ How can we prevent that? In our opinion, ensuring two things: **good code metric
 
 2. **Metrics** is what **the code tells me** about **where** I should **put effort** to make it better. We currently use [SonarQube](https://www.sonarsource.com/products/sonarqube) for that. It's proven to be a stable and realiable tool for static analysis. We focus on the main indicators of SonarQube (in order to achieve what we describe earlier as our goal): Code Coverage, Maintainability, Duplication Density, Reliability, Security and Security Review.
 
-In order to manage all that, we have created an internal product called [HealthPanel](http://healthpanel.db1.com.br). Its goal is to hold information from every team's processes and metrics from every codebase they touch.
+In order to manage all that, we have created an internal product called [HealthPanel](https://healthpanel.com.br). Its goal is to hold information from every team's processes and metrics from every codebase they touch.
 
 To keep this alive, every time a lead engineer begins working with a team one of his responsabilities is to apply the best practices we've learned in the past decades and manage technical debt. The panel will reflect that and our staff engineers will keep it moving towards evolution.
 
