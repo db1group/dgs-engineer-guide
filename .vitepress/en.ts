@@ -23,8 +23,8 @@ export const en = defineConfig({
             collapsed: false,
             items: [
               {
-                text: "Architecture Drawing",
-                link: "best-practices/architecture-drawing",
+                text: "Technical documentation",
+                link: "best-practices/technical-documentation",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
               {

@@ -2,13 +2,13 @@
 outline: deep
 ---
 
-# Desenho de arquitetura
+# Documentação Técnica
 
 ## Contextualização
 
 A arquitetura da solução pode ser expressa por meio de muitas ferramentas e métodos. A [Linguagem de modelagem unificada (UML)](https://en.wikipedia.org/wiki/Unified_Modeling_Language) é uma linguagem de modelagem de desenvolvimento de uso geral no campo da engenharia de software que tem como objetivo fornecer uma maneira padrão de visualizar o projeto de um sistema.
 
-As soluções tecnológicas podem se tornar muito complexas e, consequentemente, suas representações visuais. Existem muitos frameworks e ferramentas que nos fornecem uma ótima estrutura de documentação, permitindo a governança e o gerenciamento de soluções que vão além das representações visuais. Em um nível prático, recomendamos que você sempre tenha um desenho de arquitetura.
+As soluções tecnológicas podem se tornar muito complexas e, consequentemente, suas representações visuais. Existem muitos frameworks e ferramentas que nos fornecem uma ótima estrutura de documentação, permitindo a governança e o gerenciamento de soluções que vão além das representações visuais. Em um nível prático, recomendamos que você sempre tenha uma documentação técnica.
 
 Você pode se perguntar: o que isso significa? Bem, você já ouviu falar: "Você entende ou quer que eu desenhe?". Por trás dessa pergunta, há um aprendizado que nos diz que talvez desenhar a solução de um problema seja a maneira mais eficaz de explicá-lo.
 
@@ -90,4 +90,4 @@ Por último, mas não menos importante, a DB1 criou um [e-book](https://carreira
 
 - [UML-Wikipedia](https://en.wikipedia.org/wiki/Unified_Modeling_Language)
 - [C4 Model](https://c4model.com)
-- Equipe de engenharia de software da DB1
+- Time de engenharia de software da DB1
