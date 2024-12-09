@@ -29,7 +29,7 @@ Como podemos prevenir isso? Em nossa opinião, garantindo duas coisas: **boas m�
 
 2. **Métrica** é o que **o código me diz** sobre **onde** devo **colocar esforço** para torná-lo melhor. Atualmente, usamos o [SonarQube](https://www.sonarsource.com/products/sonarqube) para isso. Está provado ser uma ferramenta estável e confiável para análise estática de código. Focamos nos principais indicadores do SonarQube (para atingir o que descrevemos anteriormente como nosso objetivo): Cobertura de Código, Manutenibilidade, Densidade de Duplicação, Confiabilidade, Segurança e Revisão de Segurança.
 
-Para gerenciar tudo isso, criamos um produto interno chamado [HealthPanel](http://healthpanel.db1.com.br). Seu objetivo é manter as informações de todos os processos e métricas da equipe de todas as bases de código que eles tocam.
+Para gerenciar tudo isso, criamos um produto interno chamado [HealthPanel](https://healthpanel.com.br). Seu objetivo é manter as informações de todos os processos e métricas da equipe de todas as bases de código que eles tocam.
 
 Para manter isso vivo, toda vez que um engenheiro líder começa a trabalhar com uma equipe, uma de suas responsabilidades é aplicar as melhores práticas que aprendemos nas últimas décadas e gerenciar a dívida técnica. O painel refletirá isso e nossos engenheiros de equipe o manterão em evolução.
 

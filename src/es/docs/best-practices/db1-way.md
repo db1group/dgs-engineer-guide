@@ -24,7 +24,7 @@ La experiencia nos ha enseñado que la deuda técnica nos lleva a una baja capac
 
 2. **Métricas** es lo que **me dice el código** sobre **dónde** debo **esforzarme** para mejorarlo. Actualmente usamos [SonarQube](https://www.sonarsource.com/products/sonarqube) para eso. Ha demostrado ser una herramienta estable y fiable para el análisis estático. Nos enfocamos en los principales indicadores de SonarQube (para lograr lo que describimos anteriormente como nuestro objetivo): Cobertura de código, Mantenibilidad, Densidad de duplicación, Fiabilidad, Seguridad y Revisión de seguridad.
 
-Para gestionar todo eso, hemos creado un producto interno llamado [HealthPanel](http://healthpanel.db1.com.br). Su objetivo es mantener información de los procesos y métricas de cada equipo de cada base de código que tocan.
+Para gestionar todo eso, hemos creado un producto interno llamado [HealthPanel](https://healthpanel.com.br). Su objetivo es mantener información de los procesos y métricas de cada equipo de cada base de código que tocan.
 
 Para mantener esto vivo, cada vez que un ingeniero líder comienza a trabajar con un equipo, una de sus responsabilidades es aplicar las mejores prácticas que hemos aprendido en las últimas décadas y administrar la deuda técnica. El panel reflejará eso y nuestro personal de ingenieros lo mantendrá en movimiento hacia la evolución.
 
