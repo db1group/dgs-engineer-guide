@@ -9,7 +9,7 @@ jobs:
       AWS_S3_BUCKET_NAME: engineerguide.db1.com.br
     strategy:
       matrix:
-        node-version: [18]
+        node-version: [20]
     steps:
       - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}
