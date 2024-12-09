@@ -44,12 +44,98 @@ export const pt = defineConfig({
                 link: "best-practices/postmortem-practice",
               },
               {
-                text: "Testes",
+                text: "Fluxo de desenvolvimento",
+                link: "best-practices/development-flow",
+              },
+              {
+                text: "DevOps",
                 collapsed: true,
                 items: [
                   {
-                    text: "Documentação de Bugs",
-                    link: "best-practices/tests/bug-documentation",
+                    text: "Diretrizes de Trabalho do DevOps",
+                    link: "best-practices/devops/devops-work-guidelines",
+                  },
+                  {
+                    text: "Processos de Trabalho do DevOps",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "Execução de Pipelines",
+                        link: "best-practices/devops/work processes/4-pipeline-execution",
+                      },
+                      {
+                        text: "Monitoramento de Pipelines",
+                        link: "best-practices/devops/work processes/5-pipeline-monitoring",
+                      },
+                      {
+                        text: "Criação de Scripts de Automação",
+                        link: "best-practices/devops/work processes/6-script-creation",
+                      },
+                    ],
+                  },
+                  {
+                    text: "Documentação de Infraestrutura",
+                    link: "best-practices/devops/documentation/infrastructure",
+                  },
+                ],
+              },
+              {
+                text: "QA",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Jeito DB1 para QA",
+                    link: "best-practices/QA/qa-db1-way",
+                  },
+                  {
+                    text: "Diretizes de trabalho do QA",
+                    link: "best-practices/QA/qa-work-guidelines",
+                  },
+                  {
+                    text: "Processos de trabalho do QA",
+                    collapsed: true,
+                    items: [
+                      {
+                        text:"Reuniões e cerimônias",
+                        link:"best-practices/QA/Work Processes/1-meetings-and-cerimonies",
+                      },
+                      {
+                        text:"Criação/escrita de casos de teste",
+                        link:"best-practices/QA/Work Processes/2-creating-writing-test-cases",
+                      },
+                      {
+                        text:"Planejamento de testes",
+                        link:"best-practices/QA/Work Processes/3-test-planning",
+                      },
+                      {
+                        text:"Execução de testes",
+                        link:"best-practices/QA/Work Processes/4-test-execution",
+                      },
+                      {
+                        text:"Evidências de testes",
+                        link:"best-practices/QA/Work Processes/5-test-evidence",
+                      },
+                      {
+                        text:"Resultados dos testes",
+                        link:"best-practices/QA/Work Processes/6-test-results",
+                      },
+                      {
+                        text:"Gestão de defeitos (bugs) e retestes",
+                        link:"best-practices/QA/Work Processes/7-bug-management-and-retests",
+                      },
+                      {
+                        text:"Abordagem Shift-left",
+                        link:"best-practices/QA/Work Processes/8-shift-left-approach",
+                      },
+                      {
+                        text:"Heuristícas de testes",
+                        link:"best-practices/QA/Work Processes/9-test-heuristics",
+                      },
+                      {
+                        text:"Técnicas de testes",
+                        link:"best-practices/QA/Work Processes/10-testing-techniques",
+                      },
+                    ]
                   },
                 ],
               },

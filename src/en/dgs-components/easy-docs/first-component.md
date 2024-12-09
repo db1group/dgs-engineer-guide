@@ -151,7 +151,7 @@ Access the link `http://localhost:6006/` and see your component.
 You must send the desired document format in the Header of the request:
 
 - application/pdf
-- application/html
+- text/html
 
 Easy Docs can return these two formats based on the header sent.
 
