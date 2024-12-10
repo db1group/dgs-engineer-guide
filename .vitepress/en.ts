@@ -96,46 +96,46 @@ export const en = defineConfig({
                     collapsed: true,
                     items: [
                       {
-                        text:"Meetings and Cerimonies",
-                        link:"best-practices/QA/Work Processes/1-meetings-and-cerimonies",
+                        text: "Meetings and Cerimonies",
+                        link: "best-practices/QA/Work Processes/1-meetings-and-cerimonies",
                       },
                       {
-                        text:"Creating/writing test cases",
-                        link:"best-practices/QA/Work Processes/2-creating-writing-test-cases",
+                        text: "Creating/writing test cases",
+                        link: "best-practices/QA/Work Processes/2-creating-writing-test-cases",
                       },
                       {
-                        text:"Test planning",
-                        link:"best-practices/QA/Work Processes/3-test-planning",
+                        text: "Test planning",
+                        link: "best-practices/QA/Work Processes/3-test-planning",
                       },
                       {
-                        text:"Test execution",
-                        link:"best-practices/QA/Work Processes/4-test-execution",
+                        text: "Test execution",
+                        link: "best-practices/QA/Work Processes/4-test-execution",
                       },
                       {
-                        text:"Test evidence",
-                        link:"best-practices/QA/Work Processes/5-test-evidence",
+                        text: "Test evidence",
+                        link: "best-practices/QA/Work Processes/5-test-evidence",
                       },
                       {
-                        text:"Test results",
-                        link:"best-practices/QA/Work Processes/6-test-results",
+                        text: "Test results",
+                        link: "best-practices/QA/Work Processes/6-test-results",
                       },
                       {
-                        text:"Bug management and retests",
-                        link:"best-practices/QA/Work Processes/7-bug-management-and-retests",
+                        text: "Bug management and retests",
+                        link: "best-practices/QA/Work Processes/7-bug-management-and-retests",
                       },
                       {
-                        text:"Shift-left approach",
-                        link:"best-practices/QA/Work Processes/8-shift-left-approach",
+                        text: "Shift-left approach",
+                        link: "best-practices/QA/Work Processes/8-shift-left-approach",
                       },
                       {
-                        text:"Test heuristics",
-                        link:"best-practices/QA/Work Processes/9-test-heuristics",
+                        text: "Test heuristics",
+                        link: "best-practices/QA/Work Processes/9-test-heuristics",
                       },
                       {
-                        text:"Testing techniques",
-                        link:"best-practices/QA/Work Processes/10-testing-techniques",
+                        text: "Testing techniques",
+                        link: "best-practices/QA/Work Processes/10-testing-techniques",
                       },
-                    ]
+                    ],
                   },
                 ],
               },
@@ -156,6 +156,28 @@ export const en = defineConfig({
       "/en/dgs-components/": {
         base: "/en/dgs-components/",
         items: [
+          {
+            text: "Golden Path",
+            collapsed: false,
+            items: [
+              {
+                text: "Introduction",
+                link: "golden-path/introduction",
+              },
+              {
+                text: "Getting Started",
+                link: "golden-path/getting-started",
+              },
+              {
+                text: "Frontend",
+                link: "golden-path/frontend",
+              },
+              {
+                text: "Backend",
+                link: "golden-path/backend",
+              },
+            ],
+          },
           {
             text: "Easy Monitor",
             collapsed: false,
