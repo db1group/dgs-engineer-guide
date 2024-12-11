@@ -169,25 +169,12 @@ export const pt = defineConfig({
                 link: "easy-monitor/getting-started",
               },
               {
-                text: "Conectando",
-                link: "easy-monitor/connecting-to-your-app.md"
-              },
-              {
                 text: "Instalando ELK",
                 link: "easy-monitor/elk-install",
               },
               {
                 text: "FAQ",
                 link: "easy-monitor/faq",
-              },
-              {
-                text: "Instrumentação de aplicações",
-                items: [
-                  {
-                    text: "Apache",
-                    link: "easy-monitor/instrumentation/apache/introduction",
-                  },
-                ],
               },
             ],
           },
