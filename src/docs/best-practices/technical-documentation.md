@@ -84,7 +84,7 @@ Incentive o time a sugerir melhorias e a manter a documentação atualizada, inc
 
 ## Ferramentas
 
-Por último, mas não menos importante, a DB1 criou um [e-book](https://carreira.db1group.com/desenho-de-arquitetura-de-software) sobre o c4model que pode ajudá-lo a começar rapidamente.
+Por último, mas não menos importante, a DB1 criou um [e-book](/assets/ebooks/GEP_2021_EBOOK_ARQUITETURA.pdf) sobre o c4model que pode ajudá-lo a começar rapidamente.
 
 ## Créditos
 

@@ -2,6 +2,7 @@ node_modules
 .vitepress/dist
 .vitepress/cache
 diffs/*
+.DS_Store
 
 # yarn not using Zero-Installs
 .pnp.*
