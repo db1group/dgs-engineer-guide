@@ -13,7 +13,7 @@ After checking out c4model documentation you will find out that it's very easy t
 
 To make this even better, there's a way to turn code into a c4model diagram through [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML). You can add this to your code review process, making sure that every change in code reflects to the diagram. From time to time you can check if your solution is moving towards the target defined by you and your team (from a technical perspective).
 
-Last but not least, DB1 has created an [e-book](https://carreira.db1group.com/desenho-de-arquitetura-de-software) about c4model that might help you for a quick start.
+Last but not least, DB1 has created an [e-book](/assets/ebooks/GEP_2021_EBOOK_ARQUITETURA.pdf) about c4model that might help you for a quick start.
 
 Credits
 

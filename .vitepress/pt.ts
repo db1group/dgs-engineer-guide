@@ -23,8 +23,8 @@ export const pt = defineConfig({
             collapsed: false,
             items: [
               {
-                text: "Desenho de arquitetura",
-                link: "best-practices/architecture-drawing",
+                text: "Documentação técnica",
+                link: "best-practices/technical-documentation",
               },
               { text: "CI/CD", link: "best-practices/ci-cd" },
               {
