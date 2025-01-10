@@ -1,21 +1,87 @@
-# Dibujo arquitectónico
-La arquitectura de soluciones puede expresarse mediante muchas herramientas y métodos. El [Lenguaje Unificado de Modelado (UML)](https://en.wikipedia.org/wiki/Unified_Modeling_Language) es un lenguaje de modelado de desarrollo de uso general en el campo de la ingeniería de software que pretende ofrecer una forma estándar de visualizar el diseño de un sistema.
+# Documentación Técnica
 
-Las soluciones tecnológicas pueden llegar a ser muy complejas y, en consecuencia, sus representaciones visuales. Hay muchos marcos y herramientas que nos proporcionan una gran estructura de documentación, lo que permite una gobernanza y una gestión de las soluciones que va más allá de las representaciones visuales. Llevándolo a un nivel práctico, te animamos a que tengas siempre un dibujo de la arquitectura.
+## Contextualización
 
-Quizá se pregunte: ¿qué significa eso? Bueno, ¿ha oído alguna vez: "¿Lo entiendes o quieres que lo dibuje?". Detrás de esa pregunta hay un aprendizaje que nos dice que quizá dibujar la solución de un problema sea la forma más eficaz de explicarlo.
+La arquitectura de la solución puede expresarse mediante muchas herramientas y métodos. El [Lenguaje Unificado de Modelado (UML)](https://en.wikipedia.org/wiki/Unified_Modeling_Language) es un lenguaje de modelado de desarrollo de propósito general en el campo de la ingeniería de software que tiene como objetivo proporcionar una forma estándar de visualizar el diseño de un sistema.
 
-Programar software empresarial consiste en interactuar con diferentes personas, departamentos e incluso empresas y hacer que todos encajen en una solución. Definitivamente creemos que un buen dibujo que represente la solución de tu problema es la forma más efectiva de conseguir que todo el mundo lo entienda. Dibujar recuadros y conectarlos con flechas puede ser la forma más fácil de empezar, e incluso eso empezará a darle beneficios. En DB1 fomentamos el uso de [c4model](https://c4model.com) para hacerlo. Es una herramienta sencilla, práctica y gratuita para representar sus soluciones en 4 niveles de detalle. Cada uno de ellos será más eficaz en función del nivel de la discusión y del público implicado.
+Las soluciones tecnológicas pueden volverse muy complejas y, en consecuencia, también sus representaciones visuales. Existen muchos frameworks y herramientas que nos brindan una excelente estructura de documentación, permitiendo la gobernanza y gestión de soluciones más allá de las representaciones visuales. En un nivel práctico, recomendamos siempre tener documentación técnica.
 
-¿Cuántas veces ha detenido su trabajo para explicar a alguien una regla de negocio o cómo encajan las piezas de software en el panorama general? Creemos que un buen dibujo de c4model puede responder a ese tipo de preguntas en su lugar. Siempre que el equipo tenga una pregunta, lo primero que debe hacer es preguntar al diagrama. Esto ayudará a mantenerlo actualizado, significativo y útil en general para usted y su equipo.
+Puede que te preguntes: ¿qué significa esto? Bueno, ¿alguna vez has escuchado la frase: "¿Entiendes o quieres que lo dibuje?" Detrás de esta pregunta hay una lección que sugiere que quizás dibujar la solución a un problema sea la forma más eficaz de explicarlo.
 
-Después de revisar la documentación de c4model descubrirás que es muy fácil de usar y práctico. Escriba algunos diagramas y utilice la [lista de comprobación de revisión de diagramas](https://c4model.com/review) para garantizar que se ajusta a sus mejores prácticas.
+## ¿Por qué documentar?
 
-Para hacerlo aún mejor, hay una manera de convertir el código en un diagrama c4model a través de [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML). Puedes añadir esto a tu proceso de revisión de código, asegurándote de que cada cambio en el código se refleja en el diagrama. De vez en cuando puedes comprobar si tu solución se está moviendo hacia el objetivo definido por ti y tu equipo (desde una perspectiva técnica).
+Programar software empresarial implica interactuar con diferentes personas, departamentos e incluso empresas, y hacer que todo encaje en una solución. Definitivamente creemos que un buen dibujo que represente la solución a tu problema es la forma más eficaz de involucrar a todos. Dibujar cajas y conectarlas con flechas puede ser la manera más sencilla de comenzar, y hasta esto traerá beneficios. En DB1, fomentamos el uso del [Modelo C4](https://c4model.com) para este propósito. Es una herramienta simple, práctica y gratuita para representar tus soluciones en cuatro niveles de detalle. Cada uno será más efectivo dependiendo del nivel de discusión y del público involucrado.
 
-Por último, pero no por ello menos importante, DB1 ha creado un [e-book](/assets/ebooks/GEP_2021_EBOOK_ARQUITETURA.pdf) sobre c4model que puede ayudarte a empezar rápidamente.
+¿Cuántas veces has detenido tu trabajo para explicar una regla de negocio o cómo las piezas del software encajan en el panorama general? Creemos que un buen diagrama del [Modelo C4](https://c4model.com) puede responder este tipo de preguntas en lugar de ti. Siempre que el equipo tenga una duda, lo primero que debe hacer es consultar el diagrama. Esto ayudará a mantenerlo actualizado, significativo y generalmente útil para ti y tu equipo.
 
-Créditos
+Después de revisar la documentación del [Modelo C4](https://c4model.com), descubrirás que es muy fácil y práctico de usar. Crea algunos diagramas y utiliza la lista de verificación para revisión de diagramas para asegurarte de estar alineado con las mejores prácticas.
+
+Para mejorar aún más esto, existe una forma de convertir el código en un diagrama del [Modelo C4](https://c4model.com) mediante [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML). Puedes agregar esto a tu proceso de revisión de código, asegurándote de que cada cambio en el código se refleje en el diagrama. De vez en cuando, puedes verificar si la solución está alineada con los objetivos definidos por ti y tu equipo (desde una perspectiva técnica).
+
+Además, es importante integrar algunas prácticas para garantizar que la documentación arquitectónica se mantenga actualizada y relevante.
+
+## Documentación como Herramienta Viva
+
+**Automatización**: siempre que sea posible, automatiza la generación de diagramas y documentos. Herramientas como TEMOC o scripts personalizados ayudan a alinear la documentación con el código.
+
+**Revisión Continua**: fomenta una cultura donde la documentación se revise y ajuste cada vez que se consulte. Si es posible, incluye la revisión documental como requisito en el proceso de revisión del código.
+
+**Relevancia**: prioriza contenidos que aporten valor, como reglas empresariales, flujos de comunicación entre sistemas y diagramas. Evita redundancias como documentar aspectos técnicos ya cubiertos en las documentaciones oficiales.
+
+## Estructura
+
+### Documentación del Negocio:
+
+- Explica qué hace el negocio y cuáles son sus objetivos principales dentro del contexto de la aplicación.
+- Incluye diagramas a alto nivel (Modelo C4 – Nivel 1) para situar el contexto.
+
+### Arquitectura Técnica:
+
+- Mapea las interacciones entre componentes, sistemas externos y procesos internos.
+- Utiliza diagramas del Nivel 1 y Nivel 2 del Modelo C4.
+
+### Onboarding y Estándares:
+
+- Crea una sección clara para onboarding técnico, incluyendo enlaces a otras documentaciones y buenas prácticas.
+- Documenta estándares técnicos esperados durante las revisiones del código.
+
+### Bibliotecas y Frameworks:
+
+- Documenta aspectos sobre bibliotecas o frameworks utilizados que no sean triviales o fácilmente encontrados en sus documentaciones oficiales.
+- Explica cómo y por qué se eligieron estas bibliotecas/frameworks, los problemas resueltos y cómo impactan en la solución.
+
+## Evita
+
+### Documentación Desactualizada
+
+Evita dejar desactualizada la documentación. La documentación desactualizada puede ser más perjudicial que útil, llevando a malentendidos y errores.
+
+### Redundancia
+
+Evita redundancias como documentar aspectos técnicos ya bien cubiertos en las documentaciones oficiales.
+
+### Documentación Solo por Cumplir Requisitos
+
+Evita crear documentación únicamente por cumplir requisitos formales o burocráticos. La documentación debe ser útil y práctica.
+
+### Documentación Excesiva
+
+No todo necesita ser documentado; enfócate en documentar lo realmente necesario y valioso, como arquitectura, flujos comunicativos y reglas empresariales. Evita textos largos; los diagramas suelen aportar más valor.
+
+### Falta de Estándares y Consistencia
+
+Utiliza plantillas y listas de verificación para garantizar que la documentación siga un formato estándar cubriendo todos los requisitos necesarios. Si es necesario, crea una guía estilística para documentación.
+
+### Documentación Sin Feedback o Mejora Continua
+
+Incentiva al equipo a sugerir mejoras y mantener actualizada la documentación. Incluye prácticas para revisión documental en las rutinas diarias del equipo.
+
+## Herramientas
+
+Por último, pero no menos importante, DB1 creó un [e-book](/assets/ebooks/GEP_2021_EBOOK_ARQUITETURA.pdf) sobre el Modelo C4 que puede ayudarte a comenzar rápidamente.
+
+## Créditos
 
 - [UML-Wikipedia](https://en.wikipedia.org/wiki/Unified_Modeling_Language)
-- [C4model](https://c4model.com)
+- [Modelo C4](https://c4model.com)
+- Equipo de Ingeniería de Software DB1
