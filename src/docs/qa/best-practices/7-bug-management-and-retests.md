@@ -12,7 +12,7 @@ Por hábito, todo comportamento não previsto encontrado durante os testes são 
 
 - **Causa-raiz** é o que motivou o erro a ser cometido e estas podem ser diversas, como pobreza de informações em documentações de negócio, distração, não entendimento de uma regra, ambiguidade de requisitos, falta de experiência na função etc. 
 
-![alt text](../../../../public/img/docs/bug.png)
+![alt text](../../../public/img/docs/bug.png)
 
 Sabendo disso, a correta gestão de defeitos (bugs) nos proporciona visibilidade e rastreabilidade de problemas e pode nos prover informações para resolver a causa-raiz que motivou o erro e por consequência, criou o bug gerando uma falha no sistema. 
 

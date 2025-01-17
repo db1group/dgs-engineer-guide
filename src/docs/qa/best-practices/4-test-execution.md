@@ -4,7 +4,7 @@ A execução de teste consiste em rodar o teste planejado e comparar o resultado
 
 ## Planejamento de teste:
 
-Verifique se o [Planejamento de testes](../Work%20Processes/3-test-planning.md) foi realizado e se está atualizado, execute o que foi planejado, realize a [Evidência dos testes](../Work%20Processes/5-test-evidence.md) e verifique os Resultados.  
+Verifique se o [Planejamento de testes](../best-practices/3-test-planning.md) foi realizado e se está atualizado, execute o que foi planejado, realize a [Evidência dos testes](../best-practices/5-test-evidence.md) e verifique os Resultados.  
 
 ## Versão do software:
 

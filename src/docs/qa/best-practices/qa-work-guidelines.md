@@ -18,9 +18,9 @@ Nosso papel como QA é **garantir que os processos existam e funcionem corretame
 
 **Critérios de Avaliação:**
 
-- Todos os testes são executados conforme o processo de [Execução de testes](../QA/Work%20Processes/4-test-execution.md). 
+- Todos os testes são executados conforme o processo de [Execução de testes](../best-practices/4-test-execution.md). 
 
-- Todos os testes são evidenciados conforme o processo de [Evidências de testes](../QA/Work%20Processes/5-test-evidence.md). 
+- Todos os testes são evidenciados conforme o processo de [Evidências de testes](../best-practices/5-test-evidence.md). 
 
 ## 3. Documentação de qualidade
 
@@ -38,13 +38,13 @@ Nosso papel como QA é **garantir que os processos existam e funcionem corretame
 
 **Critérios de Avaliação:**
 
-- Todos os testes são criados conforme o processo de [Criação/Escrita de Casos de Teste](../QA/Work%20Processes/2-creating-writing-test-cases.md). 
+- Todos os testes são criados conforme o processo de [Criação/Escrita de Casos de Teste](../best-practices/2-creating-writing-test-cases.md). 
 
 - O QA tem conhecimento prévio do que será testado, permitindo a realização de um planejamento adequado. 
 
 - Existe tempo hábil para realizar o planejamento dos testes. 
 
-- O planejamento inclui a aplicação de [Técnicas de testes](../QA/Work%20Processes/10-testing-techniques.md) para maior assertividade. 
+- O planejamento inclui a aplicação de [Técnicas de testes](../best-practices/10-testing-techniques.md) para maior assertividade. 
 
 - Os testes planejados estão organizados e são rastreáveis em uma ferramenta de acesso ao time.
 
@@ -64,9 +64,9 @@ Nosso papel como QA é **garantir que os processos existam e funcionem corretame
 
 **Critérios de Avaliação:**
 
-- Erros internos (encontrados pelo QA) e externos (encontrados pelo cliente) seguem o modelo de [Gestão de bugs e retestes](../QA/Work%20Processes/7-bug-management-and-retests.md)
+- Erros internos (encontrados pelo QA) e externos (encontrados pelo cliente) seguem o modelo de [Gestão de bugs e retestes](../best-practices/7-bug-management-and-retests.md)
 
-- O processo de criação de tarefas de erros é bem definido pelo projeto, desta forma, o QA pode abrir tarefas de erros internos/externos conforme o [padrão](../QA/Work%20Processes/7-bug-management-and-retests.md).
+- O processo de criação de tarefas de erros é bem definido pelo projeto, desta forma, o QA pode abrir tarefas de erros internos/externos conforme o [padrão](../best-practices/7-bug-management-and-retests.md).
 
 
 ## 7. Ambiente de homologação

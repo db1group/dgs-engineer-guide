@@ -47,7 +47,7 @@ Além disso, considere fazer as seguintes práticas:
 
    Devemos tentar limitar o número de linhas de código para revisão em uma única sessão. Nosso cérebro não consegue processar tantas informações de uma só vez. O número ideal de LOC é de 200 a 400 linhas do núcleo em uma única vez, o que normalmente leva de 60 a 90 minutos.
 
-[A pirâmide de revisão de código](/img/the-code-review-pyramid.jpeg)
+[A pirâmide de revisão de código](../../../public/img/docs/the-code-review-pyramid.jpeg)
 
 Portanto, agora você sabe o que procurar em um processo de revisão de código, bem como as boas práticas ao fazê-lo. Agora você verá uma maneira de escrever comentários significativos no código do seu colega.
 

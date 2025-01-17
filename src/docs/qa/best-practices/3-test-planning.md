@@ -4,7 +4,7 @@ O planejamento de testes é uma atividade essencial para garantir que todos os a
 
 ## Alinhamento com o Ciclo de Desenvolvimento: 
 
-O planejamento de testes deve começar no início da sprint ou da tarefa. Isso garante que a equipe de QA esteja alinhada com os objetivos do desenvolvimento e possa preparar o ambiente, dados e casos de teste com antecedência. Verifique a documentação de [Abordagem shift left](../Work%20Processes/8-shift-left-approach.md) no teste.
+O planejamento de testes deve começar no início da sprint ou da tarefa. Isso garante que a equipe de QA esteja alinhada com os objetivos do desenvolvimento e possa preparar o ambiente, dados e casos de teste com antecedência. Verifique a documentação de [Abordagem shift left](../best-practices/8-shift-left-approach.md) no teste.
 
 ## Definição de Escopo:
 
