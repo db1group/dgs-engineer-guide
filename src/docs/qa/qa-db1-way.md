@@ -31,15 +31,15 @@ Como DB1, entendemos que a qualidade de um software não se mede apenas pela aus
 
 ### O que e como medimos?
 
-| Métrica                     | Definição                                                                                   | Objetivo                                                                                  | Como medir                                          |
-|-----------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|----------------------------------------------------|
-| **Índice de Erros de Versão (IEV)** | Quantidade de bugs encontrados pelo QA antes da entrega ao cliente.                                | Maximizar a detecção de bugs internamente, reduzindo os erros percebidos pelo cliente.    | Total de bugs encontrados pelo QA durante os testes. |
-| **Índice de Erros de Cliente (IEC)** | Bugs relatados pelo cliente após a entrega da versão.                                            | Reduzir continuamente, alinhando expectativas do cliente e aumentando confiança nas entregas. | Total de bugs reportados pelo cliente após a entrega. |
-| **Índice de Erros Total (IET)**     | Soma dos bugs encontrados pelo QA (IEV) e pelo cliente (IEC).                                    | Monitorar o volume geral de bugs e identificar tendências.                               | IEV + IEC                                           |
-| **Severidade dos Bugs**             | Classificação do impacto dos bugs.                                                               | Direcionar esforços para resolução conforme impacto.                                     | Identificação do impacto e categorização durante o registro do bug. |
-| **Tipos de Bugs**                   | Categorização por área do sistema afetada.                                                        | Entender os pontos críticos do sistema e priorizar melhorias.                           | Análise das categorias ao registrar e consolidar bugs. |
-| **Esforço para Correção e Reteste** | Horas gastas para corrigir e validar defeitos encontrados.                                        | Reduzir desperdício de tempo em correções e retrabalhos, promovendo prevenção de defeitos. | Registrar horas gastas por entrega e consolidar mensalmente. |
-| **Densidade de Bugs**               | Relação entre o esforço de desenvolvimento e o esforço gasto na correção de bugs.                 | Manter o índice baixo, indicando um processo de desenvolvimento eficiente.                | Horas gastas em correções / Horas de desenvolvimento. |
+| **Métrica**| **Definição**| **Objetivo**|
+|-----------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| **Índice de Erros de Versão (IEV)** | Quantidade de bugs encontrados pelo QA antes da entrega ao cliente.                              | Maximizar a detecção de bugs internamente, reduzindo os erros percebidos pelo cliente. |
+| **Índice de Erros de Cliente (IEC)** | Bugs relatados pelo cliente após a entrega da versão.                                          | Reduzir continuamente, alinhando expectativas do cliente e aumentando confiança nas entregas. |
+| **Índice de Erros Total (IET)**     | Soma dos bugs encontrados pelo QA (IEV) e pelo cliente (IEC).                                  | Monitorar o volume geral de bugs e identificar tendências.                             |
+| **Severidade dos Bugs**             | Classificação do impacto dos bugs.                                                             | Direcionar esforços para resolução conforme impacto.                                   |
+| **Tipos de Bugs**                   | Categorização por área do sistema afetada.                                                      | Entender os pontos críticos do sistema e priorizar melhorias.                         |
+| **Esforço para Correção e Reteste** | Horas gastas para corrigir e validar defeitos encontrados.                                      | Reduzir desperdício de tempo em correções e retrabalhos, promovendo prevenção de defeitos. |
+| **Densidade de Bugs**               | Relação entre o esforço de desenvolvimento e o esforço gasto na correção de bugs.               | Manter o índice baixo, indicando um processo de desenvolvimento eficiente.            |               
 
 
 ## Nível de saúde dos testes
@@ -55,6 +55,12 @@ Analisamos mensalmente a maturidade e saúde dos processos de teste dentro dos p
 - Se os testes são comprometidos por atrasos em outras fases do desenvolvimento.
 
 Desta forma, além de verificar a evolução das métricas de qualidade, garantimos a saúde do processo de testes dentro dos times.
+
+| **Nível de Saúde QA**| |
+|---------------------|--------------|
+| **>= 80%**          | Saudável     |
+| **>= 60% e < 80%**  | Degradado    |
+| **< 60%**           | Doente       |
 
 
 

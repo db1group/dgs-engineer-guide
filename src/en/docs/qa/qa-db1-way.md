@@ -31,15 +31,16 @@ At DB1, we understand that software quality is not just about the absence of bug
 
 ### What and How Do We Measure?
 
-| Metric                     | Definition                                                                                   | Objective                                                                                  | How to Measure                                      |
-|----------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|----------------------------------------------------|
-| **Version Error Index (VEI)** | Number of bugs found by QA before delivery to the client.                                     | Maximize internal bug detection, reducing client-reported errors.                        | Total bugs found by QA during testing.             |
-| **Client Error Index (CEI)** | Bugs reported by the client after delivery.                                                 | Continuously reduce, aligning client expectations and increasing trust in deliveries.     | Total bugs reported by the client post-delivery.   |
-| **Total Error Index (TEI)**  | Sum of bugs found by QA (VEI) and by the client (CEI).                                      | Monitor overall bug volume and identify trends.                                           | VEI + CEI                                          |
-| **Bug Severity**            | Classification of the bug’s impact.                                                         | Focus efforts on resolution according to impact.                                          | Impact identification and categorization when logging the bug. |
-| **Bug Types**               | Categorization by affected system area.                                                     | Understand system critical points and prioritize improvements.                            | Analyze categories when registering and consolidating bugs.      |
-| **Correction and Retest Effort** | Hours spent correcting and validating identified defects.                                   | Minimize wasted time on corrections and rework, promoting defect prevention.              | Log hours spent per delivery and consolidate monthly.           |
-| **Bug Density**             | Ratio of development effort to bug correction effort.                                        | Maintain a low index, indicating an efficient development process.                        | Correction hours / Development hours.              |
+| **Metric**                  | **Definition**                                                                          | **Objective**                                                                         |
+|-----------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| **Version Error Index (VEI)** | Number of bugs found by QA before delivery to the client.                              | Maximize internal bug detection, reducing errors perceived by the client.            |
+| **Client Error Index (CEI)** | Bugs reported by the client after version delivery.                                    | Continuously reduce this metric by aligning client expectations and increasing trust. |
+| **Total Error Index (TEI)**  | Sum of bugs found by QA (VEI) and those reported by the client (CEI).                  | Monitor the overall volume of bugs and identify trends.                              |
+| **Bug Severity**             | Classification of bug impact.                                                         | Focus efforts on resolution according to impact.                                     |
+| **Bug Types**                | Categorization by affected system areas.                                               | Identify system-critical points and prioritize improvements.                         |
+| **Effort for Fixes and Retests** | Hours spent fixing and validating discovered defects.                               | Reduce wasted time on corrections and rework, promoting defect prevention.           |
+| **Bug Density**              | Ratio between development effort and effort spent fixing bugs.                         | Keep the index low, indicating an efficient development process.                     |
+
 
 ---
 
@@ -56,6 +57,12 @@ We assess the maturity and health of test processes within projects monthly, ide
 - If testing is compromised by delays in other development phases.
 
 This way, in addition to monitoring the evolution of quality metrics, we ensure the health of the testing process within teams.
+
+| **QA Health Level**| |
+|---------------------|--------------|
+| **>= 80%**          | Healthy     |
+| **>= 60% and < 80%**  | Degraded    |
+| **< 60%**           | Sick       |
 
 ---
 

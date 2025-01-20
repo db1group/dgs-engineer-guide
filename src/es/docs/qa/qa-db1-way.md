@@ -31,15 +31,16 @@ En DB1, entendemos que la calidad de un software no solo se mide por la ausencia
 
 ### ¿Qué y Cómo Medimos?
 
-| Métrica                     | Definición                                                                                   | Objetivo                                                                                  | Cómo Medir                                        |
-|-----------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------------------------------------|
-| **Índice de Errores de Versión (IEV)** | Cantidad de errores encontrados por QA antes de la entrega al cliente.                             | Maximizar la detección de errores internamente, reduciendo los errores reportados por el cliente. | Total de errores encontrados por QA durante las pruebas. |
-| **Índice de Errores de Cliente (IEC)** | Errores reportados por el cliente después de la entrega.                                        | Reducir continuamente, alineando las expectativas del cliente y aumentando la confianza en las entregas. | Total de errores reportados por el cliente después de la entrega. |
-| **Índice de Errores Total (IET)**     | Suma de los errores encontrados por QA (IEV) y por el cliente (IEC).                           | Monitorear el volumen general de errores e identificar tendencias.                         | IEV + IEC                                         |
-| **Severidad de los Errores**           | Clasificación del impacto de los errores.                                                        | Dirigir los esfuerzos de resolución según el impacto.                                     | Identificación del impacto y categorización durante el registro del error. |
-| **Tipos de Errores**                  | Categorización por área del sistema afectada.                                                     | Comprender los puntos críticos del sistema y priorizar mejoras.                          | Análisis de las categorías al registrar y consolidar errores.      |
-| **Esfuerzo para la Corrección y Retesteo** | Horas gastadas para corregir y validar los defectos encontrados.                                | Reducir el desperdicio de tiempo en correcciones y retrabajos, promoviendo la prevención de defectos. | Registrar las horas gastadas por entrega y consolidarlas mensualmente. |
-| **Densidad de Errores**               | Relación entre el esfuerzo de desarrollo y el esfuerzo gastado en la corrección de errores.      | Mantener el índice bajo, lo que indica un proceso de desarrollo eficiente.                | Horas gastadas en correcciones / Horas de desarrollo.               |
+| **Métrica**                 | **Definición**                                                                         | **Objetivo**                                                                         |
+|-----------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| **Índice de Errores de Versión (IEV)** | Número de errores encontrados por QA antes de la entrega al cliente.                        | Maximizar la detección interna de errores, reduciendo los errores percibidos por el cliente. |
+| **Índice de Errores del Cliente (IEC)** | Errores reportados por el cliente después de la entrega de la versión.                      | Reducir continuamente esta métrica alineando las expectativas del cliente y aumentando la confianza. |
+| **Índice Total de Errores (ITE)**      | Suma de los errores encontrados por QA (IEV) y los reportados por el cliente (IEC).        | Monitorear el volumen total de errores e identificar tendencias.                     |
+| **Severidad de los Errores**          | Clasificación del impacto de los errores.                                                  | Dirigir los esfuerzos hacia la resolución según el impacto.                         |
+| **Tipos de Errores**                  | Clasificación por áreas del sistema afectadas.                                             | Identificar puntos críticos del sistema y priorizar mejoras.                        |
+| **Esfuerzo para Corrección y Retesteo** | Horas dedicadas a corregir y validar los defectos encontrados.                            | Reducir el tiempo perdido en correcciones y retrabajos, promoviendo la prevención de defectos. |
+| **Densidad de Errores**               | Relación entre el esfuerzo de desarrollo y el esfuerzo dedicado a corregir errores.        | Mantener el índice bajo, indicando un proceso de desarrollo eficiente.              |
+
 
 ---
 
@@ -56,6 +57,12 @@ Evaluamos mensualmente la madurez y la salud de los procesos de pruebas dentro d
 - Si las pruebas se ven comprometidas por retrasos en otras fases del desarrollo.
 
 De esta manera, además de monitorear la evolución de las métricas de calidad, garantizamos la salud del proceso de pruebas dentro de los equipos.
+
+| **Nível de Salud QA**| |
+|---------------------|--------------|
+| **>= 80%**          | Saludable     |
+| **>= 60% y < 80%**  | Degradado    |
+| **< 60%**           | Enfermo       |
 
 ---
 
