@@ -36,11 +36,11 @@ Assegurar que todos os pipelines sejam executados de acordo com os processos est
 **Critérios de Avaliação:**
 
 - **Execução de Pipelines**:
-  - Todos os pipelines são executados conforme o processo de [Execução de pipelines](./work%20processes/4-pipeline-execution.md).
+  - Todos os pipelines são executados conforme o processo de [Execução de pipelines](./documentation/work%20processes/4-pipeline-execution.md).
   - Garantir que os pipelines sejam executados em ambientes controlados e representativos do ambiente de produção.
 
 - **Monitoramento de Pipelines**:
-  - Todos os pipelines são monitorados conforme o processo de [Monitoramento de pipelines](./work%20processes/5-pipeline-monitoring.md).
+  - Todos os pipelines são monitorados conforme o processo de [Monitoramento de pipelines](./documentation/work%20processes/5-pipeline-monitoring.md).
   - As métricas e logs dos pipelines devem ser analisados para identificar e resolver problemas rapidamente.
 
 **Ferramentas Utilizadas:**
@@ -100,7 +100,7 @@ Automatizar tarefas repetitivas e melhorar a eficiência dos processos de DevOps
 
 ## Links Úteis
 
-- [Execução de Pipelines](./work%20processes/4-pipeline-execution.md)
-- [Monitoramento de Pipelines](./work%20processes/5-pipeline-monitoring.md)
+- [Execução de Pipelines](./documentation/work%20processes/4-pipeline-execution.md)
+- [Monitoramento de Pipelines](./documentation/work%20processes/5-pipeline-monitoring.md)
 - [Documentação de Infraestrutura](./documentation/infrastructure.md)
-- [Criação de Scripts de Automação](./work%20processes/6-script-creation.md)
+- [Criação de Scripts de Automação](./documentation/work%20processes/6-script-creation.md)

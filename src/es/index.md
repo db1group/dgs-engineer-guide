@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: La Guía
-      link: /docs/best-practices/db1-way
+      link: /es/docs/engineering/db1-way
     - theme: alt
       text: Nuestros Aceleradores
       link: /es/dgs-components/easy-monitor/introduction

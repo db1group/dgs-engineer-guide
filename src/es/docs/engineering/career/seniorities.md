@@ -1,4 +1,4 @@
-# Antigüedades
+# Senioridad
 Una empresa de tecnología se basa en **personas talentosas**, esa es la única forma en que la innovación, la productividad y la relevancia real en el mercado pueden tener lugar.
 
 Entonces, **¿qué esperamos de** los talentos que tenemos? Más específicamente, ¿qué esperamos de **nuestros ingenieros de software**?

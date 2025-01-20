@@ -13,141 +13,150 @@ export const pt = defineConfig({
         base: "/docs/",
         items: [
           {
-            text: "O Guia",
+            text: "Engenharia",
             collapsed: false,
 
-            items: [{ text: "Jeito DB1", link: "best-practices/db1-way" }],
-          },
-          {
-            text: "Práticas Recomendadas",
-            collapsed: false,
             items: [
+              { text: "Jeito DB1", link: "engineering/db1-way" },
               {
-                text: "Documentação técnica",
-                link: "best-practices/technical-documentation",
-              },
-              { text: "CI/CD", link: "best-practices/ci-cd" },
-              {
-                text: "Testes automatizados",
-                link: "best-practices/automated-test.md",
-              },
-              { text: "Revisão de código", link: "best-practices/code-review" },
-              { text: "Guia de estilos", link: "best-practices/code-style" },
-              { text: "Observabilidade", link: "best-practices/observability" },
-              { text: "Solid", link: "best-practices/SOLID" },
-              {
-                text: "Estratégia de controle de versão",
-                link: "best-practices/versioning-strategy",
-              },
-              {
-                text: "Pratica de Post Mortem",
-                link: "best-practices/postmortem-practice",
-              },
-              {
-                text: "Fluxo de desenvolvimento",
-                link: "best-practices/development-flow",
-              },
-              {
-                text: "DevOps",
+                text: "Práticas Recomendadas",
                 collapsed: true,
                 items: [
                   {
-                    text: "Diretrizes de Trabalho do DevOps",
-                    link: "best-practices/devops/devops-work-guidelines",
+                    text: "Documentação técnica",
+                    link: "engineering/best-practices/technical-documentation",
+                  },
+                  { text: "CI/CD", link: "engineering/best-practices/ci-cd" },
+                  {
+                    text: "Testes automatizados",
+                    link: "engineering/best-practices/automated-test.md",
+                  },
+                  { text: "Revisão de código", link: "engineering/best-practices/code-review" },
+                  { text: "Guia de estilos", link: "engineering/best-practices/code-style" },
+                  { text: "Observabilidade", link: "engineering/best-practices/observability" },
+                  { text: "Solid", link: "engineering/best-practices/SOLID" },
+                  {
+                    text: "Estratégia de controle de versão",
+                    link: "engineering/best-practices/versioning-strategy",
                   },
                   {
-                    text: "Processos de Trabalho do DevOps",
+                    text: "Pratica de Post Mortem",
+                    link: "engineering/best-practices/postmortem-practice",
+                  },
+                  {
+                    text: "Fluxo de desenvolvimento",
+                    link: "engineering/best-practices/development-flow",
+                  },
+                  {
+                    text: "DevOps",
                     collapsed: true,
                     items: [
                       {
-                        text: "Execução de Pipelines",
-                        link: "best-practices/devops/work processes/4-pipeline-execution",
+                        text: "Diretrizes de Trabalho do DevOps",
+                        link: "engineering/best-practices/devops/devops-work-guidelines",
                       },
                       {
-                        text: "Monitoramento de Pipelines",
-                        link: "best-practices/devops/work processes/5-pipeline-monitoring",
+                        text: "Processos de Trabalho do DevOps",
+                        collapsed: true,
+                        items: [
+                          {
+                            text: "Execução de Pipelines",
+                            link: "engineering/best-practices/devops/documentation/work processes/4-pipeline-execution",
+                          },
+                          {
+                            text: "Monitoramento de Pipelines",
+                            link: "engineering/best-practices/devops/documentation/work processes/5-pipeline-monitoring",
+                          },
+                          {
+                            text: "Criação de Scripts de Automação",
+                            link: "engineering/best-practices/devops/documentation/work processes/6-script-creation",
+                          },
+                        ],
                       },
                       {
-                        text: "Criação de Scripts de Automação",
-                        link: "best-practices/devops/work processes/6-script-creation",
+                        text: "Documentação de Infraestrutura",
+                        link: "engineering/best-practices/devops/documentation/infrastructure",
                       },
                     ],
-                  },
-                  {
-                    text: "Documentação de Infraestrutura",
-                    link: "best-practices/devops/documentation/infrastructure",
                   },
                 ],
               },
               {
-                text: "QA",
+                text: "Carreira",
                 collapsed: true,
                 items: [
                   {
-                    text: "Jeito DB1 para QA",
-                    link: "best-practices/QA/qa-db1-way",
-                  },
-                  {
-                    text: "Diretizes de trabalho do QA",
-                    link: "best-practices/QA/qa-work-guidelines",
-                  },
-                  {
-                    text: "Processos de trabalho do QA",
-                    collapsed: true,
-                    items: [
-                      {
-                        text: "Reuniões e cerimônias",
-                        link: "best-practices/QA/Work Processes/1-meetings-and-cerimonies",
-                      },
-                      {
-                        text: "Criação/escrita de casos de teste",
-                        link: "best-practices/QA/Work Processes/2-creating-writing-test-cases",
-                      },
-                      {
-                        text: "Planejamento de testes",
-                        link: "best-practices/QA/Work Processes/3-test-planning",
-                      },
-                      {
-                        text: "Execução de testes",
-                        link: "best-practices/QA/Work Processes/4-test-execution",
-                      },
-                      {
-                        text: "Evidências de testes",
-                        link: "best-practices/QA/Work Processes/5-test-evidence",
-                      },
-                      {
-                        text: "Resultados dos testes",
-                        link: "best-practices/QA/Work Processes/6-test-results",
-                      },
-                      {
-                        text: "Gestão de defeitos (bugs) e retestes",
-                        link: "best-practices/QA/Work Processes/7-bug-management-and-retests",
-                      },
-                      {
-                        text: "Abordagem Shift-left",
-                        link: "best-practices/QA/Work Processes/8-shift-left-approach",
-                      },
-                      {
-                        text: "Heuristícas de testes",
-                        link: "best-practices/QA/Work Processes/9-test-heuristics",
-                      },
-                      {
-                        text: "Técnicas de testes",
-                        link: "best-practices/QA/Work Processes/10-testing-techniques",
-                      },
-                    ],
+                    text: "Avaliação de senioridades",
+                    link: "/engineering/career/seniorities",
                   },
                 ],
               },
             ],
           },
           {
-            text: "Carreira",
+            text: "QA",
             collapsed: false,
+
             items: [
+              { text: "Jeito DB1", link: "/qa/qa-db1-way" },
               {
-                text: "Avaliação de senioridades",
-                link: "career/seniorities",
+                text: "Práticas Recomendadas",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Diretizes de trabalho do QA", link: "/qa/best-practices/qa-work-guidelines",
+                  },
+                  {
+                    text: "Reuniões e cerimônias",
+                    link: "/qa/best-practices/1-meetings-and-cerimonies",
+                  },
+                  {
+                    text: "Criação/escrita de casos de teste",
+                    link: "/qa/best-practices/2-creating-writing-test-cases",
+                  },
+                  {
+                    text: "Planejamento de testes",
+                    link: "/qa/best-practices/3-test-planning",
+                  },
+                  {
+                    text: "Execução de testes",
+                    link: "/qa/best-practices/4-test-execution",
+                  },
+                  {
+                    text: "Evidências de testes",
+                    link: "/qa/best-practices/5-test-evidence",
+                  },
+                  {
+                    text: "Resultados dos testes",
+                    link: "/qa/best-practices/6-test-results",
+                  },
+                  {
+                    text: "Gestão de defeitos (bugs) e retestes",
+                    link: "/qa/best-practices/7-bug-management-and-retests",
+                  },
+                  {
+                    text: "Abordagem Shift-left",
+                    link: "/qa/best-practices/8-shift-left-approach",
+                  },
+                  {
+                    text: "Heuristícas de testes",
+                    link: "/qa/best-practices/9-test-heuristics",
+                  },
+                  {
+                    text: "Técnicas de testes",
+                    link: "/qa/best-practices/10-testing-techniques",
+                  },
+                ]
+              },
+              {
+                text: "Carreira",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Avaliação de senioridades",
+                    link: "/qa/career/qa_seniorities",
+                  },
+                ],
               },
             ],
           },

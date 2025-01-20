@@ -2,7 +2,7 @@
 
 A Abordagem Shift-Left é uma estratégia de teste que envolve a execução de testes mais cedo no ciclo de vida de desenvolvimento de software. O princípio do teste antecipado, é muitas vezes referido como "shift-left" porque desloca as atividades de teste "para a esquerda" no processo de desenvolvimento. 
 
-![alt text](../../../../public/img/docs/shift-left-approach.png)
+![alt text](../../../public/img/docs/shift-left-approach.png)
 
 Normalmente, o shift-left sugere que os testes sejam realizados o mais cedo possível (por exemplo, sem esperar que o código seja implementado ou que os componentes sejam integrados). No entanto, é importante ressaltar que essa abordagem não significa que os testes realizados em etapas posteriores do processo devam ser negligenciados. Pelo contrário, testes em todas as fases continuam sendo cruciais para garantir a qualidade do software. 
 
