@@ -12,12 +12,6 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    // Adiciona o suporte ao MathJax
-    const mathjaxScript = document.createElement("script");
-    mathjaxScript.src =
-      "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    mathjaxScript.async = true;
-    mathjaxScript.id = "mathjax-script";
-    document.head.appendChild(mathjaxScript);
+    // ...
   },
 } satisfies Theme;
