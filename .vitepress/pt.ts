@@ -15,7 +15,6 @@ export const pt = defineConfig({
           {
             text: "Engenharia",
             collapsed: false,
-
             items: [
               { text: "Jeito DB1", link: "engineering/db1-way" },
               {
@@ -40,44 +39,12 @@ export const pt = defineConfig({
                     link: "engineering/best-practices/versioning-strategy",
                   },
                   {
-                    text: "Pratica de Post Mortem",
+                    text: "Prática de Post Mortem",
                     link: "engineering/best-practices/postmortem-practice",
                   },
                   {
                     text: "Fluxo de desenvolvimento",
                     link: "engineering/best-practices/development-flow",
-                  },
-                  {
-                    text: "DevOps",
-                    collapsed: true,
-                    items: [
-                      {
-                        text: "Diretrizes de Trabalho do DevOps",
-                        link: "engineering/best-practices/devops/devops-work-guidelines",
-                      },
-                      {
-                        text: "Processos de Trabalho do DevOps",
-                        collapsed: true,
-                        items: [
-                          {
-                            text: "Execução de Pipelines",
-                            link: "engineering/best-practices/devops/documentation/work processes/4-pipeline-execution",
-                          },
-                          {
-                            text: "Monitoramento de Pipelines",
-                            link: "engineering/best-practices/devops/documentation/work processes/5-pipeline-monitoring",
-                          },
-                          {
-                            text: "Criação de Scripts de Automação",
-                            link: "engineering/best-practices/devops/documentation/work processes/6-script-creation",
-                          },
-                        ],
-                      },
-                      {
-                        text: "Documentação de Infraestrutura",
-                        link: "engineering/best-practices/devops/documentation/infrastructure",
-                      },
-                    ],
                   },
                 ],
               },
@@ -96,7 +63,6 @@ export const pt = defineConfig({
           {
             text: "QA",
             collapsed: false,
-
             items: [
               { text: "Jeito DB1", link: "/qa/qa-db1-way" },
               {
@@ -104,7 +70,8 @@ export const pt = defineConfig({
                 collapsed: true,
                 items: [
                   {
-                    text: "Diretizes de trabalho do QA", link: "/qa/best-practices/qa-work-guidelines",
+                    text: "Diretrizes de trabalho do QA",
+                    link: "/qa/best-practices/qa-work-guidelines",
                   },
                   {
                     text: "Reuniões e cerimônias",
@@ -139,14 +106,14 @@ export const pt = defineConfig({
                     link: "/qa/best-practices/8-shift-left-approach",
                   },
                   {
-                    text: "Heuristícas de testes",
+                    text: "Heurísticas de testes",
                     link: "/qa/best-practices/9-test-heuristics",
                   },
                   {
                     text: "Técnicas de testes",
                     link: "/qa/best-practices/10-testing-techniques",
                   },
-                ]
+                ],
               },
               {
                 text: "Carreira",
@@ -155,6 +122,57 @@ export const pt = defineConfig({
                   {
                     text: "Avaliação de senioridades",
                     link: "/qa/career/qa_seniorities",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            text: "DevOps",
+            collapsed: false,
+            items: [
+              { text: "Jeito DB1", link: "/devops/devops-db1-way" },
+              {
+                text: "Práticas Recomendadas",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Diretrizes de trabalho do DevOps",
+                    link: "/devops/best-practices/devops-work-guidelines",
+                  },
+                  {
+                    text: "CI/CD",
+                    link: "/devops/best-practices/cicd",
+                  },
+                  {
+                    text: "Infraestrutura",
+                    link: "/devops/best-practices/infrastructure",
+                  },
+                  {
+                    text: "Segurança",
+                    link: "/devops/best-practices/security",
+                  },
+                  {
+                    text: "Observabilidade",
+                    link: "/devops/best-practices/observability",
+                  },
+                  {
+                    text: "FinOps",
+                    link: "/devops/best-practices/finops",
+                  },
+                  {
+                    text: "Cultura DevOps",
+                    link: "/devops/best-practices/culture",
+                  },
+                ],
+              },
+              {
+                text: "Carreira",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Avaliação de senioridades",
+                    link: "/devops/career/devops-seniorities",
                   },
                 ],
               },
