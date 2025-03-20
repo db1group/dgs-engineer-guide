@@ -47,7 +47,7 @@ Uma das responsabilidades dos engenheiros líderes no DB1 é manter esse número
 | :--------------------: |
 |     >=80% Saudável     |
 | >=60% e <80% Degradado |
-|      >60% Doente       |
+|      <60% Doente       |
 
 Claro que entendemos que toda "média" pode ser um indicador ingênuo. Sempre incentivamos nossa equipe de engenharia a detalhar os indicadores e combiná-los para uma melhor análise crítica.
 
