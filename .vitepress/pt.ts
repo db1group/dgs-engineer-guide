@@ -138,31 +138,31 @@ export const pt = defineConfig({
                 items: [
                   {
                     text: "Diretrizes de trabalho do DevOps",
-                    link: "/devops/best-practices/devops-work-guidelines",
+                    link: "/devops/best-practices/0-devops-work-guidelines",
                   },
                   {
                     text: "CI/CD",
-                    link: "/devops/best-practices/cicd",
+                    link: "/devops/best-practices/1-cicd",
                   },
                   {
                     text: "Infraestrutura",
-                    link: "/devops/best-practices/infrastructure",
+                    link: "/devops/best-practices/2-infrastructure",
                   },
                   {
                     text: "Segurança",
-                    link: "/devops/best-practices/security",
+                    link: "/devops/best-practices/3-security",
                   },
                   {
                     text: "Observabilidade",
-                    link: "/devops/best-practices/observability",
+                    link: "/devops/best-practices/4-observability",
                   },
                   {
                     text: "FinOps",
-                    link: "/devops/best-practices/finops",
+                    link: "/devops/best-practices/5-finops",
                   },
                   {
                     text: "Cultura DevOps",
-                    link: "/devops/best-practices/culture",
+                    link: "/devops/best-practices/6-culture",
                   },
                 ],
               },
@@ -172,7 +172,7 @@ export const pt = defineConfig({
                 items: [
                   {
                     text: "Avaliação de senioridades",
-                    link: "/devops/career/devops-seniorities",
+                    link: "/devops/career/devops_seniorities",
                   },
                 ],
               },
