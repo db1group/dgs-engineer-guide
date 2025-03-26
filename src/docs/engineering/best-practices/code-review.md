@@ -8,13 +8,14 @@ Uma etapa **imprescindível** em seu processo de desenvolvimento de software é 
 
 Quando começar a revisar um código, lembre-se de que você sempre estará procurando por:
 
+- **funcionalidade** - **Isso é o mais importante**. A implementação faz o que deveria fazer? Você entendeu o que esse Pull Request está tentando fazer? Após isso, verique se o código realmente está implementando o que foi proposto.
 - **design** (isso se integra bem ao restante do sistema e as interações dos diferentes componentes fazem sentido)
-- **funcionalidade** (essa mudança é o que o desenvolvedor pretendia)
 - **complexidade** (esse código é mais complexo do que deveria ser)
 - **nomeação** (a nomenclatura é boa?)
 - **princípios de engenharia** (solid, kiss, dry),
 - **testes** (os diferentes tipos de testes são usados adequadamente, cobertura de código),
 - **estilo** (ele segue as diretrizes de estilo)
+- **segurança** Existem vulnerabilidades de segurança no código? Chaves de API expostas, senhas armazenadas em texto simples, queries SQL injetáveis, etc.
 - **documentação**
 
 Além disso, considere fazer as seguintes práticas:
