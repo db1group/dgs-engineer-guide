@@ -18,11 +18,10 @@ Um padrão de código é um conjunto de convenções (às vezes arbitrárias) so
 
 Ao garantir um estilo de código em seu projeto, você obterá os seguintes benefícios: legibilidade, estrutura do programa, práticas de programação, correção, portabilidade/interoperabilidade, reutilização, desempenho e globalização/localização.
 
-Se não tiver certeza de onde ou como começar, há muito trabalho na comunidade em torno de padrões para as linguagens mais comuns, confira [aqui](https://codestyle.co) e [aqui](https://google.github.io/styleguide/), escolha um e siga-o.
+Se não tiver certeza de onde ou como começar, há muito trabalho na comunidade em torno de padrões para as linguagens mais comuns, confira [aqui](https://google.github.io/styleguide/), escolha um e siga-o.
 
 Quando você e sua equipe estiverem de acordo com a prática, não se esqueça de aplicar seu padrão de código diariamente. Você pode configurar seu IDE para verificar automaticamente se há código fora do padrão, instalar complementos e extensões, conectar ferramentas externas em seu processo [CI/CD](ci-cd.md) e até mesmo verificá-lo em seu [processo de revisão de código](code-review.md).
 
 Créditos
 
-- [CodeStyle](https://codestyle.co)
 - [Google Styleguide](https://google.github.io/styleguide/)
