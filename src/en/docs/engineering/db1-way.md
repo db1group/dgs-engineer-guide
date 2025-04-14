@@ -20,7 +20,7 @@ How can we prevent that? In our opinion, ensuring two things: **good code metric
    - Code quality;
    - Test management;
    - Application Monitoring;
-   - Infrastructure as code.
+   - Secure Software Development.
 
 2. **Metrics** is what **the code tells me** about **where** I should **put effort** to make it better. We currently use [SonarQube](https://www.sonarsource.com/products/sonarqube) for that. It's proven to be a stable and realiable tool for static analysis. We focus on the main indicators of SonarQube (in order to achieve what we describe earlier as our goal): Code Coverage, Maintainability, Duplication Density, Reliability, Security and Security Review.
 

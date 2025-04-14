@@ -25,7 +25,7 @@ Como podemos prevenir isso? Em nossa opinião, garantindo duas coisas: **boas m�
    - Qualidade do código;
    - Gerenciamento de testes;
    - Monitoramento de aplicativos;
-   - Infraestrutura como código.
+   - Desenvolvimento seguro.
 
 2. **Métrica** é o que **o código me diz** sobre **onde** devo **colocar esforço** para torná-lo melhor. Atualmente, usamos o [SonarQube](https://www.sonarsource.com/products/sonarqube) para isso. Está provado ser uma ferramenta estável e confiável para análise estática de código. Focamos nos principais indicadores do SonarQube (para atingir o que descrevemos anteriormente como nosso objetivo): Cobertura de Código, Manutenibilidade, Densidade de Duplicação, Confiabilidade, Segurança e Revisão de Segurança.
 

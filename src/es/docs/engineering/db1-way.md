@@ -20,7 +20,7 @@ La experiencia nos ha enseñado que la deuda técnica nos lleva a una baja capac
    - Calidad del código;
    - Gestión de pruebas;
    - Seguimiento de aplicaciones;
-   - Infraestructura como código.
+   - Desarrollo de software seguro.
 
 2. **Métricas** es lo que **me dice el código** sobre **dónde** debo **esforzarme** para mejorarlo. Actualmente usamos [SonarQube](https://www.sonarsource.com/products/sonarqube) para eso. Ha demostrado ser una herramienta estable y fiable para el análisis estático. Nos enfocamos en los principales indicadores de SonarQube (para lograr lo que describimos anteriormente como nuestro objetivo): Cobertura de código, Mantenibilidad, Densidad de duplicación, Fiabilidad, Seguridad y Revisión de seguridad.
 
