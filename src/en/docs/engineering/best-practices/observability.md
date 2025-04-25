@@ -1,9 +1,14 @@
+---
+outline: deep
+---
+
 # Observability
-Incidents in production enviroment, bugs we can never understand or reproduce in test environments, different behaviors than expected changing state of data in a way we don't understand. Well, the lack of a mature observability can lead us there.
 
-According to Dynatrace (a giant product in the monitoring business): "Observability is the extent to which the internal states of a system can be inferred from externally available data. An observable software system provides the ability to understand any issue that arises. Conventionally, the three pillars of observability data are metrics, logs and traces. Dynatrace extends this with UX and topology information. However, turning data into answers requires more than just an observable system."
+Incidents in production environments, bugs we could never understand or reproduce in test environments, unexpected behaviors that alter data states in ways we don't understand. Well, the lack of mature observability can lead us to this.
 
-As software gets more and more complex, observation complexity follows. Starting from the basics what we need to ensure for the first layer of observability, is having data comming out of our apps and infrastructure. For this challenge we need to guarantee 3 things: logging, metrics and tracing.
+According to Dynatrace (a giant product in the monitoring sector): "Observability is the degree to which the internal states of a system can be inferred from externally available data. An observable software system offers the ability to understand any problem that arises. Conventionally, the three pillars of observability data are metrics, logs, and traces. Dynatrace extends this with UX and topology information. However, turning data into answers requires more than just an observable system."
+
+As software becomes increasingly complex, the complexity of observation is the same. Starting with the basics, what we need to ensure for the first layer of observability is to have data coming out of our applications and infrastructure. For this challenge, we need to ensure three things: logging, metrics, and tracing.
 
 1. **Logging:** the application emits a string or an object detailing something that has hapenned while code is running. These data could have different purpose like informing or warning about something.
 
