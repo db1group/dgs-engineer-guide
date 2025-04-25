@@ -1,61 +1,67 @@
+---
+outline: deep
+---
+
 # Code Review
-A **must-have** step in your software development process is code review. It enables developers to **improve code quality, safety** and can also be a **knowledge transfer** tool. As any process it could be either bad or good and DB1 has gathered some characteristics of a good code review process.
 
-When you start reviewing a code, remmember that you will always be looking for:
+A **mandatory** step in your software development process is code review. It allows developers to **improve code quality and security** and can also be a **knowledge transfer tool**. Like any process, it can be good or bad, and DB1 has gathered some characteristics of a good code review process.
 
-- **design** (does this integrate well with the rest of the system and are interactions of different components make sense)
-- **functionality** (does this change is what the developer intended)
-- **complexity** (is this code more complex than it should be)
-- **naming** (is naming good?)
-- **engineering principles** (solid, kiss, dry),
-- **tests** (are different kinds of tests used appropriately, code coverage),
-- **style** (does it follow style guidelines)
-- **documentation**
+When starting to review code, remember that you are always looking for:
 
-In addition to that consider doing the follow practices:
+- **Functionality** - **This is the most important**. Does the implementation do what it is supposed to do? Do you understand what this Pull Request is trying to accomplish? After that, check if the code is actually implementing what was proposed.
+- **Design** (does it integrate well with the rest of the system, and do the interactions of the different components make sense?)
+- **Complexity** (is this code more complex than it should be?)
+- **Naming** (is the naming good?)
+- **Engineering principles** (SOLID, KISS, DRY)
+- **Tests** (are the different types of tests used appropriately, code coverage?)
+- **Style** (does it follow the style guidelines?)
+- **Security** Are there security vulnerabilities in the code? Exposed API keys, passwords stored in plain text, injectable SQL queries, etc.
+- **Documentation**
+
+Additionally, consider the following practices:
 
 1. Try to review your own code first
 
-   Before sending a code to your colleagues, try to read and understand it first. Search for parts that confuse you.
+   Before sending code to your colleagues, try reading and understanding it first. Look for parts that confuse you.
 
-2. Write a short description of what is changed
+2. Write a brief description of what was changed
 
-   This should explain what was changes at a high level and why are those changes made.
+   This should explain what was changed at a high level and why these changes were made.
 
 3. Automate what can be automated
 
-   Leave to the system everything that can be automated, such as checking for successful builds (CI), style changes (linters), automated tests and some code smells and bugs (SonarQube).
+   Leave to the system everything that can be automated, such as checking successful builds (CI), style changes (linters), automated tests, and some bugs and code smells (SonarQube).
 
 4. Don't rush
 
-   You need to understand what is changed. Every line of it. Read multiple times if needed, file by file.
+   You need to understand what was changed. Every line. Read multiple times if necessary, file by file.
 
-5. Comment with kindess
+5. Comment kindly
 
-   Never mention the person (you), always focus on changes as questions or suggestions and leave at least one positive comment. Explain the "why" in your comments and give a suggestion on how to make it better. You will see a recommendation for "how to make good comments" latter in this post.
+   Never mention the person (you), always focus on the changes as questions or suggestions and leave at least one positive comment. Explain the "why" in your comments and give a suggestion on how to improve the situation. You will see a recommendation on "how to make good comments" later in this post.
 
-6. Approve PR when its good enough
+6. Approve PR when it's good enough
 
-   Don't strive for perfection, but hold to high standards. Don't be a nitpicker.
+   Don't seek perfection, but maintain high standards. Don't be a nitpicker.
 
-7. Make reviews manageable in size
+7. Make reviews manageable in terms of size
 
-   We should try to make limit the number of lines of code for review in one sitting. Our brains cannot process so much information at once. The ideal number of LOC is 200 to 400 lines of the core at one time, which is usually 60 to 90 minutes of time.
+   We should try to limit the number of lines of code for review in a single session. Our brain cannot process so much information at once. The ideal number of LOC is 200 to 400 core lines at a time, which usually takes 60 to 90 minutes.
 
-![The Code Review Pyramid](/img/docs/the-code-review-pyramid.jpeg)
+[The Code Review Pyramid](../../../public/img/docs/the-code-review-pyramid.jpeg)
 
-So, now you know what to be looking for in a code review process as well as good practices while doing it. Now you will see a way of how to write meaningfull comments in your colleague's code.
+So now you know what to look for in a code review process, as well as best practices when doing it. Now you will see a way to write meaningful comments on your colleague's code.
 
-1. Create different categories of comment, for example:
-   - **[Fix]** Something is wrong and need to be fixed. Your colleague must change it
-   - **[Question]** You didn't understand the business process or implementation strategy and you need more information to finish your review
-   - **[Suggestion]** There is another way to do the same thing and you wanna show how to do it. It's not necessarily wrong and it is not mandatory to change (knowledge transfer)
-   - **[Improvement]** It will work, but there's a better way of doing it and your way will bring real improvement to the code, your colleague should do it
-   - **[Compliment]** Your colleague did something really nice and perhaps tought you something new. Don't forget to congratulate him and reinforce that good behavior
-2. Define and **document** your code review process in your team's Wiki
-3. When you comment something in your colleague's pull request don't forget to **provide references** that support your change request (if you don't find one, maybe your change request is a matter of taste and not an improvement and then you shouldn't request changes)
+1. Create different categories of comments, for example:
+   - **[Fix]** Something is wrong and needs to be fixed. Your colleague should change it.
+   - **[Question]** You didn't understand the business process or implementation strategy and need more information to complete your review.
+   - **[Suggestion]** There is another way to do the same thing, and you want to show how to do it. It is not necessarily wrong and is not mandatory to change (knowledge transfer).
+   - **[Improvement]** It will work, but there is a better way to do it, and your way will bring real improvements to the code. Your colleague should do it.
+   - **[Praise]** Your colleague did something very good and maybe taught you something new. Don't forget to congratulate them and reinforce that good behavior.
+2. Define and **document** your code review process in your team's Wiki.
+3. When you comment on something in your colleague's pull request, don't forget to **provide references** that support your change request (if you can't find any, maybe your change request is a matter of taste and not an improvement, and then you shouldn't request changes).
 
-You can use those categories above or create your own, the goal here is to have **objective visual meaningfull** pilars to determine your intention. You can even replace the categories names with emojis. It's fun!
+You can use the categories above or create your own. The goal here is to have **objective, visual, and meaningful** pillars to determine your intent. You can even replace the category names with emojis. It's fun!
 
 Credits:
 

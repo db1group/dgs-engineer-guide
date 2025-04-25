@@ -20,12 +20,13 @@ A próxima camada de maturidade da observabilidade é o monitoramento real. O ob
 
 Por último, mas não menos importante, alertas. A terceira camada de observabilidade garante que um evento seja gerado pela plataforma de monitoramento sempre que uma anomalia for detectada, que é exatamente o que queremos que ela faça.
 
-Há uma série de ferramentas no mercado que o ajudarão a implementar isso em seu software, como: [Dynatrace](http://dynatrace.com), [Datadog](https://www.datadoghq.com) e [ELK stack](https://www.elastic.co/pt/what-is/elk-stack). Juntamente com as ferramentas, há alguns padrões de design para a implementação em si que podem ser úteis, verifique a seção Observabilidade do portal [microservices.io](https://microservices.io/patterns/index.html).
+Há uma série de ferramentas no mercado que o ajudarão a implementar isso em seu software, como: [Dynatrace](http://dynatrace.com), [Datadog](https://www.datadoghq.com), [ELK stack](https://www.elastic.co/pt/what-is/elk-stack) e [OpenTelemetry](https://opentelemetry.io/). Juntamente com as ferramentas, há alguns padrões de design para a implementação em si que podem ser úteis, verifique a seção Observabilidade do portal [microservices.io](https://microservices.io/patterns/index.html).
 
 Esta é uma breve explicação sobre como criar uma observabilidade madura. Recomendamos que você se aprofunde a partir das referências abaixo.
 
 Créditos
 
+- [Open Telemetry](https://opentelemetry.io)
 - [Dynatrace](https://www.dynatrace.com)
 - [DevOps encontra observabilidade](https://faun.pub/devops-meets-observability-78775c021b0e)
 - [Monitoramento e observabilidade](https://copyconstruct.medium.com/monitoring-and-observability-8417d1952e1c)
