@@ -30,10 +30,25 @@ export const en = defineConfig({
                   {
                     text: "Automated Testing",
                     link: "/engineering/best-practices/automated-test.md",
+                    items: [
+                      {
+                        text: "Data-testid attributes asage",
+                        link: "engineering/best-practices/datatestid-attributes-usage",
+                      },
+                    ],
                   },
-                  { text: "Code Review", link: "/engineering/best-practices/code-review" },
-                  { text: "Code Style Guide", link: "/engineering/best-practices/code-style" },
-                  { text: "Observability", link: "/engineering/best-practices/observability" },
+                  {
+                    text: "Code Review",
+                    link: "/engineering/best-practices/code-review",
+                  },
+                  {
+                    text: "Code Style Guide",
+                    link: "/engineering/best-practices/code-style",
+                  },
+                  {
+                    text: "Observability",
+                    link: "/engineering/best-practices/observability",
+                  },
                   { text: "SOLID", link: "/engineering/best-practices/SOLID" },
                   {
                     text: "Versioning Strategy",
@@ -47,6 +62,7 @@ export const en = defineConfig({
                     text: "Development flow",
                     link: "/engineering/best-practices/development-flow",
                   },
+
                   {
                     text: "DevOps",
                     collapsed: true,
@@ -78,9 +94,8 @@ export const en = defineConfig({
                         link: "/engineering/best-practices/devops/documentation/infrastructure",
                       },
                     ],
-                  }
+                  },
                 ],
-
               },
 
               {
@@ -109,7 +124,8 @@ export const en = defineConfig({
                 collapsed: true,
                 items: [
                   {
-                    text: "QA Work Guidelines", link: "/qa/best-practices/qa-work-guidelines",
+                    text: "QA Work Guidelines",
+                    link: "/qa/best-practices/qa-work-guidelines",
                   },
                   {
                     text: "Meetings and Cerimonies",
@@ -151,7 +167,7 @@ export const en = defineConfig({
                     text: "Testing techniques",
                     link: "/qa/best-practices/10-testing-techniques",
                   },
-                ]
+                ],
               },
               {
                 text: "Career",
