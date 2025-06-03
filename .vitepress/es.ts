@@ -30,6 +30,12 @@ export const es = defineConfig({
                   {
                     text: "Pruebas Automatizadas",
                     link: "/engineering/best-practices/automated-test.md",
+                    items: [
+                      {
+                        text: "Uso de atributos data-testid",
+                        link: "engineering/best-practices/datatestid-attributes-usage",
+                      },
+                    ],
                   },
                   {
                     text: "Revisión de Código",
@@ -56,10 +62,7 @@ export const es = defineConfig({
                     text: "Flujo de desarrollo",
                     link: "/engineering/best-practices/development-flow",
                   },
-                  {
-                    text: "Uso de atributos data-testid",
-                    link: "engineering/best-practices/datatestid-attributes-usage",
-                  },
+
                   {
                     text: "DevOps",
                     collapsed: true,
