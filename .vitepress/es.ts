@@ -16,86 +16,94 @@ export const es = defineConfig({
             text: "Ingeniería",
             collapsed: false,
 
-            items: [{ text: "DB1 Way", link: "/engineering/db1-way" },
-            {
-              text: "Mejores Prácticas",
-              collapsed: true,
-              items: [
-                {
-                  text: "Documentación técnica",
-                  link: "/engineering/best-practices/technical-documentation",
-                },
-                { text: "CI/CD", link: "/engineering/best-practices/ci-cd" },
-                {
-                  text: "Pruebas Automatizadas",
-                  link: "/engineering/best-practices/automated-test.md",
-                },
-                {
-                  text: "Revisión de Código",
-                  link: "/engineering/best-practices/code-review",
-                },
-                {
-                  text: "Guía de Estilo de Código",
-                  link: "/engineering/best-practices/code-style",
-                },
-                { text: "Observabilidad", link: "/engineering/best-practices/observability" },
-                { text: "SOLID", link: "/engineering/best-practices/SOLID" },
-                {
-                  text: "Estrategia de Versionado",
-                  link: "/engineering/best-practices/versioning-strategy",
-                },
-                {
-                  text: "Práctica de Postmortem",
-                  link: "/engineering/best-practices/postmortem-practice",
-                },
-                {
-                  text: "Flujo de desarrollo",
-                  link: "/engineering/best-practices/development-flow",
-                },
-                {
-                  text: "DevOps",
-                  collapsed: true,
-                  items: [
-                    {
-                      text: "Directrices de Trabajo de DevOps",
-                      link: "/engineering/best-practices/devops/devops-work-guidelines",
-                    },
-                    {
-                      text: "Procesos de Trabajo de DevOps",
-                      collapsed: true,
-                      items: [
-                        {
-                          text: "Ejecución de Pipelines",
-                          link: "/engineering/best-practices/devops/work processes/4-pipeline-execution",
-                        },
-                        {
-                          text: "Monitoreo de Pipelines",
-                          link: "/engineering/best-practices/devops/work processes/5-pipeline-monitoring",
-                        },
-                        {
-                          text: "Creación de Scripts de Automatización",
-                          link: "/engineering/best-practices/devops/work processes/6-script-creation",
-                        },
-                      ],
-                    },
-                    {
-                      text: "Documentación de Infraestructura",
-                      link: "/engineering/best-practices/devops/documentation/infrastructure",
-                    },
-                  ],
-                },
-              ]
-            },
-            {
-              text: "Carrera",
-              collapsed: true,
-              items: [
-                {
-                  text: "Evaluación de Seniorities",
-                  link: "/engineering/career/seniorities",
-                },
-              ],
-            }
+            items: [
+              { text: "DB1 Way", link: "/engineering/db1-way" },
+              {
+                text: "Mejores Prácticas",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Documentación técnica",
+                    link: "/engineering/best-practices/technical-documentation",
+                  },
+                  { text: "CI/CD", link: "/engineering/best-practices/ci-cd" },
+                  {
+                    text: "Pruebas Automatizadas",
+                    link: "/engineering/best-practices/automated-test.md",
+                  },
+                  {
+                    text: "Revisión de Código",
+                    link: "/engineering/best-practices/code-review",
+                  },
+                  {
+                    text: "Guía de Estilo de Código",
+                    link: "/engineering/best-practices/code-style",
+                  },
+                  {
+                    text: "Observabilidad",
+                    link: "/engineering/best-practices/observability",
+                  },
+                  { text: "SOLID", link: "/engineering/best-practices/SOLID" },
+                  {
+                    text: "Estrategia de Versionado",
+                    link: "/engineering/best-practices/versioning-strategy",
+                  },
+                  {
+                    text: "Práctica de Postmortem",
+                    link: "/engineering/best-practices/postmortem-practice",
+                  },
+                  {
+                    text: "Flujo de desarrollo",
+                    link: "/engineering/best-practices/development-flow",
+                  },
+                  {
+                    text: "Uso de atributos data-testid",
+                    link: "engineering/best-practices/datatestid-attributes-usage",
+                  },
+                  {
+                    text: "DevOps",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "Directrices de Trabajo de DevOps",
+                        link: "/engineering/best-practices/devops/devops-work-guidelines",
+                      },
+                      {
+                        text: "Procesos de Trabajo de DevOps",
+                        collapsed: true,
+                        items: [
+                          {
+                            text: "Ejecución de Pipelines",
+                            link: "/engineering/best-practices/devops/work processes/4-pipeline-execution",
+                          },
+                          {
+                            text: "Monitoreo de Pipelines",
+                            link: "/engineering/best-practices/devops/work processes/5-pipeline-monitoring",
+                          },
+                          {
+                            text: "Creación de Scripts de Automatización",
+                            link: "/engineering/best-practices/devops/work processes/6-script-creation",
+                          },
+                        ],
+                      },
+                      {
+                        text: "Documentación de Infraestructura",
+                        link: "/engineering/best-practices/devops/documentation/infrastructure",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                text: "Carrera",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Evaluación de Seniorities",
+                    link: "/engineering/career/seniorities",
+                  },
+                ],
+              },
             ],
           },
           {
@@ -114,8 +122,6 @@ export const es = defineConfig({
                     text: "Directrices de Trabajo del QA",
                     link: "/qa/best-practices/qa-work-guideline",
                   },
-
-
 
                   {
                     text: "Reuniones y Ceremonias",
@@ -157,8 +163,7 @@ export const es = defineConfig({
                     text: "Técnicas de pruebas",
                     link: "/qa/best-practices/Work Processes/10-testing-techniques",
                   },
-
-                ]
+                ],
               },
               {
                 text: "Carrera",

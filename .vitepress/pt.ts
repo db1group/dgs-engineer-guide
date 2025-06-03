@@ -30,9 +30,18 @@ export const pt = defineConfig({
                     text: "Testes automatizados",
                     link: "engineering/best-practices/automated-test.md",
                   },
-                  { text: "Revisão de código", link: "engineering/best-practices/code-review" },
-                  { text: "Guia de estilos", link: "engineering/best-practices/code-style" },
-                  { text: "Observabilidade", link: "engineering/best-practices/observability" },
+                  {
+                    text: "Revisão de código",
+                    link: "engineering/best-practices/code-review",
+                  },
+                  {
+                    text: "Guia de estilos",
+                    link: "engineering/best-practices/code-style",
+                  },
+                  {
+                    text: "Observabilidade",
+                    link: "engineering/best-practices/observability",
+                  },
                   { text: "Solid", link: "engineering/best-practices/SOLID" },
                   {
                     text: "Estratégia de controle de versão",
@@ -45,6 +54,10 @@ export const pt = defineConfig({
                   {
                     text: "Fluxo de desenvolvimento",
                     link: "engineering/best-practices/development-flow",
+                  },
+                  {
+                    text: "Uso de atributos data-testid",
+                    link: "engineering/best-practices/datatestid-attributes-usage",
                   },
                 ],
               },
