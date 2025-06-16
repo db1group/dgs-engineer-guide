@@ -42,10 +42,8 @@ $ sudo yum install git
 Primeiro, você precisa clonar o repositório do easy monitor para o seu sistema. Você pode fazer isso executando o seguinte comando no seu terminal:
 
 ```bash
-$ git clone https://github.com/db1group/easy-monitor
+$ git clone https://dev.azure.com/db1global/DGS%20Accelerators/_git/easy-monitor
 ```
-
-![Git Clone Easy monitor](/img/components/easy-monitor/easy-monitor-git-clone.png)
 
 Após clonar o repositório, navegue para o diretório:
 
