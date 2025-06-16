@@ -10,7 +10,7 @@ O Easy Monitor é um conjunto de tecnologias e configurações pré-definidas pa
 
 ## Objetivo
 
-O objetivo do Easy Monitor é fornecer uma maneira de implementar ferramentas como ELK, Prometheus, Grafana, entre outras, de forma rápida e fácil. Com o Easy Monitor, você pode ter uma stack de observabilidade pronta para uso em minutos.
+O objetivo do Easy Monitor é fornecer uma maneira de implementar ferramentas como (Prometheus, Grafana, Loki, Jaeger, OpenTelemetry Collector) de forma rápida e fácil. Com o Easy Monitor, você pode ter uma stack de observabilidade pronta para uso em minutos.
 
 ## Como funciona
 

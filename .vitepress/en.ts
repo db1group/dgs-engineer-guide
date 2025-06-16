@@ -221,12 +221,12 @@ export const en = defineConfig({
                 link: "easy-monitor/getting-started",
               },
               {
-                text: "Installing ELK",
-                link: "easy-monitor/elk-install",
+                text: "Installing Open Telemetry",
+                link: "easy-monitor/otel-install",
               },
               {
-                text: "FAQ",
-                link: "easy-monitor/faq",
+                text: "Instrumenting Applications",
+                link: "easy-monitor/app-instrumentation",
               },
             ],
           },
