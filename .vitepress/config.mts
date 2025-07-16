@@ -16,6 +16,7 @@ export default defineConfig({
       },
     ],
   ],
+  metaChunk: true,
   description: "Guia de engenharia da DB1 - Em busca da excelência técnica",
   ignoreDeadLinks: [/^http?:\/\/localhost/],
   locales: {
