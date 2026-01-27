@@ -48,6 +48,7 @@ DB1 Group tiene un proceso de gestión de personas complejo y profundo, pero par
   - Debes tener una visión holística. Siempre debe ver el panorama general, desde su equipo y el contexto de su proyecto.
   - Debes tener una vasta horizontalidad de conocimientos que te permita moverte entre las principales materias de la ingeniería de software
   - Saber transcribir al cliente por qué una decisión técnica es importante y cómo impacta en su negocio. Ejemplo: ¿por qué las pruebas unitarias son importantes para el negocio?
+  - Debes tener flexibilidad para desempeñarte en diferentes modelos de contratación y de colaboración con el cliente, ajustando tu nivel de participación en la codificación según las necesidades del proyecto (desde el trabajo hands-on hasta la coordinación técnica).
   - Al menos 5 años de experiencia laboral, al menos 2 como senior
 
 Sabemos que hay excepciones a las reglas, pero eso es lo que se supone que deben ser: excepciones.

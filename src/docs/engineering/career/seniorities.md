@@ -49,7 +49,8 @@ O Grupo DB1 possui um processo de gestão de pessoas complexo e aprofundado, mas
   - Você deve ter uma visão holística. Você deve sempre ver o quadro geral, de sua equipe e do contexto do projeto
   - Você deve ter uma vasta horizontalidade de conhecimento que lhe permita transitar entre os principais assuntos da engenharia de software
   - Saber transcrever para o cliente porque uma decisão técnica é importante e como ela impacta o seu negócio. Exemplo: por que o teste de unidade é importante para o negócio?
-  - Pelo menos 5 anos de experiência profissional, pelo menos 2 como sénior
+  - Você deve ter flexibilidade para atuar em diferentes modelos de contratação e engajamento com o cliente, ajustando seu nível de participação em codificação conforme as necessidades do projeto (do hands-on à coordenação técnica).
+  - Pelo menos 5 anos de experiência profissional, pelo menos 2 como sênior
 
 Sabemos que há exceções às regras, mas é isso mesmo que devem ser: exceções.
 

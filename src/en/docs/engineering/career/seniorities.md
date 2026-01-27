@@ -49,6 +49,7 @@ DB1 Group has a complex and in-depth people management process, but in order to 
   - You must have an holistic view. You must always see the big picture, from your team and your project context
   - You must have a vast knowledge horizontality that allows you to move between the main subjects of software engineering
   - Knowing how to transcribe to the customer why a technical decision is important and how it impacts its business. Example: why unit testing matters to the business?
+  - You must be flexible to operate across different contracting and client engagement models, adjusting your level of involvement in coding according to project needs (from hands-on to technical coordination).
   - At least 5 years of work experience, at least 2 as a senior
 
 We know there are exceptions to the rules, but that's what they're supposed to be: exceptions.
