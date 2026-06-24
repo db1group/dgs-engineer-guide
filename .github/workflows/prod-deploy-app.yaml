@@ -1,35 +1,46 @@
-name: CI
+name: Deploy to S3
+
 on:
   push:
     branches: ["main"]
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      AWS_S3_BUCKET_NAME: engineerguide.db1.com.br
-    strategy:
-      matrix:
-        node-version: [20]
+      AWS_REGION: us-east-1
+      S3_BUCKET: engineerguide.db1.com.br
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "20"
           cache: "yarn"
+
       - name: Install Dependencies
-        run: yarn install
+        run: yarn install --immutable
+
       - name: Build Application
-        run: yarn build     
-        
-      - uses: jakejarvis/s3-sync-action@master
-        name: Upload App to S3 Bucket
+        run: yarn build
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          args: --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ env.AWS_S3_BUCKET_NAME }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1"
-          SOURCE_DIR: ".vitepress/dist"
-        
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Deploy to S3
+        run: aws s3 sync .vitepress/dist "s3://${{ env.S3_BUCKET }}" --delete
+
+      # Descomentar SOMENTE se houver CloudFront na frente do bucket:
+      # - name: Invalidate CloudFront cache
+      #   run: |
+      #     aws cloudfront create-invalidation \
+      #       --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" \
+      #       --paths "/*"
