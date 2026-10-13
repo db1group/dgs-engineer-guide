@@ -294,35 +294,37 @@ or when the human authorizes it while answering a question.
 
 ## Do not leave silent debt between tasks
 
-Two situations leave debt that the checks do not catch and that gets lost between batches
-of tasks running in separate sessions: a deliberate temporary construct that a
-later task replaces, and unintended leftovers when closing (an unused dependency or
-file). Neither of them may pass in silence.
+Two situations leave debt that the checks do not catch and that gets lost between
+sessions: work of the spec's scope left to a later task, and unintended leftovers when
+closing (an unused dependency or file). Neither may pass in silence.
 
-### Forward-dependency: deliberate temporary construct
+### Forward-dependency: debt addressed to a later task
 
-Sometimes a task needs something that will only be delivered definitively by
-a later task — a hardcoded value embedded before the task that delivers the
-configuration exists, a stub in place of a service that another task implements,
-or a simplified adapter before the definitive one. Creating a deliberately
-temporary construct is acceptable, but **never
-silently**: the destination task may run in another session, so without a trace
-this debt gets lost between one session and another and the temporary construct becomes
-definitive by oversight.
+A forward-dependency is any debt within the spec's scope that a task leaves for a later
+task of the same spec to absorb. It takes two shapes:
+
+- **a deliberate temporary construct** — a hardcoded value, a stub or a simplified
+  adapter that a later task replaces with the definitive one;
+- **an adjustment imposed on a later task** — a decision the human changed, or a case
+  the spec did not foresee, alters what that task delivers; nothing temporary stays in
+  the code.
+
+Both are acceptable, but **never silently**: the destination task may run in another
+session, so a debt reported only to the session is lost and a temporary construct
+becomes definitive by oversight.
 
 The trace has two parts, with distinct roles:
 
 - **`forward-deps.md`, in the spec folder — the index and the source of truth.** It is
-  what the destination task reads to know what it needs to replace. Each entry has
-  a stable id, the origin task, the destination task, a `status` and the constructs
-  involved:
+  what the destination task reads to know what it must do. Each entry has a stable id,
+  the origin and destination tasks, a `status`, the `expected resolution` and, only for
+  a temporary construct, the `constructs` involved:
 
   ```markdown
   # Forward-dependencies — 012-reporting
 
-  Intentional debts between tasks: temporary constructs created by one task
-  to be replaced by another. The spec does not close with `open` or
-  `planned` items.
+  Intentional debts between tasks: temporary constructs and adjustments one task
+  leaves for another. The spec does not close with `open` or `planned` items.
 
   ## FD-1 — provisional stub of the configuration provider
   - origin: T2
@@ -330,12 +332,18 @@ The trace has two parts, with distinct roles:
   - status: open
   - constructs: `ConfigProviderStub`, `DEFAULT_LIMITS`
   - expected resolution: replace with the definitive configuration provider delivered in T5.
+
+  ## FD-2 — export by the reporting period adopted in T3
+  - origin: T3
+  - destination: T7
+  - status: open
+  - expected resolution: filter the export by the reporting period.
   ```
 
-- **A marker in the code — a local signal, not the source of truth.** Next to the
-  temporary construct, point to the ledger entry, so that whoever edits
-  that file for another reason does not treat the placeholder as definitive. Use the
-  comment syntax of the project language:
+- **A marker in the code — a local signal, only when there is a temporary construct.**
+  Next to the construct, point to the ledger entry, so whoever edits the file for
+  another reason does not take the placeholder as definitive. Use the project's comment
+  syntax:
 
   ```
   // FORWARD-DEP(012-reporting/FD-1): provisional stub of the configuration provider;
@@ -345,41 +353,36 @@ The trace has two parts, with distinct roles:
 
 Lifecycle:
 
-- **When creating the temporary construct** (origin task): record an
-  `open` entry in `forward-deps.md` (creating the file if it does not exist yet) and leave the
-  marker in the code. If the spec already anticipated the debt, a `planned` entry
-  may exist — promote it to `open`.
-- **When executing the destination task:** before closing, read `forward-deps.md` and
-  resolve every entry addressed to it — remove the temporary construct and the
-  marker, and change the `status` to `resolved`. Resolving the open entries
-  addressed to the current task is part of "done"; do not mark the checkbox
-  leaving an `open` or `planned` entry addressed to it.
-- **`resolved` entries stay in the file** as an auditable trace of which
-  task created and which resolved the debt.
+- **When leaving the debt** (origin task, also in a correction round): record an `open`
+  entry in `forward-deps.md` (creating the file if missing) and, for a
+  construct, leave the marker. If the spec already anticipated the debt, a `planned`
+  entry may exist — promote it to `open`.
+- **When executing the destination task:** read `forward-deps.md` before implementing and
+  resolve every entry addressed to it — deliver the expected resolution, remove any
+  construct and its marker, and set the `status` to `resolved`. Do not mark the
+  checkbox leaving an `open` or `planned` entry addressed to it.
+- **`resolved` entries stay in the file** as the audit trail of which task created
+  and which resolved the debt.
 
 When to escalate instead of recording:
 
-- If the temporary construct **has no clear destination task** (no later
-  task will replace it), that is a scope gap — escalate as a question to the
-  human instead of creating an orphan entry.
+- If the debt **has no clear destination task** (no later task of the spec absorbs it),
+  that is a scope gap — escalate as a question to the human instead of creating an
+  orphan entry.
 - If the marker in the code and the ledger **diverge** (a marker without a
   corresponding entry, or a `resolved` entry with the marker still in the code), that is
   drift — escalate as a question, do not fix it by guessing.
 
 ### Delivery coherence before closing
 
-Green checks do not guarantee a coherent delivery. Lint, type-check, tests and build
-usually do **not** reject an installed and unused dependency, a file
-created and not referenced, or two concurrent implementations of the same thing
-with one of them dead. These are silent debt: they pass the checks and do not surface
-on their own. Before marking the task as complete, review the coherence of what
-you delivered:
+Green checks do not guarantee a coherent delivery: lint, type-check, tests and build
+usually do **not** reject the leftovers below. Before marking the task as complete,
+review the coherence of what you delivered:
 
 - **Installed dependency = used dependency.** Every dependency you
   add must be effectively configured and exercised by code in this task.
-  If you installed something that only a later task will configure, that is a
-  forward-dependency (record it in `forward-deps.md` and mark it in the code) or a
-  decision to escalate — never install and leave it unused.
+  If you installed something that only a later task will configure, record a
+  forward-dependency or escalate the decision — never install and leave it unused.
 - **Created file = referenced file.** Every file, asset or catalog
   you create must be loaded or referenced by code in this task. An
   orphan file is removed or, if it was created for a future task, recorded
@@ -387,7 +390,7 @@ you delivered:
 - **One source of truth per piece of data.** Do not leave two concurrent implementations
   of the same thing (e.g., a catalog embedded in the code and the same catalog in an
   external file that nobody loads), with one of them dead. Choose one; if the
-  other is the target of a later task, that is a forward-dependency.
+  other is the target of a later task, record a forward-dependency.
 
 If you cannot resolve the incoherence within the scope of the task, escalate the
 decision to the human instead of closing the task with the inconsistent state.
@@ -438,7 +441,7 @@ stylistic adjustment with no behavior impact, or when the artifacts answer the
 question clearly. Escalating what is already answered only delays the delivery.
 
 Important distinction: a **decision** blocks a choice that belongs to the human and is therefore
-escalated for them to answer. Whereas **deferrable, out-of-scope** work that does not depend
+escalated for them to answer. Whereas **deferrable** work outside the spec's scope that does not depend
 on any choice (heavy global validations, minor improvements and technical debt)
 is not a decision — it is merely reported for awareness, without interrupting. When in doubt between the
 two, prefer to escalate as a decision.
@@ -473,8 +476,8 @@ two, prefer to escalate as a decision.
 - Demoting a choice that belongs to the human (e.g., a scope gap) to a mere note.
 - Marking the checkbox before the work is actually complete.
 - Moving logic between tasks on your own initiative.
-- Creating a temporary construct without recording it in `forward-deps.md` and without a marker in the code.
-- Closing the destination task leaving an open `forward-deps.md` entry addressed to it.
+- Leaving a forward-dependency out of `forward-deps.md` (reported only to the session), a
+  construct without its marker, or the destination task closed with the entry still open.
 - Installing a new dependency without concrete traceable confirmation, just because the task asks for it.
 - Installing a dependency and not configuring or using it in this task.
 - Creating a file, asset or catalog that no code in this task references.
