@@ -35,9 +35,11 @@ Cada item diz o que é a dependência e o que o domínio perde sem ela.
   espanhola das diretrizes gravada como `qa-work-guidelines.md` — sem ela a página aparece em
   pt-BR em `/en/` ou `/es/`, e um arquivo `es` com o nome `qa-work-guideline.md` fica órfão e é
   ignorado.
-- Passo `postBuild` do portal que copia o `index.html` gerado pelo plugin de redirecionamento
-  para `<from>.html` — sem ele o redirecionamento das diretrizes em espanhol é gravado como
-  `qa-work-guideline/index.html`, que o S3 não serve para a URL `qa-work-guideline.html`.
+- Plugin local `client-redirects-html` do portal, que envolve o
+  `@docusaurus/plugin-client-redirects` e grava o redirecionamento das diretrizes em espanhol como
+  `qa-work-guideline.html` com destino `qa-work-guidelines.html` — sem ele o redirecionamento fica
+  em `qa-work-guideline/index.html` com destino sem extensão, e o S3 responde 404 à URL
+  `qa-work-guideline.html` e ao destino.
 - Imagens `bug.png`, `shift-left-approach.png` e `test-tradeoff.png` em `static/img/docs/`,
   servidas em `/img/docs/` — sem elas as figuras de Gestão de defeitos e Shift-Left e o link da
   pirâmide de testes quebram e o build falha.

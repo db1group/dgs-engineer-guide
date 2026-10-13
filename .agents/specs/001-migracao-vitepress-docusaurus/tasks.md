@@ -4,7 +4,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
 [`test-cases.md`](./test-cases.md). Domínios afetados: `portal-do-guia`, `guia-de-engenharia`,
 `guia-de-qa`, `guia-de-devops`, `golden-path`, `easy-monitor`, `easy-docs` e `easy-connect`.
 
-- [ ] **T1. Atualizar a skill de autoria: redirecionamento ao mover ou renomear página**
+- [x] **T1. Atualizar a skill de autoria: redirecionamento ao mover ou renomear página**
   - Depende de: nenhuma
   - Fonte autoritativa: `.agents/skills/autoria-de-paginas-multilingues/SKILL.md`, seção
     "Mover ou renomear uma página".
@@ -14,7 +14,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
   - Origem: História 1 (critérios do redirecionamento de QA `es` e das 10 URLs antigas de
     DevOps) e R35 de `portal-do-guia`.
 
-- [ ] **T2. Atualizar as dependências técnicas do Portal do guia**
+- [x] **T2. Atualizar as dependências técnicas do Portal do guia**
   - Depende de: nenhuma
   - Fonte autoritativa: `.agents/skills/portal-do-guia/references/technical-dependencies.md`,
     seção "Levantadas na investigação do domínio".
@@ -30,7 +30,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
     (critério do seletor de idioma), História 1 (critério das páginas `unlisted` fora do
     sitemap), R10 e R32.
 
-- [ ] **T3. Atualizar as dependências técnicas do Guia de DevOps**
+- [x] **T3. Atualizar as dependências técnicas do Guia de DevOps**
   - Depende de: nenhuma
   - Fonte autoritativa: `.agents/skills/guia-de-devops/references/technical-dependencies.md`,
     seção "Levantadas na investigação do domínio", item do passo `postBuild` do portal.
@@ -39,7 +39,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
   - Origem: História 1 (critério das 10 URLs antigas da árvore   DevOps `en`/`es`) e R7 e R8 de
     `guia-de-devops`.
 
-- [ ] **T4. Atualizar as dependências técnicas do Guia de QA**
+- [x] **T4. Atualizar as dependências técnicas do Guia de QA**
   - Depende de: nenhuma
   - Fonte autoritativa: `.agents/skills/guia-de-qa/references/technical-dependencies.md`, seção
     "Levantadas na investigação do domínio", item do passo `postBuild` do portal.
@@ -47,7 +47,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
     `qa-work-guideline.html` com destino `qa-work-guidelines.html`.
   - Origem: História 1 (critério do redirecionamento de QA `es`) e R6 de `guia-de-qa`.
 
-- [ ] **T5. Site Docusaurus com o guia de Engenharia em pt-BR**
+- [x] **T5. Site Docusaurus com o guia de Engenharia em pt-BR**
   - Depende de: T2
   - Pré-requisito nomeado: introdução do Docusaurus 3.10.2 (template `classic-typescript`) no
     `package.json` e no `yarn.lock`, com os scripts do plano, `engines.node: ">=22"`, `.nvmrc` e
@@ -63,7 +63,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
   - Validação com `yarn build` e `yarn typecheck`: TC-1, TC-2, TC-3, TC-4 e TC-5 (parte pt-BR de
     Engenharia), TC-18, TC-39, TC-41, TC-42, TC-43 e TC-45.
 
-- [ ] **T6. Engenharia em inglês e espanhol**
+- [x] **T6. Engenharia em inglês e espanhol**
   - Depende de: T5
   - Páginas de `src/{en,es}/docs/engineering/` movidas para
     `i18n/{en,es}/docusaurus-plugin-content-docs/current/engineering/`, exceto a árvore antiga
@@ -74,7 +74,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
     CI/CD `es` em `/img/docs/`, `<img style>` em JSX e `<60%` na tabela de saúde.
   - Validação: TC-1, TC-3 e TC-4 (Engenharia `en`/`es`), TC-17, TC-35 e TC-37.
 
-- [ ] **T7. Guia de QA nos três idiomas**
+- [x] **T7. Guia de QA nos três idiomas**
   - Depende de: T6
   - Páginas de QA movidas para `docs/qa/` e para as pastas `current/qa/` de `en` e `es`, com
     `_category_.json`, rótulos de categoria em `current.json`, frontmatter e prefixos numéricos
@@ -83,7 +83,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
     `/img/docs/`; chaves `{ }` de Heurísticas escapadas; links sem `.md`.
   - Validação: TC-1 (QA), TC-14 (parte QA), TC-16, TC-36 e TC-38.
 
-- [ ] **T8. Plugin local de redirecionamento e redirecionamento de QA `es`**
+- [x] **T8. Plugin local de redirecionamento e redirecionamento de QA `es`**
   - Depende de: T1, T4, T7
   - `@docusaurus/plugin-client-redirects` 3.10.2 instalado e envolvido por
     `plugins/client-redirects-html/index.ts`, que grava cada `<from>.html` com destino `<to>.html`
@@ -92,7 +92,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
     publicada nos três idiomas.
   - Validação: TC-6, TC-7, TC-9, TC-13 e TC-44.
 
-- [ ] **T9. Guia de DevOps em pt-BR com fórmulas pelo KaTeX**
+- [x] **T9. Guia de DevOps em pt-BR com fórmulas pelo KaTeX**
   - Depende de: T5
   - Páginas de `src/docs/devops/` movidas para `docs/devops/` com `_category_.json`,
     frontmatter, prefixos numéricos preservados e links sem `.md`.
@@ -100,7 +100,7 @@ Consome [`spec.md`](./spec.md) e [`plan.md`](./plan.md). Os ids `TC-<n>` apontam
     folha de estilo do KaTeX em `customCss`.
   - Validação: TC-1 (DevOps pt-BR), TC-14 (parte DevOps pt-BR) e TC-33 (pt-BR).
 
-- [ ] **T10. DevOps traduzido para inglês e espanhol e redirecionamentos da árvore antiga**
+- [x] **T10. DevOps traduzido para inglês e espanhol e redirecionamentos da árvore antiga**
   - Depende de: T3, T8, T9
   - Tradução das 9 páginas de `docs/devops/` para `en` e `es` nas pastas `current/devops/`, com
     rótulos da categoria DevOps em `current.json`.

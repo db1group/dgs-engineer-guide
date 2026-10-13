@@ -46,9 +46,11 @@ Cada item diz o que é a dependência e o que o domínio perde sem ela.
 - `numberPrefixParser: false` na instância de docs do guia — com o analisador de prefixo padrão
   do Docusaurus, `0-devops-work-guidelines` e as práticas `1-` a `6-` perdem o prefixo no ID e
   na URL, e as URLs publicadas mudam.
-- Passo `postBuild` do portal que copia o `index.html` gerado pelo plugin de redirecionamento
-  para `<from>.html` — sem ele os 10 redirecionamentos da árvore antiga são gravados como
-  `<caminho>/index.html`, que o S3 website hosting não serve para a URL `<caminho>.html`.
+- Plugin local `client-redirects-html` do portal, que envolve o
+  `@docusaurus/plugin-client-redirects` e grava os 10 redirecionamentos da árvore antiga como
+  `<from>.html` com destino `<to>.html` — sem ele os redirecionamentos ficam em
+  `<caminho>/index.html` com destino sem extensão, e o S3 website hosting responde 404 à URL
+  `<caminho>.html` e ao destino.
 - Caminho `from` dos três redirecionamentos de `work processes` escrito com o espaço literal
   (`/docs/engineering/best-practices/devops/work processes/...`) — o S3 decodifica `%20` antes de
   procurar o objeto; com `%20` no `from`, o arquivo gerado tem `%20` no nome e as 6 URLs

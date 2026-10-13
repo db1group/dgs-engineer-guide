@@ -34,9 +34,22 @@ Cada item diz o que é a dependência e o que o domínio perde sem ela.
   `en-US`, `es-ES`) — sem ele o seletor mostra rótulos padrão e o atributo de idioma do HTML
   muda em `en` e `es`.
 - Traduções do tema por idioma em `i18n/<locale>/` (`code.json` para textos da home e rótulos da
-  interface, como `Nesta página`; `docusaurus-theme-classic/navbar.json` e `footer.json` para o
-  item do Radar e o copyright) e o `current.json` de cada instância de docs para os rótulos das
-  categorias — sem elas esses textos aparecem em pt-BR ou no padrão do tema nos outros idiomas.
+  interface, como `Nesta página`; `docusaurus-theme-classic/navbar.json` para o item do Radar) e
+  o `current.json` de cada instância de docs para os rótulos das categorias — sem elas esses
+  textos aparecem em pt-BR ou no padrão do tema nos outros idiomas.
+- `themeConfig.footer.copyright` em `docusaurus.config.ts` com o ano do build
+  (`new Date().getFullYear()`), sem `docusaurus-theme-classic/footer.json` versionado em nenhum
+  idioma e com `i18n/*/docusaurus-theme-classic/footer.json` no `.gitignore` — o
+  `write-translations` grava o copyright em `footer.json`, e esse arquivo, quando versionado,
+  prevalece sobre a configuração e congela o ano da geração.
+- Item de navbar `custom-localeDropdownHtml`
+  (`src/theme/NavbarItem/LocaleDropdownHtmlNavbarItem.tsx`), registrado no
+  `src/theme/NavbarItem/ComponentTypes.tsx` ejetado, que leva ao mesmo caminho no outro idioma
+  terminado em `.html` — o `localeDropdown` padrão monta o destino a partir do caminho corrente,
+  que fica sem `.html` depois de qualquer navegação interna, e a troca de idioma cai no 404 do S3.
+- `sitemap.createSitemapItems` chamando `defaultCreateSitemapItems` e acrescentando `.html` a toda
+  URL que não termine em `/` nem em `.html` — sem ele o sitemap lista URLs sem extensão, que o S3
+  responde com 404. As páginas `unlisted` ficam fora do sitemap pela meta `noindex`.
 - `themeConfig.colorMode` com alternância habilitada e `respectPrefersColorScheme: true` — sem
   ele o modo inicial ignora a preferência de cor do sistema.
 - `themeConfig.tableOfContents.maxHeadingLevel: 6` — sem ele o sumário mostra só os títulos de
@@ -47,9 +60,12 @@ Cada item diz o que é a dependência e o que o domínio perde sem ela.
 - `remark-math` + `rehype-katex` configurados em cada instância de docs que tiver fórmula
   (opções de plugin são por instância) e folha de estilo do KaTeX carregada no site — sem eles
   as fórmulas aparecem como LaTeX cru ou sem formatação.
-- Passo `postBuild` que copia cada `<from>/index.html` gerado pelos redirecionamentos para
-  `<from>.html` — sem ele o redirecionamento existe só em `<from>/` e a URL `.html` antiga
-  retorna 404 no S3.
+- Plugin local `plugins/client-redirects-html`, que envolve o
+  `@docusaurus/plugin-client-redirects` e, no `postBuild`, depois do plugin oficial, move cada
+  `<from>/index.html` para `<from>.html` com destino reescrito para `<to>.html`, falhando o build
+  se o arquivo não existir ou o destino não for reescrito — sem ele o redirecionamento fica em
+  `<from>/` e aponta para `<to>` sem extensão, e o S3 responde 404 à URL `.html` antiga e ao
+  destino.
 - Hospedagem de site estático do bucket S3 com documento de índice `index.html` e documento de
   erro `404.html` (configuração fora do repositório) — sem `404.html` na raiz do build, caminho
   inexistente recebe o erro cru do S3; sem o documento de índice, `/`, `/en/` e `/es/` não

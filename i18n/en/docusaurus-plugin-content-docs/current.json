@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.guide.category.Engenharia": {
+    "message": "Engineering",
+    "description": "The label for category 'Engenharia' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.Práticas Recomendadas": {
+    "message": "Best Practices",
+    "description": "The label for category 'Práticas Recomendadas' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.Testes automatizados": {
+    "message": "Automated Testing",
+    "description": "The label for category 'Testes automatizados' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.Carreira": {
+    "message": "Career",
+    "description": "The label for category 'Carreira' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.QA": {
+    "message": "QA",
+    "description": "The label for category 'QA' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.qa-best-practices": {
+    "message": "Best Practices",
+    "description": "The label for category 'Práticas Recomendadas' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.qa-career": {
+    "message": "Career",
+    "description": "The label for category 'Carreira' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.DevOps": {
+    "message": "DevOps",
+    "description": "The label for category 'DevOps' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.devops-best-practices": {
+    "message": "Best Practices",
+    "description": "The label for category 'Práticas Recomendadas' in sidebar 'guide'"
+  },
+  "sidebar.guide.category.devops-career": {
+    "message": "Career",
+    "description": "The label for category 'Carreira' in sidebar 'guide'"
+  }
+}

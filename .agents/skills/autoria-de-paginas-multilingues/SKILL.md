@@ -122,7 +122,8 @@ sidebar_label: Revisão de código
 1. Mova o arquivo pt-BR e as duas traduções juntos, para o mesmo novo `<caminho>`. Se só a
    pasta pt-BR mudar, as traduções ficam órfãs e são ignoradas.
 2. Se a URL publicada mudar, adicione um redirecionamento em `docusaurus.config.ts`, na opção
-   `redirects` de `@docusaurus/plugin-client-redirects`:
+   `redirects` do plugin local `plugins/client-redirects-html`, que envolve o
+   `@docusaurus/plugin-client-redirects`:
 
    ```ts
    { from: '/docs/qa/best-practices/qa-work-guideline', to: '/docs/qa/best-practices/qa-work-guidelines' }
@@ -130,12 +131,16 @@ sidebar_label: Revisão de código
 
    - Escreva `from` e `to` sem `.html` e sem prefixo de idioma. Os caminhos são relativos ao
      `baseUrl` de cada idioma, e a mesma entrada é aplicada nos builds de pt-BR, `en` e `es`.
+     Um `to` com `.html` não corresponde a nenhuma rota e derruba o build.
    - O `to` precisa existir, senão o build falha. Um `from` igual a uma rota existente é
      ignorado com aviso.
-   - Com `trailingSlash: false`, o plugin grava o redirecionamento em `<from>/index.html`, e o
-     S3 sem CloudFront não serve esse arquivo para a URL `<from>.html`. Um passo `postBuild` do
-     próprio build copia cada `<from>/index.html` para `<from>.html`. Quem cria a página só
-     adiciona a entrada e confere se o `.html` foi gerado.
+   - O `@docusaurus/plugin-client-redirects` grava o redirecionamento em `<from>/index.html`, com
+     destino `<to>` sem extensão, e o S3 sem CloudFront responde 404 aos dois. No `postBuild`,
+     depois do plugin oficial, o `client-redirects-html` move cada `<from>/index.html` para
+     `<from>.html`, reescreve o destino para `<to>.html` e remove as pastas que ficarem vazias.
+     O build falha se o arquivo gerado não existir ou se o destino não for reescrito. Quem cria
+     a página só adiciona a entrada e confere, em `build/`, o `<from>.html` com destino
+     `<to>.html`.
    - Quando a URL antiga tem pasta com espaço (`work processes`, publicada como `%20`), escreva
      o `from` com o espaço literal: `'/docs/engineering/best-practices/devops/work processes/4-pipeline-execution'`.
      O arquivo gerado tem espaço no nome e corresponde à chave que o S3 procura ao decodificar
@@ -209,8 +214,8 @@ texto corrido, escape com `\$`.
 - `docusaurus.config.ts`: as instâncias do plugin de docs (`default` em `docs/` e
   `dgs-components` em `dgs-components/`), `i18n` (`defaultLocale: 'pt-BR'`, locales `pt-BR`,
   `en`, `es`), `trailingSlash: false`, `onBrokenLinks: 'throw'`,
-  `themeConfig.tableOfContents.maxHeadingLevel: 6` e a lista `redirects` de
-  `@docusaurus/plugin-client-redirects`.
+  `themeConfig.tableOfContents.maxHeadingLevel: 6` e a lista `redirects` do plugin local
+  `plugins/client-redirects-html`.
 - `yarn docusaurus start --locale en` (ou `es`) mostra um idioma por vez no servidor local. Sem
   `--locale`, mostra o pt-BR.
 - `yarn docusaurus write-translations --locale <locale>` gera as chaves de `current.json` para
@@ -219,7 +224,7 @@ texto corrido, escape com `\$`.
   `build/es/`) e falha em link quebrado, imagem Markdown ausente, `to` de redirecionamento
   inexistente ou erro de MDX.
 - `yarn docusaurus serve` serve o build. Use para conferir o menu em produção e os
-  redirecionamentos (`build/<caminho-antigo>.html` precisa existir).
+  redirecionamentos (`build/<caminho-antigo>.html` precisa existir e levar a `<caminho-novo>.html`).
 - Em `/en/` e `/es/`, confira se nenhuma página aparece em pt-BR. Toda página aberta em pt-BR
   nesses idiomas é uma tradução ausente ou órfã.
 

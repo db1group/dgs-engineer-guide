@@ -252,10 +252,14 @@ invalidação comentado.
   então os containers de aviso aparecem como admonitions `warning`/`danger` com o título original
   (`IMPORTANTE`/`IMPORTANT`).
 - Dadas a página CI/CD `es` e a página Revisão de código nos três idiomas, quando abertas, então
-  os links apontam para `/img/docs/ci-cd-flow-desktop.png`, `/img/docs/CI-CD.png` e
-  `/img/docs/the-code-review-pyramid.jpeg` e respondem 200.
-- Dadas as imagens de QA (`test-tradeoff.png`, `bug.png`, `shift-left-approach.png`), quando as
-  páginas são abertas nos três idiomas, então as imagens carregam de `/img/docs/`.
+  os links para `ci-cd-flow-desktop.png`, `CI-CD.png` e `the-code-review-pyramid.jpeg` abrem a
+  imagem com resposta 200. Os links são escritos em Markdown com caminho `/img/docs/...`, que o
+  build valida, e o Docusaurus os publica como cópias com hash no nome em `assets/files/` do
+  idioma.
+- Dadas as imagens de QA (`bug.png` em Gestão de bugs e retestes, `shift-left-approach.png` em
+  Abordagem shift left e o link para `test-tradeoff.png` no Jeito DB1 de QA), quando as páginas
+  são abertas em pt-BR, então as imagens aparecem, publicadas como cópias com hash no nome em
+  `/assets/images/` e `/assets/files/`. As páginas de QA `en` e `es` não contêm essas imagens.
 - Dada a tabela de saúde do Jeito DB1 de Engenharia em `en` e `es`, quando aberta, então a última
   linha é `<60% Unhealthy` e `<60% Insalubres`.
 - Dada a lista de caracteres especiais de Heurísticas de teste nos três idiomas, quando aberta,

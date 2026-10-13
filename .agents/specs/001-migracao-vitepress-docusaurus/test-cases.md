@@ -388,15 +388,20 @@ folha de estilo e as fontes do KaTeX vêm do próprio site, sem script de render
    `<local>/`, `<local>/en/` e `<local>/es/`.
 2. Confira os links das imagens e as respostas na aba Rede.
 
-**Esperado:** os links apontam para `/img/docs/ci-cd-flow-desktop.png`, `/img/docs/CI-CD.png` e
-`/img/docs/the-code-review-pyramid.jpeg` e respondem 200; as imagens aparecem.
+**Esperado:** os links para `ci-cd-flow-desktop.png`, `CI-CD.png` e
+`the-code-review-pyramid.jpeg` apontam para cópias com hash no nome em `assets/files/` do idioma
+(ex.: `/es/assets/files/CI-CD-<hash>.png`) e respondem 200; as imagens aparecem.
 
 ### TC-36 (obrigatório) — Imagens de QA
 
-1. Abra pelo menu as páginas de QA que exibem `test-tradeoff.png`, `bug.png` e
-   `shift-left-approach.png`, em `<local>/`, `<local>/en/` e `<local>/es/`.
+1. Abra pelo menu, em `<local>/`, as páginas Gestão de bugs e retestes e Abordagem shift left e
+   confira as imagens `bug.png` e `shift-left-approach.png`.
+2. Abra o Jeito DB1 de QA em `<local>/` e siga o link da pirâmide de testes (`test-tradeoff.png`).
+3. Abra as mesmas páginas em `<local>/en/` e `<local>/es/`.
 
-**Esperado:** as três imagens aparecem nos três idiomas, carregadas de `/img/docs/`.
+**Esperado:** em pt-BR, as duas imagens aparecem, carregadas de `/assets/images/` com hash no
+nome, e o link da pirâmide abre a imagem em `/assets/files/` com resposta 200. As páginas `en` e
+`es` não contêm essas imagens.
 
 ### TC-37 (obrigatório) — Tabela de saúde do Jeito DB1 de Engenharia
 
