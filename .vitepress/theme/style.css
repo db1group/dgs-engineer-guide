@@ -4,6 +4,106 @@
  */
 
 /**
+ * Identidade visual DB1 Itênex
+ *
+ * Cores principais: Azul Noite #0F1629, Vermelho Itênex #E81E3F,
+ * Lavanda #BBC1D2, Névoa #E4E4EB e Papel #F8F8F8.
+ * Tipografia: Artlab.
+ * -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Artlab";
+  src: url("/fonts/artlab/Artlab-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Artlab";
+  src: url("/fonts/artlab/Artlab-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Artlab";
+  src: url("/fonts/artlab/Artlab-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Artlab";
+  src: url("/fonts/artlab/Artlab-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Artlab";
+  src: url("/fonts/artlab/Artlab-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Artlab";
+  src: url("/fonts/artlab/Artlab-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --itx-navy: #0f1629;
+  --itx-navy-raised: #141c33;
+  --itx-navy-card: #172038;
+  --itx-navy-deep: #0b1122;
+  --itx-navy-line: #2e3956;
+  --itx-red: #e81e3f;
+  --itx-red-deep: #c71d3f;
+  --itx-red-press: #a8172f;
+  --itx-red-on-navy: #ff5c75;
+  --itx-lavender: #bbc1d2;
+  --itx-mist: #e4e4eb;
+  --itx-paper: #f8f8f8;
+  --itx-ink-2: #474757;
+  --itx-ink-muted: #646978;
+  --itx-line: #d3d6e0;
+
+  --vp-font-family-base: "Artlab", "Helvetica Neue", Arial, system-ui,
+    sans-serif;
+
+  --vp-c-text-1: var(--itx-navy);
+  --vp-c-text-2: var(--itx-ink-2);
+  --vp-c-text-3: var(--itx-ink-muted);
+
+  --vp-c-bg-alt: var(--itx-paper);
+  --vp-c-divider: var(--itx-line);
+  --vp-c-gutter: var(--itx-mist);
+}
+
+.dark {
+  --vp-c-bg: var(--itx-navy);
+  --vp-c-bg-alt: var(--itx-navy-deep);
+  --vp-c-bg-elv: var(--itx-navy-raised);
+  --vp-c-bg-soft: var(--itx-navy-card);
+
+  --vp-c-text-1: var(--itx-paper);
+  --vp-c-text-2: #bbc1d2;
+  --vp-c-text-3: #9aa1b5;
+
+  --vp-c-border: var(--itx-navy-line);
+  --vp-c-divider: #212b45;
+  --vp-c-gutter: var(--itx-navy-deep);
+}
+
+/**
  * Colors
  *
  * Each colors have exact same color scale system with 3 levels of solid
@@ -49,10 +149,10 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  --vp-c-brand-1: var(--itx-red-deep);
+  --vp-c-brand-2: var(--itx-red-press);
+  --vp-c-brand-3: var(--itx-red);
+  --vp-c-brand-soft: rgba(232, 30, 63, 0.1);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
@@ -68,6 +168,13 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+.dark {
+  --vp-c-brand-1: var(--itx-red-on-navy);
+  --vp-c-brand-2: var(--itx-red-deep);
+  --vp-c-brand-3: var(--itx-red);
+  --vp-c-brand-soft: rgba(255, 92, 117, 0.14);
 }
 
 /**
@@ -94,14 +201,15 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #bd34fe 30%,
-    #41d1ff
+    #c71d3f 20%,
+    #e81e3f 55%,
+    #ff5c75
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #bd34fe 50%,
-    #47caff 50%
+    #e81e3f 50%,
+    #0f1629 50%
   );
   --vp-home-hero-image-filter: blur(44px);
 }
@@ -135,6 +243,33 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/**
+ * Component: Nav logo
+ * O logotipo DB1 Itênex é horizontal, então a altura é reduzida para caber
+ * junto do título do site sem invadir a busca. Em telas com menu lateral, o
+ * título fica sobre a coluna do menu, cuja barra de rolagem ocupa a altura
+ * toda; por isso o conjunto precisa terminar antes dela.
+ * -------------------------------------------------------------------------- */
+
+.VPNavBarTitle .title img.logo {
+  height: 13px;
+}
+
+.VPNavBarTitle .title {
+  font-size: 14px;
+}
+
+@media (min-width: 960px) {
+  .VPNavBarTitle.has-sidebar .title img.logo {
+    height: 12px;
+    margin-right: 6px;
+  }
+
+  .VPNavBarTitle.has-sidebar .title {
+    font-size: 13px;
+  }
 }
 
 .VPHome .text {
