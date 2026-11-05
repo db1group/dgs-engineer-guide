@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "DB1 Global Software"
+  name: "DB1 Itênex"
   text: "Guia de engenharia"
   tagline: para compartilhar e, além disso, expressar nossa forte opinião sobre como o software deve ser feito
   actions:

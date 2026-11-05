@@ -13,8 +13,35 @@ export default defineConfig({
       {
         rel: "icon",
         href: "/img/favicon.ico",
+        sizes: "32x32",
       },
     ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/img/favicon-32.png",
+        sizes: "32x32",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/img/favicon-192.png",
+        sizes: "192x192",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "/img/apple-touch-icon.png",
+      },
+    ],
+    ["meta", { name: "theme-color", content: "#0f1629" }],
   ],
   metaChunk: true,
   description: "Guia de engenharia da DB1 - Em busca da excelência técnica",
@@ -30,7 +57,11 @@ export default defineConfig({
     es: { label: "Español", ...es },
   },
   themeConfig: {
-    logo: "/img/style/logo.png",
+    logo: {
+      light: "/img/style/logo-itenex-positivo.svg",
+      dark: "/img/style/logo-itenex-negativo.svg",
+      alt: "DB1 Itênex",
+    },
     search: {
       provider: "local",
     },
