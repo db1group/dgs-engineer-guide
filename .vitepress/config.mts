@@ -13,15 +13,25 @@ export default defineConfig({
       {
         rel: "icon",
         href: "/img/favicon.ico",
-        sizes: "48x48",
+        sizes: "32x32",
       },
     ],
     [
       "link",
       {
         rel: "icon",
-        type: "image/svg+xml",
-        href: "/img/favicon.svg",
+        type: "image/png",
+        href: "/img/favicon-32.png",
+        sizes: "32x32",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/img/favicon-192.png",
+        sizes: "192x192",
       },
     ],
     [
