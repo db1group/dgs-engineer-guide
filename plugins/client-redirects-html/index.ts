@@ -1,94 +1,164 @@
-import fs from 'fs/promises';
-import path from 'path';
-import type {LoadContext, Plugin, PluginModule} from '@docusaurus/types';
-import pluginClientRedirects, {
-  validateOptions,
-  type PluginOptions,
-} from '@docusaurus/plugin-client-redirects';
+import {access, readFile, readdir, rmdir, unlink, writeFile} from 'node:fs/promises';
+import path from 'node:path';
+import clientRedirects from '@docusaurus/plugin-client-redirects';
+import type {LoadContext, Plugin} from '@docusaurus/types';
 
-// O plugin oficial grava cada redirecionamento em `<from>/index.html`, com destino `<to>` sem
-// extensão. O S3 website hosting só serve `<caminho>.html`, então o arquivo é movido para
-// `<from>.html` e o destino é reescrito para `<to>.html`.
+export {validateOptions} from '@docusaurus/plugin-client-redirects';
 
-// O template oficial grava o destino no meta refresh, no link canonical e em
-// `window.location.href`.
-const EXPECTED_DESTINATIONS = 3;
+type RedirectEntry = {from: string | string[]; to: string};
+type Options = {redirects?: RedirectEntry[]};
 
-function escapeRegExp(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-async function removeEmptyDirs(dir: string, stopAt: string): Promise<void> {
-  let current = dir;
-  while (path.relative(stopAt, current) && !path.relative(stopAt, current).startsWith('..')) {
-    if ((await fs.readdir(current)).length > 0) {
-      return;
-    }
-    await fs.rmdir(current);
-    current = path.dirname(current);
+async function exists(file: string): Promise<boolean> {
+  try {
+    await access(file);
+    return true;
+  } catch {
+    return false;
   }
 }
 
-async function moveRedirect(
+async function collectHtmlFiles(directory: string): Promise<Set<string>> {
+  const files = new Set<string>();
+  const entries = await readdir(directory, {withFileTypes: true});
+  for (const entry of entries) {
+    const file = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      for (const htmlFile of await collectHtmlFiles(file)) {
+        files.add(htmlFile);
+      }
+    } else if (entry.isFile() && path.extname(entry.name) === '.html') {
+      files.add(path.resolve(file));
+    }
+  }
+  return files;
+}
+
+async function addHtmlExtensionsToPageLinks(
+  directory: string,
   outDir: string,
   baseUrl: string,
-  from: string,
-  to: string,
+  htmlFiles: Set<string>,
 ): Promise<void> {
-  const source = path.join(outDir, from, 'index.html');
-  const target = path.join(outDir, `${from}.html`);
+  const entries = await readdir(directory, {withFileTypes: true});
+  const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 
-  let content: string;
-  try {
-    content = await fs.readFile(source, 'utf8');
-  } catch {
-    throw new Error(
-      `client-redirects-html: arquivo de redirecionamento não gerado para "${from}" (esperado ${source}).`,
+  for (const entry of entries) {
+    const file = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      await addHtmlExtensionsToPageLinks(file, outDir, baseUrl, htmlFiles);
+      continue;
+    }
+    if (!entry.isFile() || path.extname(entry.name) !== '.html') {
+      continue;
+    }
+    const content = await readFile(file, 'utf8');
+    const updated = content.replace(
+      /\bhref=(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g,
+      (
+        attribute,
+        doubleQuoted: string | undefined,
+        singleQuoted: string | undefined,
+        unquoted: string | undefined,
+      ) => {
+        const href = doubleQuoted ?? singleQuoted ?? unquoted ?? '';
+        if (!href.startsWith('/') || href.startsWith('//')) {
+          return attribute;
+        }
+
+        const suffixIndex = href.search(/[?#]/);
+        const pathname = suffixIndex === -1 ? href : href.slice(0, suffixIndex);
+        const suffix = suffixIndex === -1 ? '' : href.slice(suffixIndex);
+        if (pathname.endsWith('/') || pathname.endsWith('.html')) {
+          return attribute;
+        }
+
+        const localePath = pathname.match(/^\/(?:en|es)\/(.+)$/);
+        let route: string | undefined;
+        if (
+          localePath &&
+          (normalizedBaseUrl === '/' || !pathname.startsWith(normalizedBaseUrl))
+        ) {
+          route = localePath[1];
+        } else if (pathname.startsWith(normalizedBaseUrl)) {
+          route = pathname.slice(normalizedBaseUrl.length);
+        } else if (pathname.startsWith('/')) {
+          route = pathname.slice(1);
+        }
+        if (!route) {
+          return attribute;
+        }
+        const segments = route.split('/').map(decodeURIComponent);
+        const target = path.resolve(outDir, ...segments) + '.html';
+        const relativeTarget = path.relative(outDir, target);
+        if (
+          relativeTarget.startsWith('..') ||
+          path.isAbsolute(relativeTarget) ||
+          !htmlFiles.has(target)
+        ) {
+          return attribute;
+        }
+        const updatedHref = `${pathname}.html${suffix}`;
+        if (doubleQuoted !== undefined) {
+          return `href="${updatedHref}"`;
+        }
+        if (singleQuoted !== undefined) {
+          return `href='${updatedHref}'`;
+        }
+        return `href=${updatedHref}`;
+      },
     );
+    if (updated !== content) {
+      await writeFile(file, updated);
+    }
   }
-
-  // Mesmo valor que o plugin oficial grava: encodeURI(normalizeUrl([baseUrl, to])).
-  const toUrl = encodeURI(`${baseUrl}${to.replace(/^\/+/, '')}`);
-  const pattern = new RegExp(`${escapeRegExp(toUrl)}(?=["'])`, 'g');
-  const found = content.match(pattern)?.length ?? 0;
-  if (found !== EXPECTED_DESTINATIONS) {
-    throw new Error(
-      `client-redirects-html: esperadas ${EXPECTED_DESTINATIONS} ocorrências de "${toUrl}" em ${source}, encontradas ${found}.`,
-    );
-  }
-
-  await fs.writeFile(target, content.replace(pattern, `${toUrl}.html`), {flag: 'wx'});
-  await fs.rm(source);
-  await removeEmptyDirs(path.dirname(source), outDir);
 }
 
-function pluginClientRedirectsHtml(
+// O plugin oficial grava `<from>/index.html` com destino sem extensão; o S3
+// sem CloudFront só responde a `<from>.html` e a destinos terminados em `.html`.
+export default async function pluginClientRedirectsHtml(
   context: LoadContext,
-  options: PluginOptions,
-): Plugin<void> | null {
-  const plugin = pluginClientRedirects(context, options);
-  if (!plugin) {
+  pluginOptions: unknown,
+): Promise<Plugin<any> | null> {
+  const options = pluginOptions as Options;
+  const official = (await clientRedirects(context, options as never)) as Plugin<any> | null;
+  if (!official) {
     return null;
   }
-  const officialPostBuild = plugin.postBuild;
-
   return {
-    ...plugin,
+    ...official,
+    name: 'client-redirects-html',
     async postBuild(props) {
-      await officialPostBuild?.call(plugin, props);
-      for (const {from, to} of options.redirects) {
-        for (const source of Array.isArray(from) ? from : [from]) {
-          await moveRedirect(props.outDir, props.baseUrl, source, to);
+      await official.postBuild?.(props);
+      const baseUrl = props.baseUrl.replace(/\/$/, '');
+      for (const {from, to} of options.redirects ?? []) {
+        for (const origin of [from].flat()) {
+          const directory = path.join(props.outDir, origin);
+          const source = path.join(directory, 'index.html');
+          const target = `${directory}.html`;
+          if (await exists(target)) {
+            throw new Error(
+              `Redirect ${origin} collides with the existing page ${target}.`,
+            );
+          }
+          let content = await readFile(source, 'utf8');
+          if (to.startsWith('/') && !to.endsWith('/')) {
+            const toUrl = encodeURI(`${baseUrl}${to}`);
+            content = content.split(toUrl).join(`${toUrl}.html`);
+          }
+          await writeFile(target, content);
+          await unlink(source);
+          if ((await readdir(directory)).length === 0) {
+            await rmdir(directory);
+          }
         }
       }
+      const htmlFiles = await collectHtmlFiles(props.outDir);
+      await addHtmlExtensionsToPageLinks(
+        props.outDir,
+        props.outDir,
+        props.baseUrl,
+        htmlFiles,
+      );
     },
   };
 }
-
-// Plugins declarados como função em `docusaurus.config.ts` têm as opções validadas e
-// normalizadas pela propriedade `validateOptions` da própria função.
-pluginClientRedirectsHtml.validateOptions = validateOptions;
-
-// `PluginModule` tipa `validateOptions` como função genérica em `<T, U>`, que nenhum validador
-// concreto satisfaz; a conversão fica restrita à fronteira do módulo.
-export default pluginClientRedirectsHtml as PluginModule;

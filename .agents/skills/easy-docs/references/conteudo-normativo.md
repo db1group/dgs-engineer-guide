@@ -2,74 +2,40 @@
 
 > **Manutenção deste arquivo**
 >
-> Atualize quando o texto, o código de exemplo ou a figura publicada de uma página do acelerador
-> mudar por decisão deliberada (orientação nova, comando, caminho, porta, contrato do endpoint
-> ou token de tema revisado). Ajustes apenas de sintaxe que preservam o texto não exigem edição.
-> Divergência entre este resumo e as páginas sem decisão registrada é escalada para decisão
-> humana.
+> Atualize quando o conteúdo publicado de uma página do Easy Docs mudar por decisão deliberada
+> (revisão de conteúdo aprovada, página nova, figura trocada). Ajustes de sintaxe que preservam
+> o texto não exigem edição. Divergência entre este arquivo e as páginas sem decisão registrada
+> é escalada para decisão humana.
 
-Resumo do que cada página orienta, com os valores publicados. O texto, o código de exemplo e a
-figura são publicados como estão; este resumo não autoriza reescrevê-los. Salvo indicação, o
-conteúdo é o mesmo nos três idiomas; os nomes de arquivo, pasta, componente, tema e token e o
-código de exemplo não são traduzidos.
+O texto das páginas é publicado literalmente nos três idiomas. Este arquivo registra o que cada
+página orienta, os títulos que formam o sumário e as diferenças entre idiomas que são
+preservadas.
 
-## Introdução
+## Introdução (`introduction`)
 
-- **Introdução:** o Easy Docs simplifica a geração de documentos PDF a partir de componentes
-  React. Criar PDFs como relatórios ou contratos é um desafio em vários projetos; o Easy Docs
-  permite criá-los diretamente de componentes React estilizados, eliminando a necessidade de
-  estilização inline, e é compatível com Docker.
-- **Objetivo:** converter componentes React em documentos PDF de forma eficiente, por meio de
-  um endpoint ao qual o desenvolvedor envia os dados para o template definido.
-- **Como funciona:** desenvolve-se um template React para o documento, com componentes
-  estilizados e propriedades preenchidas pelos dados; os dados são enviados ao endpoint, que
-  processa e devolve o PDF pronto. Para usar, basta executar o contêiner Docker e acessar o
-  endpoint com os dados requeridos.
+Títulos — nível 1: `Easy Docs` (três idiomas). Nível 2: pt-BR `Introdução`, `Objetivo`,
+`Como Funciona`; en `Introduction`, `Objective`, `How It Works`; es `Introducción`, `Objetivo`,
+`Cómo Funciona`.
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Easy Docs | Easy Docs | Easy Docs |
-| 2 | Introdução | Introduction | Introducción |
-| 2 | Objetivo | Objective | Objetivo |
-| 2 | Como Funciona | How It Works | Cómo Funciona |
+Conteúdo:
 
-## Começando
+- O Easy Docs simplifica a geração de documentos PDF a partir de componentes React; resolve a
+  dificuldade de criar PDFs como relatórios ou contratos, permite criá-los a partir de
+  componentes React estilizados, sem estilização inline, e é compatível com Docker.
+- Objetivo: converter componentes React em PDF por meio de um endpoint que recebe os dados e os
+  aplica ao template definido.
+- Funcionamento: desenvolver um template React para o documento, incorporar e estilizar
+  componentes, definir as propriedades preenchidas pelos dados, enviar os dados ao endpoint e
+  receber o PDF pronto. Para usar, executar o container Docker e acessar o endpoint.
 
-1. **Pré-requisitos** (lista numerada única, publicada assim):
-   1. Debian, Ubuntu, RedHat, CentOS, Fedora, Suse, Amazon Linux, Oracle Linux (sob o rótulo
-      "Sistema operacional Linux compatível");
-   2. acesso de superusuário ou permissões de sudo;
-   3. conhecimento básico de linha de comando Linux;
-   4. Git instalado;
-   5. (para criar os templates) Node.js e npm instalados.
-2. **Git com apt** (Debian, Ubuntu e derivados): `$ sudo apt update` e `$ sudo apt install git`.
-3. **Git com yum** (RedHat, CentOS, Amazon Linux e derivados): `$ sudo yum update` e
-   `$ sudo yum install git`.
-4. **Node.js com NVM:** instalar o NVM com
-   `$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash` e o
-   Node.js com `$ nvm install VERSÃO_DO_NODE` (`NODE_VERSION` em `en`, `VERSIÓN_DEL_NODE` em
-   `es`); exemplo para a versão 18: `$ nvm install 18`.
-5. **Clone:** `$ git clone https://github.com/db1group/easy-docs` e depois `$ cd easy-docs`.
-6. **Modo de desenvolvimento:** `npm run dev` ou `yarn dev`; em desenvolvimento é preciso
-   instalar dependências no ambiente.
-7. **Dependências do modo de desenvolvimento** (um bloco de código por comando, nesta ordem):
-   1. `export WKTHMLTOPDF_ARCH=$(case "$(arch)" in "aarch64" | "arm64") echo "arm64" ;; *) echo "amd64" ;; esac)`
-   2. `export WKTHMLTOPDF_URL=$(echo "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_$WKTHMLTOPDF_ARCH.deb")`
-   3. `sudo apt update`
-   4. `sudo apt install -y libfontenc1 xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils`
-   5. `curl -L $WKTHMLTOPDF_URL > /tmp/wkhtmltopdf.deb`
-   6. `dpkg -i /tmp/wkhtmltopdf.deb`
-   7. `sudo apt --fix-broken install -y`
-   8. `sudo apt install wkhtmltopdf`
-8. **Importante:** essas dependências são necessárias somente em modo de desenvolvimento; é
-   possível usar o Docker para rodar o projeto sem instalá-las. Em produção o projeto roda em um
-   contêiner Docker que já as possui.
+## Começando (`getting-started`)
+
+Títulos — nível 1: `Começando` / `Getting Started` / `Empezando`.
 
 | Nível | pt-BR | en | es |
 |---|---|---|---|
-| 1 | Começando | Getting Started | Empezando |
 | 2 | Pré-requisitos | Prerequisites | Requisitos previos |
-| 3 em `en`; parágrafo em pt-BR e `es` | Pré-requisitos: | Prerequisites: | Requisitos previos: |
+| 3 | — | Prerequisites: | — |
 | 2 | Passos para começar: | Steps to Get Started: | Pasos para empezar: |
 | 3 | Instalando o Git (usando apt) | Installing Git (using apt) | Instalando Git (usando apt) |
 | 3 | Instalando o Git (usando yum) | Installing Git (using yum) | Instalando Git (usando yum) |
@@ -79,58 +45,43 @@ código de exemplo não são traduzidos.
 | 3 | Instalando dependências | Installing Dependencies | Instalando dependencias |
 | 3 | Importante | Important | Importante |
 
-## Primeiro componente
+Pré-requisitos (lista numerada de 1 a 5, após "Sistema operacional Linux compatível"):
 
-1. **Introdução:** o tutorial cria um componente simples e gera o PDF dele. São listados 3
-   itens: criar o componente, criar o arquivo de configuração do componente para o preview e
-   criar o endpoint que recebe os dados do PDF.
-2. **Criando o componente:**
-   - na pasta `packages > templates > lib > templates`, criar a pasta `first-component` (nome do
-     primeiro componente) e, dentro dela, o arquivo `index.tsx`;
-   - importar as 3 dependências: `Text` de `templates/lib/components/Text` (renderiza textos),
-     `useAssets` de `templates/lib/hooks/useAssets` (carrega fontes e imagens) e
-     `createPropsValidation` de `templates/lib/utils/createPropsValidation` (valida as props);
-   - o componente `FirstComponent` importa `JSONSchemaType` de `ajv`, declara o tipo
-     `ExamplePropsType` com `title: string`, obtém `reactLogo` com `useAssets("react.svg")` e
-     renderiza um `div` com `<Text color="primaryBase">` contendo `Example: {title} {reactLogo}`
-     e uma `<img src={reactLogo} alt="logo" />`;
-   - o JSON Schema das props (`propsSchema`) é um objeto com `title` do tipo `string`,
-     `minLength: 1`, `maxLength: 10`, e `required: ["title"]`; é ligado ao componente por
-     `FirstComponent.validate = createPropsValidation(propsSchema)`, e o componente é o export
-     default;
-   - exportar o componente em `templates > lib > index.ts` com
-     `export { default as FirstComponent } from "./FirstComponent";`.
-3. **Visualização:** rodar `yarn dev` ou `npm run dev` e acessar `http://localhost:6006/`.
-4. **Arquivo do Storybook:** criar `FirstComponent.stories.tsx` em
-   `packages > preview > src > templates > first-component`, importando `Meta` e `StoryObj` de
-   `@storybook/react` e `Templates` de `templates/lib`; `meta` com `title: "FirstComponent"`,
-   `component: Templates.FirstComponent`, `parameters.layout: "centered"`,
-   `tags: ["autodocs"]` e `argTypes: {}`; story `Preview` com
-   `args.title: "Hello, World! First Component"`; `meta` como export default. Link para a
-   documentação oficial do Storybook. O componente aparece renderizado em
-   `http://localhost:6006/`. Figura `first-component-storybook.jpg`.
-5. **Gerando o PDF via API:**
-   - **Importante:** o cabeçalho da requisição informa o formato do documento,
-     `application/pdf` ou `text/html`; o Easy Docs devolve nesses 2 formatos conforme o
-     cabeçalho;
-   - **Temas:** temas personalizados são tratados mais adiante; por ora usa-se o tema padrão
-     `"Sample"`;
-   - **Exemplo de requisição:** o `Accept` deve ser `application/pdf` ou `text/html`; em
-     `templateProps` vão as props do componente; a página repete o bloco `propsSchema` e o
-     `export default FirstComponent`;
-   - **Exemplo com curl:** `POST` em `/template/render` com `Content-Type: application/json`,
-     `Accept: application/pdf` e corpo
-     `{"theme": ..., "templateName": "FirstComponent", "templateProps": {"title": ...}}`:
+1. Debian, Ubuntu, RedHat, CentOS, Fedora, Suse, Amazon Linux, Oracle Linux;
+2. acesso de superusuário ou permissões de sudo;
+3. conhecimento básico de linha de comando Linux;
+4. Git instalado;
+5. (para criar os templates) Node.js e npm instalados.
 
-     | Idioma | URL | `theme` | `title` |
-     |---|---|---|---|
-     | pt-BR | `http://localhost:8080/template/render` | `sample` | `"First "` (com espaço final) |
-     | en | `http://localhost:3000/template/render` | `Sample` | `"First"` |
-     | es | `http://localhost:3000/template/render` | `Sample` | `"First "` (com espaço final) |
+Comandos, em ordem (blocos `bash`):
+
+- Git com apt: `$ sudo apt update` e `$ sudo apt install git` (Debian, Ubuntu e derivados).
+- Git com yum: `$ sudo yum update` e `$ sudo yum install git` (RedHat, CentOS, Amazon Linux e
+  derivados).
+- NVM: `$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`;
+  Node: `$ nvm install VERSÃO_DO_NODE` (en `NODE_VERSION`, es `VERSIÓN_DEL_NODE`), com o
+  exemplo `$ nvm install 18`.
+- Clone: `$ git clone https://github.com/db1group/easy-docs` e `$ cd easy-docs`.
+- Modo de desenvolvimento: `npm run dev` ou `yarn dev` (sem prompt `$`).
+- Dependências do modo de desenvolvimento, um bloco por comando, sem prompt `$`:
+  1. `export WKTHMLTOPDF_ARCH=$(case "$(arch)" in "aarch64" | "arm64") echo "arm64" ;; *) echo "amd64" ;; esac)`
+  2. `export WKTHMLTOPDF_URL=$(echo "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_$WKTHMLTOPDF_ARCH.deb")`
+  3. `sudo apt update`
+  4. `sudo apt install -y libfontenc1 xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils`
+  5. `curl -L $WKTHMLTOPDF_URL > /tmp/wkhtmltopdf.deb`
+  6. `dpkg -i /tmp/wkhtmltopdf.deb`
+  7. `sudo apt --fix-broken install -y`
+  8. `sudo apt install wkhtmltopdf`
+- Importante: essas dependências só são necessárias em modo de desenvolvimento; o Docker
+  dispensa a instalação, e em produção o container já as contém.
+
+## Primeiro componente (`first-component`)
+
+Títulos — nível 1: `Nosso primeiro componente` / `Our First Component` /
+`Nuestro primer componente`.
 
 | Nível | pt-BR | en | es |
 |---|---|---|---|
-| 1 | Nosso primeiro componente | Our First Component | Nuestro primer componente |
 | 2 | Introdução | Introduction | Introducción |
 | 2 | Criando o componente. | Creating the Component | Creando el componente |
 | 2 | Criando o arquivo storybook | Creating the Storybook File | Creando el archivo storybook |
@@ -140,114 +91,116 @@ código de exemplo não são traduzidos.
 | 3 | Exemplo de requisição | Request Example | Ejemplo de solicitud |
 | 3 | Exemplo de requisição usando Curl | Request Example using Curl | Ejemplo de solicitud usando Curl |
 
-## Temas & Customização
+Conteúdo, em ordem:
 
-1. **Introdução:** temas personalizam a aparência do Easy Docs (identidade visual da empresa ou
-   personalidade do PDF). O Easy Docs vem com um tema padrão, que pode ser modificado, ou um
-   tema novo pode ser criado. O exemplo cria o tema `custom-theme`.
-2. **Criando um novo tema:** na pasta `templates > lib > theme`, criar `custom-theme.ts`,
-   importando os tokens `Borders`, `BrandColorsType` e `GlobalColors`, `Opacities`, `Shadows`,
-   `Spacings`, `Typography` (de `./tokens/...`) e o tipo `AppThemeType` (de `./types`).
-   - `brandColors: BrandColorsType` espalha `GlobalColors` e define:
+1. Três itens para criar um componente: o componente, o arquivo de configuração para o preview
+   e o endpoint que recebe os dados do PDF.
+2. Na pasta `packages > templates > lib > templates` (em citação), criar a pasta
+   `first-component` e o arquivo `index.tsx`.
+3. Bloco `tsx` com os três imports — `Text` (`templates/lib/components/Text`, renderiza
+   textos), `useAssets` (`templates/lib/hooks/useAssets`, carrega fontes e imagens) e
+   `createPropsValidation` (`templates/lib/utils/createPropsValidation`, valida as props).
+4. Bloco `tsx` do componente completo: importa `JSONSchemaType` de `ajv`; tipo
+   `ExamplePropsType = { title: string }`; `FirstComponent` usa
+   `useAssets("react.svg")` e renderiza `<Text color="primaryBase">Example: {title} {reactLogo}</Text>`
+   e `<img src={reactLogo} alt="logo" />`; `propsSchema` do tipo objeto com `title` texto,
+   `minLength: 1`, `maxLength: 10`, `required: ["title"]`;
+   `FirstComponent.validate = createPropsValidation(propsSchema)`; exportação padrão.
+5. Exportar em `templates > lib > index.ts`:
+   `export { default as FirstComponent } from "./FirstComponent";`.
+6. Rodar com `yarn dev` ou `npm run dev` e acessar `http://localhost:6006/`.
+7. Criar `FirstComponent.stories.tsx` em `packages > preview > src > templates > first-component`
+   com `meta` (`title: "FirstComponent"`, `component: Templates.FirstComponent`,
+   `parameters.layout: "centered"`, `tags: ["autodocs"]`, `argTypes: {}`) e a story `Preview`
+   com `args.title: "Hello, World! First Component"`.
+8. Link para a documentação oficial do Storybook
+   (`https://storybook.js.org/docs/get-started/react-vite`); acessar `http://localhost:6006/`.
+9. Comentário MDX invisível para o visitante e a figura
+   `/img/components/easy-docs/first-component-storybook.jpg`, texto alternativo
+   `First Component`. O HTML contém o marcador vazio `<!-- -->`, sem o texto do comentário.
+10. Importante: o cabeçalho define o formato devolvido, `application/pdf` ou `text/html`.
+11. Temas: temas personalizados são tratados adiante; por ora usa-se o tema padrão `"Sample"`.
+12. Exemplo de requisição: conferir o `Accept`; `templateProps` leva as props do componente;
+    bloco `tsx` repete o `propsSchema`, a validação e a exportação.
+13. Bloco `sh` com o `curl -X POST .../template/render`, cabeçalhos
+    `Content-Type: application/json` e `Accept: application/pdf` e corpo com `theme`,
+    `templateName: "FirstComponent"` e `templateProps.title` (valores por idioma em
+    "Inconsistências preservadas").
 
-     | Token | Valor |
-     |---|---|
-     | `primaryDarkest` | `#610D1C` |
-     | `primaryDark` | `#AD1732` |
-     | `primaryBase` | `#E11E42` |
-     | `primaryLight` | `#E6637B` |
-     | `primaryLightest` | `#FADFE4` |
-     | `secondaryDarkest` | `#160F41` |
-     | `secondaryDark` | `#1D135B` |
-     | `secondaryBase` | `#2F208C` |
-     | `secondaryLight` | `#6357B0` |
-     | `secondaryLightest` | `#E8E4FF` |
-     | `brandSecondaryDarkest` | `#243380` |
-     | `brandSecondaryDark` | `#3952CC` |
-     | `brandSecondaryBase` | `#4867FF` |
-     | `brandSecondaryLight` | `#94A6FF` |
-     | `brandSecondaryLightest` | `#EFF2FE` |
+## Temas & Customização (`themes`)
 
-   - `CustomTheme: AppThemeType` com `colors: brandColors`, `borders: Borders`,
-     `opacities: Opacities`, `shadows: Shadows`, `spacings: Spacings`,
-     `typography: Typography` e `companyName` — "Meu tema" (pt-BR), "My Theme" (en), "Mi tema"
-     (es); export default.
-3. **Configuração do tema:** em `templates > lib > theme > index.ts`, importar `CustomTheme` e
-   registrá-lo: enum `Themes` com `coop = "coop"`, `sample = "sample"` e
-   `customTheme = "customTheme"`; mapa `THEMES: Record<Themes, AppThemeType>` com
-   `coop: ExampleTheme`, `sample: SampleTheme` e `customTheme: CustomTheme`.
-4. **Utilizando o tema:** importar `useTheme` de `templates/lib/theme`, obter
-   `const theme = useTheme();` e usar as propriedades do tema, no exemplo
-   `<Text title={theme.colors.brandSecondaryDark} color="primaryBase">` com
-   `Example:` e `{theme.companyName}`, e `<img src={theme.logo} alt="logo" />`. Para usar o tema
-   na geração, informar o nome no campo `theme` da requisição:
-   `{"theme": "customTheme", "templateName": "FirstComponent", "templateProps": {"title": ...}}`,
-   com o comentário `// nome do tema` (`// theme name`, `// nombre del tema`) e `title` igual a
-   `"First "` em pt-BR e `es` e `"First"` em `en`.
-5. **Estrutura obrigatória:** o tema pode ganhar ou perder propriedades, ou ser criado do zero,
-   mas segue `AppThemeType`: `borders: BordersType`, `colors: BrandColorsType`,
-   `opacities: OpacitiesType`, `shadows: ShadowsType`, `spacings: SpacingsType`,
-   `typography: TypographyType`, `logo: string` e `companyName: string`.
+Títulos — nível 1: `Temas` / `Themes` / `Temas`. Nível 2: pt-BR `Introdução`,
+`Criando um novo tema`, `Utilizando o tema`; en `Introduction`, `Creating a New Theme`,
+`Using the Theme`; es `Introducción`, `Creando un nuevo tema`, `Utilizando el tema`. Nível 3
+(sob o segundo título de nível 2): `Configuração do tema` / `Theme Configuration` /
+`Configuración del tema`.
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Temas | Themes | Temas |
-| 2 | Introdução | Introduction | Introducción |
-| 2 | Criando um novo tema | Creating a New Theme | Creando un nuevo tema |
-| 3 | Configuração do tema | Theme Configuration | Configuración del tema |
-| 2 | Utilizando o tema | Using the Theme | Utilizando el tema |
+Conteúdo:
 
-## Deploy
+- Temas personalizam a aparência dos PDFs (identidade visual da empresa); o Easy Docs vem com
+  um tema padrão, que pode ser modificado, ou um tema novo pode ser criado. O exemplo cria
+  `custom-theme`.
+- Na pasta `templates > lib > theme`, criar `custom-theme.ts` importando os tokens `Borders`,
+  `BrandColorsType`/`GlobalColors`, `Opacities`, `Shadows`, `Spacings`, `Typography` e o tipo
+  `AppThemeType`. Cores da marca (espalhando `GlobalColors`): `primaryDarkest #610D1C`,
+  `primaryDark #AD1732`, `primaryBase #E11E42`, `primaryLight #E6637B`,
+  `primaryLightest #FADFE4`, `secondaryDarkest #160F41`, `secondaryDark #1D135B`,
+  `secondaryBase #2F208C`, `secondaryLight #6357B0`, `secondaryLightest #E8E4FF`,
+  `brandSecondaryDarkest #243380`, `brandSecondaryDark #3952CC`, `brandSecondaryBase #4867FF`,
+  `brandSecondaryLight #94A6FF`, `brandSecondaryLightest #EFF2FE`. `CustomTheme` reúne cores,
+  bordas, opacidades, sombras, espaçamentos, tipografia e `companyName` (`Meu tema` / `My Theme`
+  / `Mi tema`).
+- Registro em `templates > lib > theme > index.ts`: enum `Themes` com `coop`, `sample` e
+  `customTheme`, e o mapa `THEMES` associando `coop: ExampleTheme`, `sample: SampleTheme` e
+  `customTheme: CustomTheme`.
+- Uso: `import { useTheme } from "templates/lib/theme"`, `const theme = useTheme();` e exemplo
+  com `theme.colors.brandSecondaryDark`, `theme.companyName` e `theme.logo`.
+- Seleção na requisição: bloco `json` com `"theme": "customTheme", // nome do tema`,
+  `"templateName": "FirstComponent"` e `templateProps.title`.
+- Estrutura obrigatória `AppThemeType`: `borders`, `colors`, `opacities`, `shadows`,
+  `spacings`, `typography`, `logo` (texto) e `companyName` (texto).
 
-1. **Produção:** só o pacote `packages/api` é considerado. Compilar na raiz do projeto com
-   `yarn build` e rodar o resultado com `node packages/api/dist/api/src/main.js`.
-2. **Docker:** `docker build -t easy-docs-api .` gera a imagem `easy-docs-api`, com o projeto
-   compilado e todas as dependências; `docker run --name easy-docs -p 8080:8080 easy-docs-api`
-   inicia o contêiner `easy-docs`, escutando na porta `8080`.
+## Deploy (`deploy`)
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Deploy | Deploy | Despliegue |
-| 2 | Publicando o Easy Docs em produção | Publishing Easy Docs to Production | Publicando Easy Docs en producción |
-| 2 | Distribuindo com docker | Distributing with Docker | Distribuyendo con Docker |
+Títulos — nível 1: `Deploy` / `Deploy` / `Despliegue`. Nível 2: pt-BR
+`Publicando o Easy Docs em produção`, `Distribuindo com docker`; en
+`Publishing Easy Docs to Production`, `Distributing with Docker`; es
+`Publicando Easy Docs en producción`, `Distribuyendo con Docker`.
 
-## Conteúdo da figura
+Conteúdo (blocos `sh`):
 
-- `first-component-storybook.jpg` — Storybook com as entradas `Example` e `FirstComponent` (cada
-  uma com `Docs` e `Preview`) no menu lateral e a aba `Docs` de `FirstComponent` aberta: o
-  componente renderizado com o texto "Example: Hello, World! First Component react.svg" e o logo
-  do React, e a tabela de controles com a prop obrigatória `title` do tipo `string`.
+- Em produção só o pacote `packages/api` é considerado; compilar na raiz com `yarn build` e
+  executar com `node packages/api/dist/api/src/main.js`.
+- Imagem Docker: `docker build -t easy-docs-api .` gera a imagem `easy-docs-api`.
+- Container: `docker run --name easy-docs -p 8080:8080 easy-docs-api` inicia o container
+  `easy-docs` escutando na porta `8080`.
+
+## Imagens
+
+| Arquivo | Página | Texto alternativo (pt-BR, en, es) |
+|---|---|---|
+| `/img/components/easy-docs/first-component-storybook.jpg` | Primeiro componente | `First Component` |
 
 ## Inconsistências preservadas
 
-O texto, o código de exemplo e a figura são publicados como estão (regra de conteúdo do
-domínio). Permanecem, sem correção:
+Publicadas como estão; corrigi-las é revisão de conteúdo.
 
-- **Entre idiomas:** a requisição curl usa a porta `8080` e o tema `sample` em pt-BR e a porta
-  `3000` e o tema `Sample` em `en` e `es`; o `title` das requisições tem espaço final em pt-BR e
-  `es` e não tem em `en`; em `en`, "Prerequisites:" é título de nível 3, e em pt-BR e `es` é
-  texto de parágrafo; em `es`, o texto de temas de Primeiro componente fala em "plantillas"
-  enquanto o resto usa "templates".
-- **Entre texto e código:** a introdução de Primeiro componente lista "criar o endpoint", mas o
-  tutorial usa o endpoint `/template/render` existente; o texto chama o tema padrão de
-  `"Sample"`, e o enum registra `sample`; a pasta criada é `first-component` com `index.tsx`, e
-  o export aponta para `./FirstComponent`; o componente imprime `{reactLogo}` (o caminho do
-  asset) dentro do texto, o que a figura mostra como "react.svg"; a story usa um `title` de 29
-  caracteres e o schema limita `title` a 10; o tema de exemplo não define `logo`, que
-  `AppThemeType` exige e o exemplo de uso lê em `theme.logo`; o trecho de registro de temas usa
-  `ExampleTheme`, `SampleTheme` e `AppThemeType` sem importá-los e mapeia `coop` para
-  `ExampleTheme`; o exemplo de uso passa uma cor (`theme.colors.brandSecondaryDark`) como
-  `title` de `Text`; o bloco JSON do uso do tema contém um comentário `//`; o tema se chama
-  `custom-theme` no texto, `custom-theme.ts` no arquivo e `customTheme` no registro.
-- **Começando:** os comandos do wkhtmltopdf usam `apt` e um pacote `.deb` de Debian buster,
-  embora os pré-requisitos listem também distribuições RedHat; `dpkg -i` aparece sem `sudo`; a
-  variável se chama `WKTHMLTOPDF_*`; os comandos de instalação do Git, do NVM e do clone têm
-  prompt `$ `, e os do modo de desenvolvimento e das dependências não têm; a lista de
-  distribuições ocupa o item 1 da lista numerada de pré-requisitos.
-- **pt-BR:** "repositório do easy monitor" no passo de clone (em `es`, "repositorio de Easy
-  Monitor"; em `en`, "easy-docs repository"); "CebtOS"; "prjeto"; "dependencias"; "Parar criar";
-  "O easy docs oferece diversos token"; "à partir"; título de nível 2 "Criando o componente." com
-  ponto final; a crase solta em "`Crie um novo arquivo chamado `custom-theme.ts`.", que publica
-  "Crie um novo arquivo chamado " como código inline e uma crase literal antes do ponto final;
-  linhas em branco no início e no fim do bloco de código do `yum` e no fim do bloco do clone; os
-  blocos do modo de desenvolvimento e das dependências com indentação interna de 3 ou 4 espaços.
+| Página | Idioma | Inconsistência |
+|---|---|---|
+| Começando | pt-BR, es | "Pré-requisitos:" / "Requisitos previos:" é texto corrido seguido de "Sistema operacional Linux compatível:" no mesmo parágrafo; em `en` "Prerequisites:" é título de nível 3 e aparece no sumário |
+| Começando | pt-BR | Erros de digitação "CebtOS" e "prjeto"; "dependencias" sem acento no texto sobre o modo de desenvolvimento |
+| Começando | pt-BR | O texto do clone diz "repositório do easy monitor"; em `es`, "repositorio de Easy Monitor"; em `en`, "easy-docs repository" |
+| Começando | pt-BR | Os blocos do modo de desenvolvimento e das dependências têm o comando indentado por espaços; o bloco do `yum` tem linhas em branco no início e no fim, e o do clone, linha em branco no fim |
+| Primeiro componente | pt-BR | "Parar criar", "Criando o componente." com ponto final no título, "Props criada anteriormente" |
+| Primeiro componente | todos | Anuncia três itens, incluindo criar o endpoint, mas não há passo de criação de endpoint |
+| Primeiro componente | todos | Cria a pasta `first-component` com `index.tsx`, mas exporta de `"./FirstComponent"` |
+| Primeiro componente | todos | A story usa `title` "Hello, World! First Component", maior que o `maxLength: 10` do esquema; o `Text` exibe `{reactLogo}` junto do título |
+| Primeiro componente | todos | O texto cita o tema padrão `"Sample"`; o registro de temas usa a chave `sample` |
+| Primeiro componente | pt-BR | Requisição em `http://localhost:8080/template/render`, `"theme": "sample"`, `"title": "First "` (com espaço) |
+| Primeiro componente | en | Requisição em `http://localhost:3000/template/render`, `"theme": "Sample"`, `"title": "First"` |
+| Primeiro componente | es | Requisição em `http://localhost:3000/template/render`, `"theme": "Sample"`, `"title": "First "` (com espaço) |
+| Temas & Customização | pt-BR | Acento grave solto no início da linha: `` `Crie um novo arquivo chamado `custom-theme.ts`. `` |
+| Temas & Customização | pt-BR | "diversos token" no singular |
+| Temas & Customização | todos | `CustomTheme` não define `logo`, exigido por `AppThemeType`; o exemplo de uso lê `theme.logo`; `ExampleTheme` e `SampleTheme` aparecem no registro sem import |
+| Temas & Customização | pt-BR, es | `"title": "First "` com espaço no bloco `json`; em `en`, `"First"` |
+| Deploy | pt-BR | "à partir dessa imagem" |

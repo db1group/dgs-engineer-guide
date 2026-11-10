@@ -112,9 +112,9 @@ Hierarquia de títulos:
   `NomeComponente.stories.tsx`, o storybook quando existir) e `OutroComponente`;
   `hooks/useNomeHook/` (`index.ts` e `useNomeHook.spec.ts`); `utils/mask/maskDocument/`
   (`index.ts` com parser e format, e `maskDocument.spec.ts`); `utils/validators/validateDocument/`
-  (`index.ts` e `validateDocument.spec.ts`). Os nomes de exemplo são traduzidos em cada idioma
-  (`NameService`/`ComponentName`/`useHookName` em `en`; `NombreComponente`/`useNombreHook` em
-  `es`).
+  (`index.ts` e `validateDocument.spec.ts`). Os nomes de exemplo são traduzidos em `en`
+  (`NameService`/`ComponentName`/`useHookName`) e, em `es`, os de componente e hook
+  (`NombreComponente`/`useNombreHook`), com o serviço mantido como `NameService`.
 - **Componentes e bibliotecas de terceiros:** por padrão, salvo raras exceções, bibliotecas e
   componentes de terceiros são abstraídos antes de serem usados nos componentes e recursos do
   projeto, para mantê-lo desacoplado das dependências e facilitar a substituição. A verificação
@@ -151,13 +151,18 @@ O texto é publicado como está (regra de conteúdo do domínio). Permanecem, se
   "Para isso, execute o seguinte comando:" no singular antes dos dois clones; pasta
   `application` em Estrutura do projeto e `Application` no Backend; "repositorio" sem acento; o
   título Frontend em nível 2 (em `en` e `es`, nível 3, abaixo do ambiente).
-- **Introdução (pt-BR):** "um exemplos de usuários".
+- **Introdução (pt-BR):** "um exemplos de usuários"; o nome na primeira frase escrito como
+  código inline e com `p` minúsculo (`` `Golden path` ``).
+- **Frontend (três idiomas):** "Em ambos os casos" ("In both cases", "En ambos casos") logo
+  depois de três regras de nomenclatura.
 - **Frontend (pt-BR):** "Foi construido" sem acento; "trabalho paralelos"; "bibliotecas de
   terceiro" no título; frases em inglês "Run the command to install.", "Runs the app in the
   development mode." e "Open http://localhost:5173 to view it in the browser." e o título
   "`vite` or `yarn dev`"; na árvore de `src/`, a linha de `services/` sem o `#` do comentário.
 - **Frontend (`es`):** o exemplo de organização omite `OtroComponente` e o bloco
   `utils/validators/validateDocument`.
+- **Backend (pt-BR):** na estrutura de projetos, as pastas de cada projeto (exceto
+  `GoldenPath.Api`) indentadas com quatro espaços; em `en` e `es`, sem indentação.
 - **Destaques por idioma:** SPOTLIGHT em itálico em pt-BR e em negrito em `en`/`es`; Golden
   Path, Postgres e Keycloak em negrito em partes das traduções; o link do ASP.NET Core aponta
   para a documentação em português em pt-BR e em inglês em `en`/`es`.

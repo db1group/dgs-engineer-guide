@@ -10,21 +10,28 @@ Cada item diz o que é a dependência e o que o domínio perde sem ela.
 
 ## Do mapa funcional
 
-- Seção `/docs/` com categoria "QA" nos três idiomas — sem ela as páginas ficam inalcançáveis pelo menu.
-- Preservação dos prefixos numéricos no ID do documento — sem ela as URLs das práticas mudam.
-- Redirecionamento da URL `es` das diretrizes — sem ele o link publicado retorna 404.
+- Seção `/docs/` com categoria "QA" nos três idiomas — sem ela as páginas ficam fora do menu.
+- Redirect de `qa-work-guideline.html` em `es` — sem ele a URL publicada retorna 404.
 
 ## Levantadas na investigação do domínio
 
-- Metadados de categoria (`_category_.json`) na pasta pt-BR `docs/qa/best-practices/` e
-  `docs/qa/career/`, com `label` (`Práticas Recomendadas`, `Carreira`), `position` (2 e 3),
+- Plugin de docs, na instância única do site, com `numberPrefixParser: false`, preservando os prefixos numéricos no
+  ID do documento — sem ele os prefixos `1-` a `10-` são removidos do ID e da URL, e as dez URLs
+  `.html` publicadas das práticas mudam.
+- `themeConfig.tableOfContents.maxHeadingLevel: 6` na configuração do site, que sustenta o
+  sumário com títulos de nível 2 a 6 — as páginas de QA usam títulos só até o nível 3, então sem
+  ele o sumário atual não muda, mas títulos de nível 4 a 6 adicionados às páginas ficam fora do
+  sumário.
+
+- Metadados de categoria (`_category_.json`) nas pastas pt-BR `docs/docs/qa/best-practices/` e
+  `docs/docs/qa/career/`, com `label` (`Práticas Recomendadas`, `Carreira`), `position` (2 e 3),
   `collapsed: true` e um `key` exclusivo no menu do guia — as disciplinas Engenharia e DevOps usam
   os mesmos rótulos no mesmo menu, e o Docusaurus 3.10.2 aborta o build com
   "Multiple docs sidebar items produce the same translation key" quando duas categorias geram a
   mesma chave de tradução; sem `label`, `position` e `collapsed`, as subcategorias perdem rótulo,
   ordem e estado inicial recolhido.
-- Traduções dos rótulos das duas categorias no `current.json` de `en` e `es` do plugin de docs
-  do guia (`Best Practices`/`Mejores Prácticas`, `Career`/`Carrera`), sob a chave derivada do
+- Traduções dos rótulos das duas categorias no `current.json` de `en` e `es` da instância única
+  do plugin de docs (`Best Practices`/`Mejores Prácticas`, `Career`/`Carrera`), sob a chave derivada do
   `key` da categoria (`sidebar.<sidebar>.category.<key>`) — sem elas os rótulos aparecem em
   pt-BR nos outros idiomas.
 - Frontmatter `sidebar_position` nas 13 páginas dos três idiomas (Jeito DB1 1; nas práticas,

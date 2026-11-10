@@ -1,0 +1,190 @@
+.hero {
+  padding: 112px 24px 48px;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.name {
+  margin: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  background: linear-gradient(
+    120deg,
+    var(--db1-color-itenex-red) 30%,
+    var(--db1-color-itenex-red)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text {
+  max-width: 100%;
+  margin: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.tagline {
+  max-width: 100%;
+  margin: 0;
+  padding-top: 8px;
+  color: var(--db1-text-2);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.brandButton,
+.altButton {
+  display: inline-block;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 38px;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+}
+
+.brandButton,
+.brandButton:hover {
+  color: var(--db1-on-brand);
+  text-decoration: none;
+}
+
+.brandButton {
+  background-color: var(--db1-brand-3);
+}
+
+.brandButton:hover {
+  background-color: var(--db1-brand-2);
+}
+
+.brandButton:active {
+  background-color: var(--db1-brand-1);
+}
+
+.altButton {
+  background-color: var(--db1-gray-3);
+  color: var(--db1-text-1);
+}
+
+.altButton:hover {
+  background-color: var(--db1-gray-2);
+  color: var(--db1-text-1);
+  text-decoration: none;
+}
+
+.altButton:active {
+  background-color: var(--db1-gray-1);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 1152px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+.card {
+  display: block;
+  margin: 8px;
+  padding: 24px;
+  border: 1px solid var(--db1-bg-soft);
+  border-radius: 12px;
+  background-color: var(--db1-bg-soft);
+  color: var(--db1-text-1);
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.card:hover {
+  border-color: var(--db1-brand-1);
+  color: var(--db1-text-1);
+  text-decoration: none;
+}
+
+.cardTitle {
+  margin: 0;
+  color: var(--db1-text-1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.cardText {
+  margin: 0;
+  padding-top: 8px;
+  color: var(--db1-text-2);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 144px 48px 64px;
+  }
+
+  .name,
+  .text {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .tagline {
+    padding-top: 12px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .features {
+    padding: 0 48px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .hero {
+    padding: 144px 64px 64px;
+  }
+
+  .name,
+  .text {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .tagline {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .features {
+    padding: 0 64px;
+  }
+}

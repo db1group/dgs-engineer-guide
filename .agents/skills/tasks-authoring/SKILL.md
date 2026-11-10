@@ -116,13 +116,13 @@ lost between the tasks:
   wishful thinking and does not happen. The destination also lists the source among its
   predecessors, since it replaces a construct that the source creates.
 - The unit gains a `forward-deps.md` with an entry in status `planned`
-  linking source and destination:
+  linking origin and destination:
 
 ```markdown
 # Forward-dependencies — 012-reporting
 
 ## FD-1 — temporary stub of the configuration provider
-- source: T2
+- origin: T2
 - destination: T5
 - status: planned
 - constructs: `ConfigProviderStub`, `DEFAULT_LIMITS`

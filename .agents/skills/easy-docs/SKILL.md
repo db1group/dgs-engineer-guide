@@ -1,6 +1,6 @@
 ---
 name: easy-docs
-description: Esta é a documentação autoritativa do domínio Easy Docs, o acelerador da DB1 que gera PDFs a partir de templates React, no Engineering Guide em pt-BR, en e es. Cobre introdução, primeiros passos (Linux, Git, Node.js com NVM, clone, modo de desenvolvimento e wkhtmltopdf), primeiro componente com Storybook e o endpoint /template/render, temas e customização (AppThemeType, useTheme) e deploy com Docker, com menu, rótulos, URLs, imagem e saneamento MDX dessas páginas.
+description: This is the authoritative documentation of the Easy Docs domain. Cobre o acelerador Easy Docs do Engineering Guide DB1 em pt-BR, en e es — geração de PDF a partir de templates React, pré-requisitos Linux, Node via NVM, clone no GitHub, wkhtmltopdf, primeiro componente, Storybook, endpoint /template/render, temas, deploy com Docker e imagem do Storybook. Use ao mexer nessas cinco páginas, no menu, rótulos, URLs, sintaxe MDX ou tradução do Easy Docs.
 metadata:
   author: clovis-cli
   type: domain-skill
@@ -22,29 +22,31 @@ metadata:
 ## Visão geral do domínio
 
 O Easy Docs é o terceiro acelerador da seção **Aceleradores** (`/dgs-components/`) do
-Engineering Guide da DB1 Global Software. É uma ferramenta que gera documentos PDF (relatórios,
-contratos) a partir de componentes React estilizados: o desenvolvedor cria um template React,
-visualiza-o no Storybook e envia os dados a um endpoint HTTP, que devolve o documento em PDF ou
-HTML. O projeto roda em contêiner Docker. O guia tem cinco páginas:
+Engineering Guide da DB1 Global Software. Ele apresenta uma ferramenta da DB1 que gera documentos
+PDF (relatórios, contratos) a partir de templates React estilizados: o desenvolvedor cria o
+template, define as propriedades que ele recebe e envia os dados a um endpoint HTTP, que devolve o
+documento pronto em PDF ou HTML; a ferramenta roda em container Docker. O conteúdo está em cinco
+páginas:
 
-- **Introdução** — o que é o Easy Docs, o objetivo e como funciona;
-- **Começando** — pré-requisitos, instalação do Git e do Node.js, clone do repositório, modo de
-  desenvolvimento e dependências do wkhtmltopdf;
-- **Primeiro componente** — criação de um template, do arquivo de visualização no Storybook e da
-  requisição que gera o PDF;
-- **Temas & Customização** — criação, registro e uso de um tema personalizado;
-- **Deploy** — build de produção e distribuição com Docker.
+- **Introdução** — o que é o Easy Docs, objetivo e como funciona;
+- **Começando** — pré-requisitos, instalação do Git e do Node.js (via NVM), clone do
+  repositório, execução em modo de desenvolvimento e instalação do wkhtmltopdf e das fontes;
+- **Primeiro componente** — tutorial que cria o componente `FirstComponent` com validação de
+  propriedades, sua visualização no Storybook e a geração do PDF via API;
+- **Temas & Customização** — criação do tema `customTheme`, registro do tema, uso no componente
+  e seleção do tema na requisição;
+- **Deploy** — compilação para produção, execução do projeto compilado e distribuição com
+  Docker.
 
 O domínio é dono das 5 páginas nos três idiomas (pt-BR, `en`, `es`), da ordem e dos rótulos das
-páginas dentro da categoria Easy Docs do menu, das URLs dessas páginas, da imagem do acelerador
-e da sintaxe com que o conteúdo é publicado. A moldura (cabeçalho, rodapé, seletor de idioma,
-busca, formato `.html` das URLs, mecanismo de redirecionamento, profundidade do sumário,
-publicação, página inicial com o cartão Easy Docs e posição, rótulo e estado expandido da
-categoria de topo Easy Docs) pertence ao portal.
+páginas dentro da categoria Easy Docs do menu, das URLs dessas páginas e da imagem em
+`/img/components/easy-docs/`. A moldura (cabeçalho, rodapé, seletor de idioma, busca, formato
+`.html` das URLs, mecanismo de redirecionamento, profundidade do sumário, publicação, textos e
+destinos da página inicial, posição, rótulo e estado expandido da categoria de topo Easy Docs)
+pertence ao portal.
 
-O resumo do que cada página orienta — pré-requisitos, comandos, caminhos de pasta, código de
-exemplo, contrato do endpoint, tokens de tema, portas e nomes de imagem e contêiner —, a
-hierarquia de títulos, o conteúdo da figura e as inconsistências preservadas estão em
+O que cada página orienta — títulos por idioma, comandos, contrato da API, exemplos de código,
+links, imagem — e as diferenças e imperfeições entre os idiomas estão em
 [conteúdo normativo das páginas](references/conteudo-normativo.md).
 
 ## Regras de negócio
@@ -61,22 +63,17 @@ hierarquia de títulos, o conteúdo da figura e as inconsistências preservadas 
   com a tradução ausente ou órfã, o que é defeito a corrigir.
 - **R3.** Os nomes das páginas não têm prefixo numérico: `introduction`, `getting-started`,
   `first-component`, `themes` e `deploy`. A ordem no menu vem da posição declarada de cada
-  página (R7), nunca da ordem alfabética do nome.
-- **R4.** A Introdução (`/dgs-components/easy-docs/introduction.html` e equivalentes em `/en/` e
-  `/es/`) é destino fixo do cartão Easy Docs da página inicial nos três idiomas. Mudar o caminho
-  dela exige redirecionamento (R5) e a atualização do destino do cartão na mesma mudança; sem
-  isso o build falha por link quebrado.
-- **R5.** Toda URL `.html` do acelerador que mude de caminho ou deixe de existir recebe
-  redirecionamento para a URL nova, no mesmo idioma. As URLs publicadas são as 15 de R1; o
-  domínio não tem redirecionamento.
-- **R6.** O acelerador não tem página fora do menu: as 5 páginas aparecem no menu, na busca e na
-  sequência de links anterior/próxima, nos três idiomas.
+  página (R5), nunca da ordem alfabética do nome.
+- **R4.** Todas as URLs do acelerador são preservadas, por isso o domínio não tem
+  redirecionamentos. Toda URL `.html` do acelerador que vier a mudar de caminho ou deixar de
+  existir recebe redirecionamento para a URL nova, no mesmo idioma.
 
 ### Menu do acelerador
 
-- **R7.** A categoria Easy Docs contém apenas as 5 páginas de R1, sem subcategorias, nesta ordem
-  e com estes rótulos. Os rótulos são preservados literalmente, inclusive o `&` em pt-BR e `en`,
-  e diferem do título de nível 1 de várias páginas (R13):
+- **R5.** A categoria Easy Docs tem o rótulo `Easy Docs` nos três idiomas e não tem página
+  própria: clicar no rótulo apenas expande ou recolhe a categoria. Ela contém apenas as 5
+  páginas, sem subcategorias, nesta ordem e com estes rótulos, preservados literalmente
+  (inclusive o `&` de pt-BR e `en`):
 
   | Posição | pt-BR | en | es | Página |
   |---|---|---|---|---|
@@ -86,86 +83,97 @@ hierarquia de títulos, o conteúdo da figura e as inconsistências preservadas 
   | 4 | Temas & Customização | Themes & Customization | Temas y Personalización | `themes` |
   | 5 | Deploy | Deploy | Despliegue | `deploy` |
 
-- **R8.** Os links anterior/próxima seguem a ordem de R7, com os rótulos do menu. A página
-  anterior à Introdução é a última página do acelerador anterior no menu da seção (Instrumentando
-  as aplicações, do Easy Monitor), e a página seguinte a Deploy é a primeira página do acelerador
-  seguinte (Introdução, do Easy Connect).
-- **R9.** O acelerador é alcançado pelo menu da seção Aceleradores, pela busca e pelo cartão
-  Easy Docs da página inicial (R4). Nenhuma página do guia ou de outro acelerador aponta para
-  ele, e as páginas do Easy Docs não apontam umas para as outras.
+  Em Introdução, Primeiro componente e Temas & Customização o rótulo difere do título de nível 1
+  da página (R10); o rótulo do menu é o da tabela.
+- **R6.** Todas as 5 páginas estão no menu; o acelerador não tem página publicada fora do menu.
+- **R7.** Os links anterior/próxima seguem a ordem de R5. A página anterior a Introdução é a
+  última página do acelerador anterior no menu da seção (Instrumentando as aplicações, do Easy
+  Monitor); a página seguinte a Deploy é a primeira página do acelerador seguinte (Introdução,
+  do Easy Connect).
+- **R8.** O acelerador é alcançado pelo menu da seção Aceleradores, pela busca e pelo card Easy
+  Docs da página inicial, que leva a `/dgs-components/easy-docs/introduction.html` no idioma
+  corrente. Por isso a página `introduction` não pode mudar de URL nem sair do site sem que o
+  portal mude o destino do card; o build falha se ela não existir em algum idioma. Nenhuma
+  página do guia ou de outro acelerador aponta para o Easy Docs.
 
 ### Conteúdo publicado
 
-- **R10.** O texto das páginas é publicado como está, sem reescrita nem revisão, nos três
-  idiomas, inclusive as divergências entre idiomas, entre páginas e entre o texto e o código de
-  exemplo, e as imperfeições de redação, de digitação e de estrutura existentes. Os casos
-  conhecidos estão em
+- **R9.** O texto das páginas é publicado como está, sem reescrita nem revisão, nos três
+  idiomas, inclusive as inconsistências e as imperfeições de redação, de digitação, de
+  estrutura e de exemplo existentes. Os casos conhecidos que permanecem estão listados em
   [conteúdo normativo das páginas](references/conteudo-normativo.md#inconsistências-preservadas),
-  entre eles: a requisição de exemplo usa `http://localhost:8080` e o tema `sample` em pt-BR e
-  `http://localhost:3000` e o tema `Sample` em `en` e `es`; o tema de exemplo não define `logo`,
-  que o tipo de tema exige e o exemplo de uso lê; o bloco JSON do uso do tema traz um comentário
-  `//`; e, em pt-BR, a crase solta em "`Crie um novo arquivo chamado `custom-theme.ts`.", que
-  publica parte da frase como código. Corrigi-los é revisão de conteúdo, fora do escopo.
-- **R11.** O código de exemplo é conteúdo: cada bloco de código é publicado literalmente, com a
-  linguagem declarada na abertura (`bash`, `sh`, `tsx`, `ts`, `json`), a indentação interna e as
-  linhas em branco internas existentes. Os comandos das seções de instalação do Git, do Node.js e
-  do clone têm o prompt `$ ` no início de cada linha; os comandos do modo de desenvolvimento, das
-  dependências do wkhtmltopdf e do deploy não têm.
-- **R12.** A figura é parte do conteúdo: Primeiro componente publica a mesma imagem, na mesma
-  posição e com o texto alternativo `First Component` nos três idiomas. Trocar ou atualizar a
-  figura é revisão de conteúdo.
-- **R13.** O primeiro título de nível 1 de cada página é o título exibido no topo da página e na
-  aba do navegador; o rótulo do menu segue R7.
-- **R14.** O sumário lateral de cada página mostra os títulos de nível 2 a 6, nas 5 páginas e nos
-  três idiomas, inclusive nas páginas `en` que não declaram profundidade própria.
-- **R15.** Em Começando, "Pré-requisitos:" e "Sistema operacional Linux compatível:" formam um
-  único parágrafo em pt-BR ("Requisitos previos:" e "Sistema operativo Linux compatible:" em
-  `es`); em `en`, "Prerequisites:" é título de nível 3 e "Compatible Linux operating system:" é
-  o parágrafo seguinte. Frases do código-fonte separadas por uma única quebra de linha formam o
-  mesmo parágrafo; as páginas não têm quebra de linha forçada.
+  entre eles: a requisição de exemplo de Primeiro componente usa a porta `8080` e o tema
+  `"sample"` em pt-BR, e a porta `3000` e o tema `"Sample"` em `en` e `es`; o texto de clone
+  chama o repositório de "easy monitor" em pt-BR e "Easy Monitor" em `es`; "Pré-requisitos:" é
+  texto corrido em pt-BR e `es` e título de nível 3 em `en`; o tutorial anuncia a criação de um
+  endpoint que não acontece; o tema de exemplo não define `logo`, exigido pela estrutura de tema
+  mostrada na mesma página; o acento grave solto no início de "Crie um novo arquivo chamado" em
+  pt-BR; e os erros de digitação de pt-BR (`CebtOS`, `prjeto`, `Parar criar`, `dependencias`).
+  Corrigi-los é revisão de conteúdo, fora do escopo.
+- **R10.** O primeiro título de nível 1 de cada página é o título exibido no topo da página e na
+  aba do navegador; o rótulo do menu segue R5.
+- **R11.** O sumário lateral de cada página mostra os títulos de nível 2 a 6. As páginas do
+  acelerador só têm títulos de nível 2 e 3, todos exibidos no sumário.
+- **R12.** Comandos e exemplos aparecem em blocos de código com a linguagem declarada no
+  legado (`bash`, `sh`, `tsx`, `ts`, `json`), literalmente, inclusive o prompt `$ ` onde
+  existe, as linhas em branco e a indentação interna dos blocos de pt-BR, e o comentário `//`
+  dentro do bloco `json` de Temas & Customização. O código JSX dos exemplos fica sempre dentro
+  de bloco de código: fora dele seria compilado como componente e quebraria o build.
+- **R13.** O comentário que antecede a figura de Primeiro componente ("Imagem" / "Image" /
+  "Imagen") continua invisível para o visitante nos três idiomas, escrito na sintaxe de
+  comentário do MDX (`{/* Imagem */}`), porque um comentário HTML com texto não é aceito pelo
+  MDX 3 e quebra o build. O HTML gerado contém o marcador vazio `<!-- -->`, sem texto visível.
+  Esse é o único ajuste de sintaxe do conteúdo, além da saída da marcação de sumário profundo
+  do frontmatter (a profundidade do sumário é global, R11).
+- **R14.** A figura é parte do conteúdo: a imagem
+  `/img/components/easy-docs/first-component-storybook.jpg` aparece em Primeiro componente, logo
+  após "Acesse o link `http://localhost:6006/` e veja o seu componente." e antes de "Gerando o
+  PDF via API", nos três idiomas, com o texto alternativo `First Component` (igual nos três
+  idiomas). É a única imagem do acelerador e continua publicada no mesmo caminho. Trocar ou
+  atualizar a figura é revisão de conteúdo.
+- **R15.** O texto corrido das páginas não tem cifrão, chaves nem sinal de menor que; esses
+  caracteres existem apenas dentro de blocos e trechos de código e são publicados como texto.
+  Acrescentar um par de cifrões em texto corrido transforma o trecho entre eles em fórmula.
 
-### Links e imagens
+### Links
 
-- **R16.** As páginas não têm links internos para outras páginas do site.
-- **R17.** O único link clicável do acelerador é o da documentação oficial do Storybook, em
-  Primeiro componente, igual nos três idiomas e publicado como está. Endereços como
-  `http://localhost:6006/` aparecem como código inline, e as URLs de `localhost`, do GitHub, do
-  NVM e do wkhtmltopdf aparecem só dentro de blocos de código; nenhum deles é link nem é
-  verificado pelo build.
-- **R18.** A imagem do acelerador é servida da raiz do site, em
-  `/img/components/easy-docs/first-component-storybook.jpg`, e referenciada por caminho
-  absoluto nos três idiomas. É o único arquivo da pasta de imagens do acelerador.
+- **R16.** As páginas não têm links internos para outras páginas do site; a imagem de R14 é o
+  único recurso interno referenciado.
+- **R17.** O único link clicável é o da documentação oficial do Storybook, em Primeiro
+  componente (inventário em "Entidades e dados"). Os endereços `http://localhost:6006/`,
+  `http://localhost:8080/...` e `http://localhost:3000/...` aparecem como código, não como
+  link, e os endereços do GitHub e do instalador do NVM aparecem dentro de blocos de comando;
+  nenhum deles é verificado pelo build nem tratado como link quebrado.
 
 ## Fluxos
 
 ### Navegação do visitante
 
-1. O visitante chega à Introdução pelo cartão Easy Docs da página inicial ou abre a seção
-   Aceleradores pelo menu; a categoria Easy Docs é a terceira e começa expandida, mostrando as 5
-   páginas de R7.
-2. Os links anterior/próxima percorrem as 5 páginas na ordem de R7, vindo do Easy Monitor e
-   seguindo para o Easy Connect (R8).
+1. O visitante chega pelo card Easy Docs da página inicial à Introdução, ou abre a seção
+   Aceleradores pelo menu; a categoria Easy Docs é a terceira e começa expandida, mostrando as
+   5 páginas.
+2. Os links anterior/próxima percorrem as 5 páginas na ordem de R5, vindo do Easy Monitor e
+   seguindo para o Easy Connect.
 3. Trocar de idioma leva à mesma página no idioma escolhido.
 
 ### Jornada que as páginas orientam (gerar um PDF a partir de um template React)
 
-1. Entender o que é o Easy Docs: templates React convertidos em PDF por um endpoint, rodando em
-   Docker (Introdução).
-2. Conferir os pré-requisitos (Linux compatível, sudo, linha de comando, Git e, para criar
-   templates, Node.js e npm), instalar o Git com `apt` ou `yum` e o Node.js com NVM, clonar
-   `https://github.com/db1group/easy-docs` e entrar no diretório (Começando).
-3. Rodar em modo de desenvolvimento com `npm run dev` ou `yarn dev`, instalando antes o
-   wkhtmltopdf e suas fontes, necessários só fora do Docker (Começando).
-4. Criar o template `FirstComponent`, com validação das props por JSON Schema, e exportá-lo
+1. Entender o que é o Easy Docs: template React, endpoint e PDF devolvido, executado em Docker
+   (Introdução).
+2. Conferir os pré-requisitos, instalar o Git com `apt` ou `yum`, instalar o NVM e o Node.js,
+   clonar o repositório e entrar no diretório (Começando).
+3. Rodar em modo de desenvolvimento com `npm run dev` ou `yarn dev`, depois de instalar o
+   wkhtmltopdf 0.12.6-1 e as fontes X11; em produção o container já traz essas dependências
+   (Começando).
+4. Criar o componente `FirstComponent` com o esquema de validação das propriedades, exportá-lo
+   e visualizá-lo no Storybook em `http://localhost:6006/` (Primeiro componente).
+5. Gerar o documento com `POST /template/render`, escolhendo PDF ou HTML pelo cabeçalho
+   `Accept`, o tema por `theme`, o template por `templateName` e os dados por `templateProps`
    (Primeiro componente).
-5. Criar a story do template e conferir a renderização no Storybook em `http://localhost:6006/`
-   (Primeiro componente).
-6. Gerar o documento com `POST /template/render`, escolhendo PDF ou HTML pelo cabeçalho `Accept`
-   e enviando tema, nome do template e props (Primeiro componente).
-7. Criar um tema com os tokens de marca, registrá-lo na lista de temas, lê-lo no template com o
-   hook de tema e selecioná-lo pelo campo `theme` da requisição (Temas & Customização).
-8. Compilar o pacote da API para produção e distribuí-lo como imagem Docker `easy-docs-api`, em
-   contêiner `easy-docs` na porta `8080` (Deploy).
+6. Criar e registrar um tema próprio, usá-lo no componente e selecioná-lo na requisição
+   (Temas & Customização).
+7. Compilar o pacote da API para produção ou gerar e executar a imagem Docker `easy-docs-api`
+   na porta `8080` (Deploy).
 
 Os valores concretos de cada passo estão em
 [conteúdo normativo das páginas](references/conteudo-normativo.md).
@@ -174,15 +182,14 @@ Os valores concretos de cada passo estão em
 
 1. A página nasce em pt-BR sob `/dgs-components/easy-docs/`, no caminho que forma a URL
    desejada, e recebe tradução `en` e `es` no mesmo caminho e com o mesmo nome de arquivo.
-2. Posição e rótulo de menu são definidos nos três idiomas (rótulo traduzido) e a tabela de R7 é
-   atualizada nesta skill.
-3. Se a URL de uma página existente mudar, a URL antiga recebe redirecionamento (R5); se for a
-   Introdução, o destino do cartão da página inicial muda junto (R4).
-4. Imagens novas vão para `/img/components/easy-docs/` e são referenciadas por caminho absoluto.
-5. Exemplos de código (JSX, TSX, TypeScript, JSON, comandos) ficam sempre dentro de bloco de
-   código cercado, com a linguagem declarada.
-6. O build valida sintaxe, links internos e imagens referenciadas; qualquer falha bloqueia a
-   publicação.
+2. Posição e rótulo de menu são definidos nos três idiomas (rótulo traduzido) e a tabela de R5
+   é atualizada nesta skill.
+3. Se a URL de uma página existente mudar, a URL antiga recebe redirecionamento (R4); se for a
+   Introdução, o portal muda junto o destino do card da página inicial (R8).
+4. Imagens novas ficam em `/img/components/easy-docs/` e são referenciadas por caminho
+   absoluto.
+5. Exemplos de código ficam em blocos de código; comentários usam a sintaxe do MDX (R12, R13).
+6. O build valida sintaxe, imagens e links internos; qualquer falha bloqueia a publicação.
 
 ## Entidades e dados
 
@@ -197,74 +204,52 @@ título de nível 1 em cada idioma:
 | `/dgs-components/easy-docs/themes.html` | Temas | Themes | Temas |
 | `/dgs-components/easy-docs/deploy.html` | Deploy | Deploy | Despliegue |
 
-Imagem referenciada:
+Contrato da API descrito nas páginas (assunto do conteúdo, não serviço do site):
 
-| Arquivo | Página | Texto alternativo (três idiomas) |
-|---|---|---|
-| `/img/components/easy-docs/first-component-storybook.jpg` | Primeiro componente | First Component |
+| Item | Valor |
+|---|---|
+| Rota | `POST /template/render` |
+| Cabeçalhos | `Content-Type: application/json`; `Accept: application/pdf` ou `text/html` (define o formato devolvido) |
+| Corpo | `theme` (nome do tema registrado, ex.: `sample`, `customTheme`), `templateName` (nome do template exportado, ex.: `FirstComponent`), `templateProps` (objeto com as propriedades do template) |
+| Validação | as propriedades seguem o esquema JSON do template; no exemplo, `title` é texto obrigatório com 1 a 10 caracteres |
+| Porta | `8080` no container `easy-docs` (Deploy); a requisição de exemplo usa `8080` em pt-BR e `3000` em `en` e `es` (R9) |
 
-Link externo publicado:
+Links e endereços externos publicados (iguais nos três idiomas):
 
-| Página | Destino | Texto do link |
-|---|---|---|
-| Primeiro componente | `https://storybook.js.org/docs/get-started/react-vite` | "Documentação oficial do storybook" (pt-BR), "official Storybook documentation" (en), "Documentación oficial de storybook" (es) |
-
-Contrato do endpoint de geração descrito pelas páginas (assunto do conteúdo, servido pelo Easy
-Docs, não pelo site):
-
-- `POST /template/render`, com `Content-Type: application/json`;
-- `Accept: application/pdf` devolve o documento em PDF; `Accept: text/html` devolve em HTML;
-- corpo JSON com `theme` (nome do tema registrado), `templateName` (nome do template exportado,
-  ex.: `FirstComponent`) e `templateProps` (objeto com as props do template, validadas pelo JSON
-  Schema do template).
+| Página | Destino |
+|---|---|
+| Começando | `https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh` (instalação do NVM, em bloco de código) |
+| Começando | `https://github.com/db1group/easy-docs` (comando de clone, em bloco de código) |
+| Começando | `https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_$WKTHMLTOPDF_ARCH.deb` (em bloco de código) |
+| Primeiro componente | `https://storybook.js.org/docs/get-started/react-vite` (link com o texto "Documentação oficial do storybook" / "official Storybook documentation" / "Documentación oficial de storybook") |
 
 ## Restrições e validações
 
-- Reescrever ou revisar o texto, o código de exemplo ou a figura das páginas está fora do escopo
-  (R10–R12); as únicas alterações permitidas são ajustes de sintaxe que preservam o texto,
-  correções de link e de imagem e metadados de menu (posição e rótulo).
-- O saneamento para o formato de página da plataforma tem dois pontos, e nenhum outro trecho
-  precisa de ajuste:
-  - o comentário HTML que antecede a figura de Primeiro componente (`<!-- Imagem -->`,
-    `<!-- Image -->`, `<!-- Imagen -->`), que não é exibido, é escrito como comentário de
-    expressão (`{/* Imagem */}` e equivalentes); escrito como comentário HTML, a compilação da
-    página depende de um modo de compatibilidade da plataforma e falha sem ele;
-  - a configuração de sumário da plataforma anterior (`outline: deep`) sai do frontmatter dos 12
-    arquivos que a declaram (as 5 páginas pt-BR e `es`; Primeiro componente e Deploy em `en`),
-    porque a profundidade do sumário vem da configuração global do site (R14).
-- Todo JSX, TSX e JSON de exemplo das páginas já está dentro de blocos de código cercados, nos
-  três idiomas; as chaves e tags dentro desses blocos são publicadas literalmente e não exigem
-  escape. A crase solta da página de temas em pt-BR (R10) compila e não é sintaxe a sanear.
-- O build falha em erro de sintaxe de página, link interno quebrado e imagem referenciada
-  ausente; o acelerador só é publicado com o build verde. O link do Storybook e as URLs dentro
-  de código não são verificados.
-- Arquivos em UTF-8 sem BOM e fim de linha LF, preservando os acentos e o `ñ`/`¡` das traduções.
+- Reescrever ou revisar o texto das páginas está fora do escopo (R9); as únicas alterações
+  permitidas são o ajuste de sintaxe de R13, correções de link e de imagem e metadados de menu.
+- O build falha em erro de sintaxe de página, imagem referenciada ausente e link interno
+  quebrado; o acelerador só é publicado com o build verde. Links externos e endereços
+  `localhost` não são verificados.
 - Antes do corte da migração, a comparação lado a lado com o site publicado confere, nos três
-  idiomas: as 15 URLs `.html`, a ordem e os rótulos de R7, os links anterior/próxima de R8, a
-  figura com seu texto alternativo, o link do Storybook, o parágrafo de pré-requisitos de R15 e
-  a chamada da página inicial para a Introdução. Diferença esperada, que não é regressão: no site
-  publicado pela plataforma anterior, Começando e Temas em `en` mostram no sumário só os títulos
-  de nível 2; o sumário com os níveis 2 a 6 (R14) é o comportamento decidido.
+  idiomas: as 5 URLs `.html`, a ordem e os rótulos de R5, os links anterior/próxima de R7, a
+  figura de R14, os blocos de código com seu conteúdo literal (R12), o comentário invisível de
+  R13, o link do Storybook e a chamada do card Easy Docs da página inicial para a Introdução.
 
 ## Integrações e dependências externas
 
 As páginas tratam de sistemas externos que são assunto do conteúdo, não dependências do build:
 
-- **GitHub** — repositório público `db1group/easy-docs` (`https://github.com/db1group/easy-docs`),
-  clonado em Começando.
-- **React** — os templates de documento são componentes React em TSX.
-- **Storybook** — visualização dos templates em `http://localhost:6006/`; documentação oficial
-  em `storybook.js.org`.
-- **Ajv** — tipo de JSON Schema usado para declarar e validar as props dos templates.
-- **wkhtmltopdf** `0.12.6-1` (pacote `.deb` para Debian buster, arquitetura `amd64` ou `arm64`)
-  e as fontes X (`libfontenc1`, `xfonts-75dpi`, `xfonts-base`, `xfonts-encodings`,
-  `xfonts-utils`) — necessários em modo de desenvolvimento fora do Docker; a imagem Docker já os
-  contém.
-- **Node.js** e **npm**, instalados com **NVM** (`v0.38.0`, exemplo com Node.js 18), e **Yarn** —
-  para criar templates, rodar em desenvolvimento e compilar.
-- **Docker** — gera a imagem `easy-docs-api` e executa o contêiner `easy-docs` na porta `8080`.
-- **Git**, instalado com **apt** (Debian, Ubuntu e derivados) ou **yum** (RedHat, CentOS, Amazon
-  Linux e derivados).
+- **GitHub** da DB1 — repositório `db1group/easy-docs`, de onde a ferramenta é clonada.
+- **React** e **Storybook** — os templates são componentes React e são visualizados no
+  Storybook (`http://localhost:6006/`); documentação oficial do Storybook em
+  `storybook.js.org`.
+- **wkhtmltopdf** (pacote 0.12.6-1 para Debian buster, `amd64` ou `arm64`) e fontes X11
+  (`libfontenc1`, `xfonts-75dpi`, `xfonts-base`, `xfonts-encodings`, `xfonts-utils`) —
+  dependências do modo de desenvolvimento; em produção já estão na imagem Docker.
+- **Ajv** (esquemas `JSONSchemaType`) — validação das propriedades do template nos exemplos.
+- **Docker** — imagem `easy-docs-api` e container `easy-docs` na porta `8080`.
+- **Node.js**, **npm**, **Yarn** e **NVM** — execução em desenvolvimento e compilação.
+- **Git** e os gerenciadores de pacote **apt** e **yum** — instalação do Git e clone.
 
 As dependências técnicas do domínio e o que cada uma afeta quando ausente estão em
 [dependências técnicas](references/technical-dependencies.md).

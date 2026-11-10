@@ -1,6 +1,6 @@
 ---
 name: guia-de-qa
-description: Esta é a documentação autoritativa do domínio Guia de QA, a disciplina QA do Engineering Guide da DB1 em pt-BR, en e es. Cobre Jeito DB1 de QA (métricas IEV, IEC e IET, nível de saúde dos testes, automação), diretrizes de trabalho do QA, reuniões e cerimônias, casos de teste, planejamento, execução, evidências e resultados de testes, gestão de bugs e retestes (severidade e tipo), shift-left, heurísticas, técnicas de teste e senioridades de QA, com menu, rótulos, URLs e imagens dessas páginas.
+description: This is the authoritative documentation of the Guia de QA domain. Cobre a disciplina QA do Engineering Guide DB1 em pt-BR, en e es — Jeito DB1 de QA (métricas, nível de saúde dos testes), diretrizes do QA, cerimônias, casos de teste, planejamento, execução, evidências, resultados, gestão de bugs e retestes, shift-left, heurísticas, técnicas e senioridades de QA. Use ao mexer nessas páginas, no menu, rótulos, URLs, redirect ou imagens da disciplina.
 metadata:
   author: clovis-cli
   type: domain-skill
@@ -122,9 +122,16 @@ que a DB1 defende — está em [conteúdo normativo das páginas](references/con
   - menções a documentos sem link: `Ferramentas úteis para o QA` em Criação/escrita de casos
     de teste (não existe página com esse nome no guia), `Gestão de defeitos (bugs) e retestes`
     em Resultados dos testes e `os Resultados` em Execução de testes (pt-BR);
-  - os marcadores `(insert link)` em `en` e `(insertar enlace)` em `es`, antes da menção à
-    Gestão de bugs e retestes no resultado reprovado de Resultados dos testes, publicados como
-    texto, sem link;
+  - os marcadores de link pendente das traduções, publicados como texto, sem link, no ponto em
+    que o pt-BR tem link (R16) ou menção:
+    - em `en`, `(add link)` quatro vezes nas Diretrizes de Trabalho do QA (antes de Test
+      Execution, Test Evidence, Bug and Retest Management e standard), `(insert link)` em
+      Planejamento de testes (antes de Shift Left Testing Approach) e `(insert link)` no
+      resultado reprovado de Resultados dos testes (antes de Bug Management and Retests);
+    - em `es`, `(añadir enlace)` quatro vezes nas Diretrizes (antes de Ejecución de Pruebas,
+      Evidencias de Pruebas, Gestión de Bugs y Retestes e estándar), `(inserte enlace)` em
+      Planejamento de testes (antes de Enfoque Shift Left en Pruebas) e `(insertar enlace)` no
+      resultado reprovado de Resultados dos testes (antes de Gestión de Bugs y Repruebas);
   - o código do tipo de bug banco de dados em Gestão de defeitos: `[BD]` em pt-BR e `[DB]` em
     `en` e `es`, cada idioma com o seu código; os demais códigos de severidade e de tipo são
     idênticos nos três idiomas;
@@ -146,9 +153,9 @@ que a DB1 defende — está em [conteúdo normativo das páginas](references/con
 
 ### Links e imagens
 
-- **R16.** Links internos entre páginas da disciplina apontam para a URL da página sem extensão
-  e resolvem a partir da URL publicada da página de origem. Os links internos existentes são
-  todos em pt-BR:
+- **R16.** Links internos entre páginas da disciplina são escritos como caminho relativo do
+  arquivo `.md` de destino e publicados com a URL `.html` da página. Os links internos existentes
+  são todos em pt-BR:
 
   | Página de origem | Texto do link | Destino |
   |---|---|---|
@@ -175,7 +182,7 @@ que a DB1 defende — está em [conteúdo normativo das páginas](references/con
 - **R18.** Referência que usa caminho relativo atravessando a pasta de arquivos públicos, ou que
   não resolve, é corrigida apenas no caminho, preservando a forma (imagem ou link) e o texto. Os
   casos conhecidos são as três referências de R17, escritas com `../../public/img/docs/...` ou
-  `../../../public/img/docs/...`, e os links internos de R16, escritos com a extensão `.md`.
+  `../../../public/img/docs/...`.
 - **R19.** O conteúdo usa sintaxe compatível com MDX 3 sem alterar o texto. As chaves `{ }` das
   listas de R15 são escapadas para aparecer literalmente: sem escape elas são interpretadas como
   expressão e somem da página sem erro de build.
@@ -194,8 +201,9 @@ que a DB1 defende — está em [conteúdo normativo das páginas](references/con
 
 ### Incluir ou alterar uma página da disciplina
 
-1. A página nasce em pt-BR sob `/docs/qa/`, no caminho que forma a URL desejada, e recebe
-   tradução `en` e `es` no mesmo caminho e com o mesmo nome de arquivo.
+1. A página nasce em pt-BR em `docs/docs/qa/`, no caminho que forma a URL desejada, e recebe
+   tradução `en` e `es` no mesmo caminho, sob
+   `i18n/<locale>/docusaurus-plugin-content-docs/current/docs/qa/`, e com o mesmo nome de arquivo.
 2. Posição e rótulo de menu são definidos nos três idiomas (rótulo traduzido) e a tabela de R7
    é atualizada nesta skill.
 3. Se a URL de uma página existente mudar, a URL antiga recebe redirecionamento (R5) e os links

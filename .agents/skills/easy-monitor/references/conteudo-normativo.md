@@ -2,174 +2,183 @@
 
 > **Manutenção deste arquivo**
 >
-> Atualize quando o texto ou uma figura publicada de uma página do acelerador mudar por decisão
-> deliberada (orientação nova, comando, caminho, porta, componente ou credencial revisada).
-> Ajustes apenas de sintaxe que preservam o texto não exigem edição. Divergência entre este
-> resumo e as páginas sem decisão registrada é escalada para decisão humana.
+> Atualize quando o texto publicado de qualquer página do acelerador mudar por decisão da DB1
+> (passo, comando, endereço, credencial, componente, imagem ou título). Ajustes de sintaxe que
+> preservam o texto não exigem edição. Divergência entre este arquivo e as páginas sem decisão
+> registrada é escalada para decisão humana.
 
-Resumo do que cada página orienta, com os valores publicados. O texto e as figuras são
-publicados como estão; este resumo não autoriza reescrevê-los. Salvo indicação, o conteúdo é o
-mesmo nos três idiomas, e a cópia `easy-monitor-en` repete literalmente a versão `en`.
+Resumo do que cada página publica, igual nos três idiomas salvo indicação. Comandos, caminhos,
+endereços e credenciais são literais.
 
-## Introdução
+## Introdução (`introduction`)
 
-- **Introdução:** o Easy Monitor é um conjunto de tecnologias e configurações pré-definidas para
-  agilizar a stack de observabilidade no desenvolvimento de projetos, com ferramentas e
-  configurações que facilitam a criação e o gerenciamento de projetos usando tecnologias open
-  source.
-- **Objetivo:** implementar de forma rápida e fácil ferramentas como Prometheus, Grafana, Loki,
-  Jaeger e OpenTelemetry Collector, com uma stack de observabilidade pronta para uso em minutos.
-- **Como funciona:** basta rodar um comando para subir a stack; o Easy Monitor é uma ferramenta
+Títulos: nível 1 `Easy monitor` (pt-BR, com "monitor" minúsculo) / `Easy Monitor` (`en`, `es`);
+nível 2 `Introdução` / `Introduction` / `Introducción`, `Objetivo` / `Objective` / `Objetivo`,
+`Como funciona` / `How it works` / `Cómo funciona`.
+
+- **Introdução** — o Easy Monitor é um conjunto de tecnologias e configurações pré-definidas
+  para agilizar a stack de observabilidade no desenvolvimento de projetos, com ferramentas e
+  configurações que facilitam criar e gerenciar projetos com várias tecnologias open source
+  (grafado `openSource` em pt-BR).
+- **Objetivo** — implementar de forma rápida e fácil ferramentas como Prometheus, Grafana, Loki,
+  Jaeger e OpenTelemetry Collector (a lista aparece entre parênteses depois de "como"), com uma
+  stack de observabilidade pronta para uso em minutos.
+- **Como funciona** — basta rodar um comando para subir a stack; o Easy Monitor é uma ferramenta
   de linha de comando.
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Easy monitor | Easy Monitor | Easy Monitor |
-| 2 | Introdução | Introduction | Introducción |
-| 2 | Objetivo | Objective | Objetivo |
-| 2 | Como funciona | How it works | Cómo funciona |
+## Começando (`getting-started`)
 
-## Começando
+Títulos: nível 1 `Começando` / `Getting Started` / `Primeros pasos`; nível 2 `Pré-requisitos` /
+`Prerequisites` / `Requisitos previos` e `Passos para começar:` / `Steps to Get Started:` /
+`Pasos para comenzar:`; nível 3, na ordem:
 
-1. **Pré-requisitos** (lista numerada única, publicada assim):
-   1. sistema operacional Linux compatível: Debian, Ubuntu, RedHat, CentOS, Fedora, Suse, Amazon
-      Linux, Oracle Linux;
-   2. acesso de superusuário ou permissões de sudo;
-   3. conhecimento básico de linha de comando Linux;
-   4. Git instalado;
-   5. Docker e Docker Compose instalados.
-2. **Git com apt** (Debian, Ubuntu e derivados): `sudo apt update` e `sudo apt install git`.
-3. **Git com yum** (RedHat, CentOS, Amazon Linux e derivados): `sudo yum update` e
-   `sudo yum install git`.
-4. **Clone:** `git clone https://dev.azure.com/db1global/DGS%20Accelerators/_git/easy-monitor`
-   e depois `cd easy-monitor`.
-5. **Health check:** `chmod +x easy-monitor` e `./easy-monitor hc`, que verifica e instala Docker
-   e Docker Compose, detectando a distribuição Linux e instalando as ferramentas
-   automaticamente. Figura `easy-monitor-hc.png`.
-6. **Verificação da instalação:** `./easy-monitor hc` de novo. Figura
-   `easy-monitor-after-hc.png`.
-7. **Versões:** `docker -v` e `docker-compose -v`. Figura `easy-monitor-docker-compose.png`.
-8. **Ajuda:** `./easy-monitor` sem parâmetros exibe a mensagem de ajuda e lista os comandos
-   disponíveis. Figura `easy-monitor-help.png`. A página termina com "Pronto, agora a ferramenta
-   está pronta para uso!" ("That's it, now the tool is ready to use!"; "¡Eso es todo, ahora la
-   herramienta está lista para usarse!").
+| pt-BR | en | es |
+|---|---|---|
+| Instalando o Git (usando apt) | Installing Git (using apt) | Instalando Git (usando apt) |
+| Instalando o Git (usando yum) | Installing Git (using yum) | Instalando Git (usando yum) |
+| Clone o projeto: | Cloning the Project: | Clonando el proyecto: |
+| (texto corrido, sem título) | Running Easy Monitor Health Checking | Ejecutando el Health Checking de Easy Monitor |
+| Verificando a instalação do Docker e Docker Compose | Verifying the installation of Docker and Docker Compose | Verificando la instalación de Docker y Docker Compose |
+| Verificando a versão do Docker e Docker Compose | Checking the version of Docker and Docker Compose | Verificando la versión de Docker y Docker Compose |
+| Executando o comando easy-monitor | Running the easy-monitor command | Ejecutando el comando easy-monitor |
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Começando | Getting Started | Primeros pasos |
-| 2 | Pré-requisitos | Prerequisites | Requisitos previos |
-| 2 | Passos para começar: | Steps to Get Started: | Pasos para comenzar: |
-| 3 | Instalando o Git (usando apt) | Installing Git (using apt) | Instalando Git (usando apt) |
-| 3 | Instalando o Git (usando yum) | Installing Git (using yum) | Instalando Git (usando yum) |
-| 3 | Clone o projeto: | Cloning the Project: | Clonando el proyecto: |
-| 3 em `en`/`es`; parágrafo em pt-BR | Executando o Health Checking easy-monitor | Running Easy Monitor Health Checking | Ejecutando el Health Checking de Easy Monitor |
-| 3 | Verificando a instalação do Docker e Docker Compose | Verifying the installation of Docker and Docker Compose | Verificando la instalación de Docker y Docker Compose |
-| 3 | Verificando a versão do Docker e Docker Compose | Checking the version of Docker and Docker Compose | Verificando la versión de Docker y Docker Compose |
-| 3 | Executando o comando easy-monitor | Running the easy-monitor command | Ejecutando el comando easy-monitor |
+Pré-requisitos, numa lista numerada de 5 itens precedida de "Pré-requisitos: Sistema
+operacional Linux compatível:":
 
-## Instalando Open Telemetry
+1. Debian, Ubuntu, RedHat, CentOS, Fedora, Suse, Amazon Linux, Oracle Linux;
+2. acesso de superusuário ou permissões de sudo;
+3. conhecimento básico de linha de comando Linux;
+4. Git instalado;
+5. Docker e Docker Compose instalados.
 
-1. **Variáveis de ambiente:** antes de rodar `./easy-monitor otel`, verificar as variáveis do
-   arquivo `docker-compose.yml`, que configuram o OpenTelemetry Collector e os outros componentes;
-   podem ser ajustadas (portas, nomes de serviços, configurações do ambiente). Comando para abrir
-   no vim: `vim /opt/easy-monitor/otel/docker-compose.yml` (o texto cita vim ou vscode).
-2. **Subida:** `./easy-monitor otel` inicia a stack OpenTelemetry. Figura `otel-start.jpg`.
-3. **Componentes descritos no texto:**
-   - Loki — gerenciamento de logs, coleta e armazena logs de contêineres;
-   - OpenTelemetry Collector — agente que coleta, processa e envia métricas e traces para o
-     backend de monitoramento;
-   - Prometheus — monitoramento e alerta, coleta métricas de serviços e contêineres;
-   - Grafana — análise e visualização de dados, integrado ao Prometheus para exibir métricas em
-     painéis;
-   - Jaeger — rastreamento distribuído, coleta e visualiza traces de solicitações em
-     microsserviços.
-4. **Containers:** `docker container ls` para verificar se subiram.
-5. **Endereços:** Grafana `http://localhost:3000`, Prometheus `http://localhost:9090`, Jaeger
-   `http://localhost:16686`.
-6. **Validação do Grafana:** acessar `http://localhost:3000` com usuário e senha padrão
-   `admin`/`admin`; após o login aparece o painel do Grafana.
-7. **Dashboards de exemplo:** o Easy Monitor inclui 2 dashboards de exemplo, acessados pelo
-   ícone de dashboards no menu lateral esquerdo do Grafana, com gráficos e métricas coletadas
-   pelo Prometheus. Figura `grafana-default-dashboards.jpg`.
+Passos e comandos:
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Instalando o Open Telemetry | Installing OpenTelemetry | Instalando OpenTelemetry |
-| 3 | Iniciando a Stack OpenTelemetry | Starting the OpenTelemetry Stack | Iniciando la pila OpenTelemetry |
-| 3 | Verificando os containers | Checking the Containers | Comprobando los contenedores |
-| 3 | Acessando as ferramentas | Accessing the Tools | Accediendo a las herramientas |
-| 3 | Validando a Stack OpenTelemetry | Validating the OpenTelemetry Stack | Validando la pila OpenTelemetry |
-| 3 | Validando o Grafana | Validating Grafana | Validando Grafana |
-| 4 | Dashboard de exemplo | Sample Dashboard | Panel de ejemplo |
+| Passo | Comandos |
+|---|---|
+| Git em Debian, Ubuntu ou derivados | `$ sudo apt update` / `$ sudo apt install git` |
+| Git em RedHat, CentOS, Amazon Linux ou derivados | `$ sudo yum update` / `$ sudo yum install git` |
+| Clone | `$ git clone https://dev.azure.com/db1global/DGS%20Accelerators/_git/easy-monitor` |
+| Entrar no diretório | `$ cd easy-monitor` |
+| Health check (detecta a distribuição Linux e instala Docker e Docker Compose automaticamente) | `$ chmod +x easy-monitor` / `$ ./easy-monitor hc` |
+| Verificar a instalação | `$ ./easy-monitor hc` |
+| Verificar as versões | `$ docker -v` / `$ docker-compose -v` |
+| Ajuda e lista de comandos (ferramenta sem parâmetros) | `$ ./easy-monitor` |
 
-## Instrumentando as aplicações
+A página termina com "Pronto, agora a ferramenta está pronta para uso!" (`en` "That's it, now
+the tool is ready to use!", `es` "¡Eso es todo, ahora la herramienta está lista para usarse!").
 
-- O Easy Monitor oferece suporte a várias linguagens e frameworks para instrumentar as
-  aplicações.
-- **Repositório de exemplos:** `otel-instrumentation-examples` no Azure DevOps (link no texto
-  "aqui"/"here"/"aquí"), com exemplos em Java, PHP, Node.js e C# .NET, além de exemplos de
-  configuração do OpenTelemetry Collector, do Prometheus e do Grafana.
-- **Fontes oficiais:** documentação de instrumentação do OpenTelemetry geral, Java, PHP,
-  Node.js e .NET.
+## Instalando Open Telemetry (`otel-install`)
 
-| Nível | pt-BR | en | es |
-|---|---|---|---|
-| 1 | Instrumentação das aplicações | Application Instrumentation | Instrumentación de aplicaciones |
-| 3 | Repositório de exemplos | Example Repository | Repositorio de ejemplos |
-| 2 | Fontes oficiais | Official Resources | Recursos oficiales |
+Títulos: nível 1 `Instalando o Open Telemetry` / `Installing OpenTelemetry` / `Instalando
+OpenTelemetry`; não há nível 2; nível 3, na ordem:
 
-## Conteúdo das figuras
+| pt-BR | en | es |
+|---|---|---|
+| Iniciando a Stack OpenTelemetry | Starting the OpenTelemetry Stack | Iniciando la pila OpenTelemetry |
+| Verificando os containers | Checking the Containers | Comprobando los contenedores |
+| Acessando as ferramentas | Accessing the Tools | Accediendo a las herramientas |
+| Validando a Stack OpenTelemetry | Validating the OpenTelemetry Stack | Validando la pila OpenTelemetry |
+| Validando o Grafana | Validating Grafana | Validando Grafana |
 
-- `easy-monitor-hc.png` — saída de `./easy-monitor hc` com o cabeçalho "DB1 Global Software -
-  Easy Monitor - Observability SRE/DevOps", detecção de Debian ou Ubuntu e instalação do Docker
-  pelo script oficial, terminando em "Docker instalado com sucesso." e "Instalando Docker Compose
-  v2...".
-- `easy-monitor-after-hc.png` — `chmod +x easy-monitor` seguido de `./easy-monitor hc`, com as
-  mensagens "Docker / Podman já estão instalados." e "Docker Compose versão 2.26.1 instalado
-  corretamente.".
-- `easy-monitor-docker-compose.png` — saída de `docker -v` (Docker 26.0.1) e
-  `docker-compose -v` (Docker Compose v2.26.1).
-- `easy-monitor-help.png` — ajuda da ferramenta: `Usage: ./easy-monitor <product>` com os
-  comandos `hc` (verifica e instala Docker e Docker Compose), `elk`, `elk up -d`, `mon`
-  (Grafana, Prometheus, NodeExporter, AlertManager e C-Advisor), `node-exp`, `wazuh` e `rancher`,
-  e as variantes `<product> stop`, `<product> start` e `<product> down`.
-- `otel-start.jpg` — saída de `./easy-monitor otel`: rede `otel_otel_network` criada e containers
-  `loki`, `prom-node-exporter`, `otel-collector`, `grafana`, `jaeger-all-in-one`, `prometheus` e
-  `cadvisor` iniciados (8/8).
-- `grafana-default-dashboards.jpg` — lista de dashboards do Grafana com os 2 exemplos:
-  "Application monitoring" (tags `application`, `logs`, `trace`) e "System monitoring" (tags
-  `docker`, `linux`, `metrics`).
+e nível 4 `Dashboard de exemplo` / `Sample Dashboard` / `Panel de ejemplo`, dentro de Validando
+o Grafana.
+
+- **Antes de subir** — verificar as variáveis de ambiente do `docker-compose.yml`, que
+  configuram o OpenTelemetry Collector e os demais componentes; ajustar portas, nomes de
+  serviços ou outras configurações do ambiente conforme a necessidade. Abrir num editor (vim ou
+  vscode), por exemplo `$ vim /opt/easy-monitor/otel/docker-compose.yml`.
+- **Subir a stack** — `$ ./easy-monitor otel`; o script configura o ambiente OpenTelemetry.
+- **Componentes da stack**, nesta ordem:
+  - Loki — gerenciamento de logs; coleta e armazena logs de contêineres;
+  - OpenTelemetry Collector — agente que coleta, processa e envia métricas e traces para o
+    backend de monitoramento;
+  - Prometheus — monitoramento e alerta; coleta métricas de serviços e contêineres;
+  - Grafana — análise e visualização; integra-se ao Prometheus para exibir métricas em painéis;
+  - Jaeger — rastreamento distribuído; coleta e visualiza traces de solicitações em
+    microsserviços.
+- **Verificar os containers** — `$ docker container ls`.
+- **Endereços** — Grafana `http://localhost:3000`, Prometheus `http://localhost:9090`, Jaeger
+  `http://localhost:16686`. Loki e OpenTelemetry Collector não têm endereço publicado.
+- **Validar o Grafana** — acessar `http://localhost:3000`; usuário e senha padrão `admin`/`admin`
+  (credencial padrão da stack local, publicada como parte do passo a passo); depois do login
+  aparece o painel do Grafana.
+- **Dashboards de exemplo** — o Easy Monitor inclui 2 dashboards de exemplo; acessá-los pelo
+  ícone de dashboards no menu lateral esquerdo do Grafana, com gráficos e métricas coletadas pelo
+  Prometheus.
+
+## Instrumentando as aplicações (`app-instrumentation`)
+
+Títulos: nível 1 `Instrumentação das aplicações` / `Application Instrumentation` /
+`Instrumentación de aplicaciones`; nível 3 `Repositório de exemplos` / `Example Repository` /
+`Repositorio de ejemplos`; nível 2 `Fontes oficiais` / `Official Resources` / `Recursos
+oficiales`.
+
+- O Easy Monitor oferece suporte a várias linguagens e frameworks para integrar as aplicações
+  existentes.
+- **Repositório de exemplos** — `https://dev.azure.com/db1global/DGS%20Accelerators/_git/otel-instrumentation-examples`,
+  com exemplos em Java, PHP, Node.js e C# .NET (lista nesta ordem) e exemplos de configuração do
+  OpenTelemetry Collector, Prometheus e Grafana.
+- **Fontes oficiais**, lista de links nesta ordem, com o texto do link igual nos três idiomas:
+
+  | Texto | Destino |
+  |---|---|
+  | OpenTelemetry | `https://opentelemetry.io/docs/instrumentation/` |
+  | OpenTelemetry Java | `https://opentelemetry.io/docs/instrumentation/java/` |
+  | OpenTelemetry PHP | `https://opentelemetry.io/docs/instrumentation/php/` |
+  | OpenTelemetry Node.js | `https://opentelemetry.io/docs/instrumentation/js/` |
+  | OpenTelemetry .NET | `https://opentelemetry.io/docs/instrumentation/dotnet/` |
+
+## Imagens
+
+Imagens referenciadas, todas por caminho absoluto em `/img/components/easy-monitor/`:
+
+| Página | Passo | Arquivo | Texto alternativo pt-BR | `en` e `es` |
+|---|---|---|---|---|
+| Começando | Health check (`chmod` + `hc`) | `easy-monitor-hc.png` | Healt Chacking Easy monitor | Health Checking Easy Monitor |
+| Começando | Verificar a instalação | `easy-monitor-after-hc.png` | Healt Chacking After Easy monitor | Health Checking After Easy Monitor |
+| Começando | Verificar as versões | `easy-monitor-docker-compose.png` | Docker and Docker Compose Easy monitor | Docker and Docker Compose Easy Monitor |
+| Começando | Ajuda da ferramenta | `easy-monitor-help.png` | Help Easy monitor | Help Easy Monitor |
+| Instalando Open Telemetry | Subir a stack | `otel-start.jpg` | ELK Easy monitor | ELK Easy monitor |
+| Instalando Open Telemetry | Dashboards de exemplo | `grafana-default-dashboards.jpg` | ELK Easy monitor | ELK Easy monitor |
+
+Imagens publicadas no mesmo diretório e não referenciadas por nenhuma página:
+`easy-monitor-does-not-exists.png`, `easy-monitor-elk-env.png`, `easy-monitor-elk.png`,
+`easy-monitor-error-401.png`, `easy-monitor-git-clone.png`,
+`easy-monitor-version-obsolete.png`, `elastic-search-first-view.png`,
+`elastic-search-running.png`, `elastic-search-user-pass.png`, `kibana-home-screen.png`.
+O diretório tem 16 arquivos: as 6 imagens da tabela e estas 10.
 
 ## Inconsistências preservadas
 
-O texto e as figuras são publicados como estão (regra de conteúdo do domínio). Permanecem, sem
-correção:
+Publicadas como estão, por decisão de não revisar o conteúdo na reescrita:
 
-- **Entre texto e figuras:** a ajuda da ferramenta mostra os comandos de outra stack (`elk`,
-  `mon`, `node-exp`, `wazuh`, `rancher`) e não mostra `otel`; a subida da stack mostra 7
-  containers, incluindo `prom-node-exporter` e `cadvisor`, que a lista de 5 componentes não cita;
-  as duas figuras da stack OpenTelemetry têm o texto alternativo `ELK Easy monitor` nos três
+- Começando, pt-BR: "Executando o Health Checking easy-monitor" é a primeira linha do parágrafo
+  que segue, sem formato de título; por isso o passo de health check não aparece no sumário de
+  pt-BR, e aparece em `en` e `es`.
+- Começando, pt-BR: "Pré-requisitos:" e "Sistema operacional Linux compatível:" formam um
+  parágrafo antes da lista, e a lista de distribuições é o item 1 dos pré-requisitos, nos três
   idiomas.
-- **Instalando Open Telemetry:** "Para iniciar o OpenTelemetry Collector" antecede o comando que
-  sobe a stack inteira; o comando de subida é `./easy-monitor otel` e a seção seguinte fala em
-  "após concluir a execução do comando ./easy-monitor otel up"; o `docker-compose.yml` é aberto em
-  `/opt/easy-monitor/otel/`, caminho que nenhum passo anterior cria (o clone fica em
-  `easy-monitor` no diretório corrente); Loki não tem endereço de acesso; "Validando a Stack"
-  anuncia passos para cada componente, mas só o Grafana é validado; não há título de nível 2; a
-  frase "Ao executar $ ./easy-monitor otel" traz o prompt `$` no texto corrido.
-- **Começando:** os pré-requisitos exigem Docker e Docker Compose instalados, e o health check é
-  apresentado como o passo que os instala; `./easy-monitor hc` aparece duas vezes (instalar e
-  verificar); "Pré-requisitos:" se repete logo abaixo do título de mesmo nome; a lista de
-  distribuições ocupa o item 1 da lista numerada de pré-requisitos.
-- **Instrumentando as aplicações:** o texto fala em "seguir alguns passos simples", mas a página
-  não lista passos; o título de nível 3 vem antes do de nível 2; os links do OpenTelemetry usam o
-  caminho `/docs/instrumentation/`.
-- **Introdução:** "Como funciona" repete que a ferramenta facilita a criação e o gerenciamento de
-  projetos, sem citar observabilidade.
-- **pt-BR:** título `Easy monitor` com `m` minúsculo; "openSource"; "CebtOS"; "verique"; "do
-  stack"; "Execute os seguintes comando abaixo" (duas vezes); "iremos verificar se subiram com
-  sucesso";   "Executando o Health Checking easy-monitor" como parágrafo emendado à frase seguinte
-    (título de nível 3 em `en` e `es`); textos alternativos "Healt Chacking" e "Easy monitor"; título "Instalando o
-  Open Telemetry" com espaço, ao lado de "OpenTelemetry" no restante da página.
-- **Quebras de linha:** em `en`, `es` e na cópia, quebra forçada entre as duas primeiras frases
-  de Instalando Open Telemetry; em pt-BR, as duas frases no mesmo parágrafo.
+- Começando, pt-BR: `CebtOS` na instalação com `yum` (`en` e `es` grafam `CentOS`) e "Execute os
+  seguintes comando abaixo".
+- Começando, texto alternativo pt-BR das imagens: `Healt Chacking` e `Easy monitor` minúsculo.
+- Começando: os pré-requisitos pedem Docker e Docker Compose já instalados, e o health check os
+  instala.
+- Instalando Open Telemetry, pt-BR: `verique` no primeiro parágrafo.
+- Instalando Open Telemetry: "Para iniciar o OpenTelemetry Collector" introduz o comando que
+  sobe a stack inteira.
+- Instalando Open Telemetry: a verificação dos containers cita "./easy-monitor otel up",
+  enquanto o comando de subida publicado é `./easy-monitor otel`.
+- Instalando Open Telemetry: o texto alternativo das duas imagens é "ELK Easy monitor", embora a
+  página trate da stack OpenTelemetry.
+- Começando: a figura da ajuda (`easy-monitor-help.png`) mostra a saída de uma versão da
+  ferramenta com os produtos `hc`, `elk`, `elk up -d`, `mon` (Grafana, Prometheus,
+  NodeExporter, AlertManager e C-Advisor), `node-exp`, `wazuh` e `rancher`, e as ações `stop`,
+  `start` e `down`; ela não lista `otel`, o subcomando que a página seguinte usa.
+- Instalando Open Telemetry: a página não tem título de nível 2; os passos são de nível 3.
+- Instalando Open Telemetry: em `en` e `es` o primeiro parágrafo termina com dois espaços e
+  quebra a linha antes de "Feel free..." / "Si lo desea..."; em pt-BR as duas frases ficam no
+  mesmo parágrafo.
+- Instrumentando as aplicações: o título "Repositório de exemplos" é de nível 3 e "Fontes
+  oficiais" é de nível 2.
+- Título de nível 1 do Open Telemetry: `Instalando o Open Telemetry` (pt-BR, com espaço) e
+  `OpenTelemetry` (`en`, `es`); o rótulo de menu grafa `Open Telemetry` nos três idiomas.

@@ -1,45 +1,75 @@
-name: Deploy to S3
+name: Deploy de produção
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 permissions:
   id-token: write
   contents: read
 
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: engineerguide.db1.com.br
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      AWS_REGION: us-east-1
-      S3_BUCKET: engineerguide.db1.com.br
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "yarn"
+      - name: Habilitar Corepack
+        run: corepack enable
 
-      - name: Install Dependencies
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Instalar dependências
         run: yarn install --immutable
 
-      - name: Build Application
+      - name: Build
         run: yarn build
 
-      - name: Configure AWS credentials (OIDC)
+      - name: Configurar credenciais AWS (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Deploy to S3
-        run: aws s3 sync .vitepress/dist "s3://${{ env.S3_BUCKET }}" --delete
+      # Assets imutáveis (nomes com hash) primeiro, com cache longo.
+      - name: Publicar assets com cache longo
+        run: |
+          aws s3 sync build/ "s3://${S3_BUCKET}" \
+            --exclude "*" \
+            --include "assets/js/*" \
+            --include "assets/css/*" \
+            --include "assets/images/*" \
+            --include "assets/fonts/*" \
+            --include "assets/medias/*" \
+            --include "assets/files/*" \
+            --cache-control "max-age=31536000, immutable"
 
-      # Descomentar SOMENTE se houver CloudFront na frente do bucket:
-      # - name: Invalidate CloudFront cache
+      # HTML, sitemap e demais arquivos com cache curto.
+      - name: Publicar HTML e demais arquivos com cache curto
+        run: |
+          aws s3 sync build/ "s3://${S3_BUCKET}" \
+            --exclude "assets/js/*" \
+            --exclude "assets/css/*" \
+            --exclude "assets/images/*" \
+            --exclude "assets/fonts/*" \
+            --exclude "assets/medias/*" \
+            --exclude "assets/files/*" \
+            --cache-control "no-cache"
+
+      # A remoção vem por último: HTML antigo com cache longo poderia pedir assets já removidos.
+      - name: Remover arquivos obsoletos
+        run: |
+          aws s3 sync build/ "s3://${S3_BUCKET}" --delete --size-only
+
+      # - name: Invalidar cache do CloudFront
       #   run: |
       #     aws cloudfront create-invalidation \
       #       --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" \

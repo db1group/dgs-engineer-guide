@@ -1,6 +1,6 @@
 ---
 name: golden-path
-description: Esta é a documentação autoritativa do domínio Golden Path, o acelerador de scaffold de projetos da DB1 no Engineering Guide, em pt-BR, en e es. Cobre introdução, primeiros passos (pré-requisitos, clone dos repositórios no Azure DevOps, Docker Compose com Postgres e Keycloak, portas e verificação), arquitetura do frontend React por features e convenções de nomenclatura e estrutura do backend .NET Core 8, com menu, rótulos, URLs e sintaxe dessas páginas.
+description: This is the authoritative documentation of the Golden Path domain. Cobre o acelerador Golden Path do Engineering Guide DB1 em pt-BR, en e es — scaffold com frontend React, backend .NET Core 8 e Keycloak, pré-requisitos, clone dos repositórios no Azure DevOps, Docker Compose com Postgres, portas, aviso de senha, arquitetura por features, nomenclatura e estrutura do backend. Use ao mexer nessas quatro páginas, no menu, rótulos, URLs, sintaxe MDX ou tradução do Golden Path.
 metadata:
   author: clovis-cli
   type: domain-skill
@@ -67,8 +67,9 @@ diferenças entre os idiomas estão em [conteúdo normativo das páginas](refere
 
 ### Menu do acelerador
 
-- **R5.** A categoria Golden Path contém apenas as 4 páginas, sem subcategorias, na mesma ordem
-  e com estes rótulos nos três idiomas. Os rótulos diferem do título de nível 1 de todas as
+- **R5.** A categoria Golden Path tem o rótulo `Golden Path` nos três idiomas e não tem página
+  própria: clicar no rótulo apenas expande ou recolhe a categoria. Ela contém apenas as 4
+  páginas, sem subcategorias, na mesma ordem e com estes rótulos nos três idiomas. Os rótulos diferem do título de nível 1 de todas as
   páginas e são preservados literalmente:
 
   | Posição | pt-BR | en | es | Página |
@@ -92,11 +93,15 @@ diferenças entre os idiomas estão em [conteúdo normativo das páginas](refere
   digitação e de estrutura existentes. Os casos conhecidos que permanecem estão listados em
   [conteúdo normativo das páginas](references/conteudo-normativo.md#inconsistências-preservadas),
   entre eles: a porta do frontend (`3000` em Começando, `5173` em Frontend), a versão do Node.js
-  (`20++` em Começando, `node 18+` em Frontend) e o bloco de clone do frontend em pt-BR, que
-  contém só a URL, sem `git clone`. Corrigi-los é revisão de conteúdo, fora do escopo.
+  (`20++` em Começando, `node 18+` em Frontend), o bloco de clone do frontend em pt-BR, que
+  contém só a URL, sem `git clone`, e as frases em inglês na configuração e na execução da
+  página Frontend em pt-BR. Corrigi-los é revisão de conteúdo, fora do escopo.
 - **R10.** O primeiro título de nível 1 de cada página é o título exibido no topo da página e na
   aba do navegador; o rótulo do menu segue R5.
 - **R11.** O sumário lateral de cada página mostra os títulos de nível 2 a 6, nas 4 páginas.
+  Começando tem o título de nível 4 "Banco de dados e Keycloak" e Frontend tem os títulos de
+  nível 4 com os comandos (`` `yarn install` ``, `` `vite` or `yarn dev` ``, `` `yarn test` `` e
+  equivalentes traduzidos), que aparecem no sumário.
 - **R12.** As estruturas de pastas e os comandos aparecem em blocos de código, literalmente,
   com os caracteres de árvore (`├──`, `│`, `└──`, `+--`, `|`), as linhas vazias e os
   comentários `#` de cada idioma.
@@ -109,14 +114,18 @@ diferenças entre os idiomas estão em [conteúdo normativo das páginas](refere
   | en | IMPORTANT | REMEMBER TO CHANGE THE KEYCLOAK PASSWORD. |
   | es | IMPORTANTE | RECUERDA CAMBIAR LA CONTRASEÑA DE KEYCLOAK. |
 
-  O comentário que antecede o alerta no arquivo fonte (`Alerta` em pt-BR e `es`, `Alert` em
-  `en`) não aparece na página.
+  O alerta fica logo depois das credenciais de acesso ao Keycloak, no passo de banco de dados e
+  Keycloak, e é renderizado como bloco de destaque, nunca como texto cru com os marcadores de
+  abertura e fechamento visíveis. O comentário que antecede o alerta no arquivo fonte (`Alerta`
+  em pt-BR e `es`, `Alert` em `en`) não aparece na página.
 - **R14.** Na seção de evolução da Introdução, a quebra de linha entre a frase "O Golden Path é
   um projeto vivo..." e o parágrafo "É **ALTAMENTE RECOMENDADO**..." é preservada nos três
   idiomas.
 - **R15.** O conteúdo usa sintaxe compatível com MDX 3 sem alterar o texto: a quebra de linha
   de R14 é uma tag autofechada, o alerta de R13 usa a sintaxe de bloco de alerta da plataforma
   com o título entre colchetes e o comentário de R13 usa a sintaxe de comentário da plataforma.
+  A marcação de sumário profundo do frontmatter de Introdução e Começando sai, porque a
+  profundidade do sumário é global (R11). Frontend e Backend não precisam de ajuste de sintaxe.
 
 ### Links e imagens
 
@@ -179,7 +188,7 @@ Links externos publicados (iguais nos três idiomas, salvo indicação):
 |---|---|
 | Começando | `https://dev.azure.com/db1global/DGS%20Components/_git/golden-path-backend` (link e comando de clone) |
 | Começando | `https://dev.azure.com/db1global/DGS%20Components/_git/golden-path-frontend` (link e bloco de clone) |
-| Começando | `http://localhost:7080` (Keycloak) e `http://localhost:3000` (frontend) |
+| Começando | `http://localhost:7080` (Keycloak) e `http://localhost:3000` (frontend), como links na verificação; no passo de banco de dados e Keycloak, o endereço `http://localhost:7080` é código inline, sem link |
 | Frontend | `https://vitejs.dev/`, `http://localhost:5173`, `https://mui.com/`, `https://lucide.dev/guide/packages/lucide-react`, `https://final-form.org`, `https://final-form.org/react` |
 | Backend | `https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-8.0` (pt-BR); `https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0` (`en` e `es`) |
 
@@ -210,6 +219,9 @@ As páginas tratam de sistemas externos que são assunto do conteúdo, não depe
 - **PostgreSQL** — banco de dados do backend, subido junto com o Keycloak.
 - **Docker** e **Docker Compose** — sobem banco de dados e Keycloak no ambiente local.
 - **React** com **Vite** (frontend) e **.NET Core 8** com **ASP.NET Core** (backend).
+- **Material UI** 5.16.7, **Lucide** 0.427.0, **Final Form** e **Final Form React** —
+  bibliotecas principais do frontend; **Storybook** — arquivos `.stories.tsx` da convenção de
+  nomenclatura; **Node.js** e **Yarn** — instalação e execução do frontend.
 - **SPOTLIGHT** (Backstage, `backstage.io`) — plataforma pela qual o texto anuncia que o Golden
   Path será gerado no futuro; até lá, os repositórios são clonados manualmente.
 

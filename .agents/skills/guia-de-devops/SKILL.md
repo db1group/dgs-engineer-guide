@@ -1,6 +1,6 @@
 ---
 name: guia-de-devops
-description: Esta é a documentação autoritativa do domínio Guia de DevOps, a disciplina DevOps do Engineering Guide da DB1 em pt-BR, en e es. Cobre Jeito DB1 de DevOps (princípios, métricas MTTR, taxa de falhas e uptime, painel de saúde e fórmula da qualidade dos processos), diretrizes de trabalho do DevOps, CI/CD, infraestrutura, segurança, observabilidade, FinOps, cultura DevOps e senioridades de DevOps, com tradução en/es, menu, rótulos, URLs e redirecionamentos da árvore DevOps antiga.
+description: This is the authoritative documentation of the Guia de DevOps domain. Cobre a disciplina DevOps do Engineering Guide DB1 em pt-BR, en e es — Jeito DB1 (painel de saúde, fórmula da qualidade dos processos, MTTR, uptime), diretrizes do DevOps, CI/CD, infraestrutura, segurança, observabilidade, FinOps, cultura e senioridades de DevOps, e a árvore DevOps antiga de en/es com seus redirects. Use ao mexer nessas páginas, na tradução, no menu, rótulos, URLs ou fórmulas da disciplina.
 metadata:
   author: clovis-cli
   type: domain-skill
@@ -191,8 +191,10 @@ critérios, práticas, níveis e faixas de experiência que a DB1 defende — es
 
 ### Incluir ou alterar uma página da disciplina
 
-1. A página nasce em pt-BR sob `/docs/devops/`, no caminho que forma a URL desejada, e recebe
-   tradução `en` e `es` no mesmo caminho e com o mesmo nome de arquivo.
+1. A página nasce em pt-BR em `docs/docs/devops/`, no caminho que forma a URL desejada, e recebe
+   tradução `en` e `es` no mesmo caminho, sob
+   `i18n/<locale>/docusaurus-plugin-content-docs/current/docs/devops/`, e com o mesmo nome de
+   arquivo.
 2. Posição e rótulo de menu são definidos nos três idiomas (rótulo traduzido) e a tabela de R10 é
    atualizada nesta skill.
 3. Se a URL de uma página existente mudar, a URL antiga recebe redirecionamento (R5), e os

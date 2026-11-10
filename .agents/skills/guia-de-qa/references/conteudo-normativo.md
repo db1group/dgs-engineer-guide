@@ -47,6 +47,9 @@ páginas não é reescrito para acompanhar este resumo.
   | Esforço para correção e reteste | horas gastas para corrigir e validar defeitos | reduzir desperdício e retrabalho, promovendo prevenção |
   | Densidade de bugs | relação entre esforço de desenvolvimento e esforço de correção de bugs | manter baixo, indicando processo eficiente |
 
+  Em `es`, as siglas são IEV (Índice de Errores de Versión), IEC (Índice de Errores del
+  Cliente) e ITE (Índice Total de Errores).
+
 - **Nível de saúde dos testes:** análise mensal da maturidade e saúde dos processos de teste
   de cada projeto, verificando se:
   - o QA realiza as atividades de teste dentro dos padrões estabelecidos;
