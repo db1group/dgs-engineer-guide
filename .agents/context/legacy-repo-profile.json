@@ -1,0 +1,55 @@
+{
+  "system": {
+    "name": "Engineering Guide DB1 (legacy)",
+    "path": "C:\\Users\\paulo.modesto\\Documents\\omni\\dgs-engineer-guide-main-legacy\\dgs-engineer-guide-main-v2",
+    "upstreamRepository": "db1group/dgs-engineer-guide",
+    "productionUrl": "https://engineerguide.db1.com.br",
+    "type": "static documentation site"
+  },
+  "stack": {
+    "language": "Markdown + TypeScript (config) + Vue (default theme only)",
+    "framework": "legacy static site generator ^1.1.3",
+    "runtime": "Node.js 20 (.nvmrc, .node-version, engines.node ~20)",
+    "packageManager": "yarn@4.5.3 (.yarnrc.yml, .yarn/, yarn.lock)",
+    "search": "Local search in the legacy site (MiniSearch, provider: local)",
+    "math": "MathJax 3 injected from cdn.jsdelivr.net in legacy-config/theme/index.ts enhanceApp()",
+    "database": null
+  },
+  "architecture": {
+    "pattern": "Static site generation (SSG) with file-based routing; srcDir src/, cleanUrls: false (pages published as .html)",
+    "i18n": "Legacy site locales: root = pt (lang pt-BR), /en/ (en-US), /es/ (es-ES); trees mirrored under src/, src/en/, src/es/",
+    "navigation": "Hand-written sidebars per locale for /docs/ and /dgs-components/ in legacy-config/pt.ts, en.ts, es.ts (893 lines total); navbar item 'Radar de tecnologia' and GitHub social link",
+    "hosting": "Amazon S3 website hosting, bucket engineerguide.db1.com.br, region us-east-1, no CloudFront"
+  },
+  "structure": {
+    "legacy-config/config.mts": "Site config: title, favicon, logo, locales, local search, cleanUrls false, metaChunk",
+    "legacy-config/pt.ts|en.ts|es.ts": "Per-locale lang, outline label, nav and sidebars",
+    "legacy-config/theme/style.css": "142-line theme override (--vp-* vars, hero gradients, custom containers, .DocSearch residue)",
+    "legacy-config/theme/index.ts": "Extends DefaultTheme and injects MathJax script",
+    "src/index.md": "Home (layout: home, hero + 3 features); mirrored in src/en/index.md and src/es/index.md",
+    "src/docs/": "Guide content: engineering/, qa/, devops/ (pt); en/es have engineering/ and qa/ plus engineering/best-practices/devops/",
+    "src/dgs-components/": "Accelerators: golden-path/, easy-monitor/, easy-docs/, easy-connect/ (+ easy-monitor-en/ duplicate in pt tree)",
+    "src/public/": "Static assets: img/ (favicon, logo, docs, components), assets/ebooks/GEP_2021_EBOOK_ARQUITETURA.pdf",
+    ".github/workflows/prod-deploy-app.yaml": "Push to main: yarn install --immutable, yarn build, OIDC (vars.AWS_DEPLOY_ROLE_ARN), aws s3 sync the legacy build output with --delete; CloudFront invalidation commented out"
+  },
+  "keyFiles": [
+    "legacy-config/config.mts",
+    "legacy-config/pt.ts",
+    "legacy-config/en.ts",
+    "legacy-config/es.ts",
+    "legacy-config/theme/style.css",
+    "legacy-config/theme/index.ts",
+    "src/index.md",
+    "src/en/index.md",
+    "src/es/index.md",
+    ".github/workflows/prod-deploy-app.yaml",
+    "package.json",
+    ".yarnrc.yml",
+    ".nvmrc"
+  ],
+  "metrics": {
+    "markdownFiles": 158,
+    "locales": ["pt-BR", "en", "es"],
+    "staticAssets": 33
+  }
+}

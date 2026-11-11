@@ -1,0 +1,144 @@
+{
+  "artifactLanguage": "pt",
+  "workMode": "maintenance",
+  "discoveryAnswers": {
+    "systemType": "frontend, Guia de engenharia\npara compartilhar e, além disso, expressar nossa forte opinião sobre como o software deve ser feito",
+    "scope": {
+      "type": "whole_project"
+    },
+    "legacyProjectPath": "C:\\Users\\paulo.modesto\\Documents\\omni\\dgs-engineer-guide-main-legacy",
+    "restrictions": [
+      "manter o i18n manter assinatura das rotas use como primissa o 2123105-engineering-guide-docusaurus.md na raiz"
+    ]
+  },
+  "domainIndex": [
+    {
+      "name": "Portal do guia",
+      "slug": "portal-do-guia",
+      "dependsOn": [],
+      "order": 0,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Guia de Engenharia",
+      "slug": "guia-de-engenharia",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 1,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Guia de QA",
+      "slug": "guia-de-qa",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 2,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Guia de DevOps",
+      "slug": "guia-de-devops",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 3,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Golden Path",
+      "slug": "golden-path",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 4,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Easy Monitor",
+      "slug": "easy-monitor",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 5,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Easy Docs",
+      "slug": "easy-docs",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 6,
+      "documented": true,
+      "specified": true
+    },
+    {
+      "name": "Easy Connect",
+      "slug": "easy-connect",
+      "dependsOn": [
+        "portal-do-guia"
+      ],
+      "order": 7,
+      "documented": true,
+      "specified": true
+    }
+  ],
+  "technicalSkillIndex": [
+    {
+      "name": "Autoria de páginas multilíngues",
+      "slug": "autoria-de-paginas-multilingues",
+      "description": "Como criar, mover ou traduzir uma página em pt-BR, en e es: árvore pt-BR e i18n/[locale], _category_.json, sidebar_position/sidebar_label, subpastas com slug e unlisted, sintaxe compatível com MDX 3 e admonitions, assets em static/ e preservação das rotas .html com redirects. Carregar ao mexer em conteúdo ou menus.",
+      "documented": true
+    }
+  ],
+  "authoritativeDocsSource": {
+    "kind": "skills"
+  },
+  "originalWorkMode": "rewrite",
+  "implementedSpecs": [
+    {
+      "slug": "001-portal-do-guia",
+      "closedAt": "2026-10-13T21:52:57.615Z"
+    },
+    {
+      "slug": "002-guia-de-engenharia",
+      "closedAt": "2026-10-26T13:38:43.725Z"
+    },
+    {
+      "slug": "003-guia-de-qa",
+      "closedAt": "2026-11-03T14:16:58.183Z"
+    },
+    {
+      "slug": "004-guia-de-devops",
+      "closedAt": "2026-11-03T14:32:45.156Z"
+    },
+    {
+      "slug": "005-golden-path",
+      "closedAt": "2026-11-03T14:49:28.082Z"
+    },
+    {
+      "slug": "006-easy-monitor",
+      "closedAt": "2026-11-03T15:00:05.402Z"
+    },
+    {
+      "slug": "007-easy-docs",
+      "closedAt": "2026-11-03T15:17:55.415Z"
+    },
+    {
+      "slug": "008-easy-connect",
+      "closedAt": "2026-11-03T15:29:10.901Z"
+    },
+    {
+      "slug": "009-identidade-visual-do-site-publicado",
+      "closedAt": "2026-11-03T15:55:57.451Z"
+    }
+  ]
+}

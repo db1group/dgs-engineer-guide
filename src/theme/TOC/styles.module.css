@@ -1,0 +1,21 @@
+.tableOfContents {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  padding-left: var(--ifm-toc-padding-horizontal);
+  font-size: 0.75rem;
+  font-weight: var(--ifm-font-weight-bold);
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (max-width: 996px) {
+  .tableOfContents {
+    display: none;
+  }
+}

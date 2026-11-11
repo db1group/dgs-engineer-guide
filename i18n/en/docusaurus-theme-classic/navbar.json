@@ -1,0 +1,14 @@
+{
+  "item.label.Radar de tecnologia": {
+    "message": "Technology Radar",
+    "description": "Navbar item with label Radar de tecnologia"
+  },
+  "title": {
+    "message": "Engineering Guide",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Engineering Guide",
+    "description": "The alt text of navbar logo"
+  }
+}
