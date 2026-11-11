@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-O **Engineering Guide** é o site estático de documentação de engenharia da DB1 Global Software,
+O **Engineering Guide** é o site estático de documentação de engenharia da DB1 Itênex,
 publicado em `engineerguide.db1.com.br` — um guia "para compartilhar e expressar nossa forte
 opinião sobre como o software deve ser feito". O próprio site é a documentação do produto e tem
 duas seções, cada uma com menu próprio:

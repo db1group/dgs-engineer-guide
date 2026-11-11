@@ -22,7 +22,7 @@ metadata:
 ## Visão geral do domínio
 
 O Easy Connect é o quarto e último acelerador da seção **Aceleradores** (`/dgs-components/`)
-do Engineering Guide da DB1 Global Software. Ele se apresenta como um **acelerador de
+do Engineering Guide da DB1 Itênex. Ele se apresenta como um **acelerador de
 integrações**, não um componente: é a forma como a DB1 trabalha com a ferramenta **n8n** —
 plataforma de automação de fluxos de trabalho e integração de sistemas com interface visual de
 arrastar e soltar — para acelerar o desenvolvimento de integrações, apoiada num conjunto de boas

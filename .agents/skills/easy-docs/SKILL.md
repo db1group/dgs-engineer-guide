@@ -22,7 +22,7 @@ metadata:
 ## Visão geral do domínio
 
 O Easy Docs é o terceiro acelerador da seção **Aceleradores** (`/dgs-components/`) do
-Engineering Guide da DB1 Global Software. Ele apresenta uma ferramenta da DB1 que gera documentos
+Engineering Guide da DB1 Itênex. Ele apresenta uma ferramenta da DB1 que gera documentos
 PDF (relatórios, contratos) a partir de templates React estilizados: o desenvolvedor cria o
 template, define as propriedades que ele recebe e envia os dados a um endpoint HTTP, que devolve o
 documento pronto em PDF ou HTML; a ferramenta roda em container Docker. O conteúdo está em cinco

@@ -22,7 +22,7 @@ metadata:
 ## Visão geral do domínio
 
 O Easy Monitor é o segundo acelerador da seção **Aceleradores** (`/dgs-components/`) do
-Engineering Guide da DB1 Global Software e o destino das chamadas de aceleradores da página
+Engineering Guide da DB1 Itênex e o destino das chamadas de aceleradores da página
 inicial. Ele apresenta uma ferramenta de linha de comando, mantida pela DB1, que sobe em poucos
 comandos uma stack de observabilidade pronta para uso — OpenTelemetry Collector, Prometheus,
 Grafana, Loki e Jaeger — e orienta a instrumentação das aplicações com OpenTelemetry, em quatro

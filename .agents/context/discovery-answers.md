@@ -39,7 +39,7 @@ Extraídas de `2123105-engineering-guide-docusaurus.md`:
 - **i18n** `defaultLocale: 'pt-BR'`, `locales: ['pt-BR', 'en', 'es']`; traduções em `i18n/[locale]/docusaurus-plugin-content-docs/current/` (incluindo `_category_.json`) e strings de navbar/footer em `i18n/[locale]/docusaurus-theme-classic/`.
 - **Identidade visual**: `favicon: 'img/favicon.ico'`, `logo: 'img/style/logo.png'`; port de `legacy-config/theme/style.css` para `src/css/custom.css` (`--vp-*` → `--ifm-*`, 5 grupos), descartando o bloco `.DocSearch`. Critério: equivalência visual em modo claro e escuro.
 - **Navbar**: "Radar de tecnologia" (`https://techradar.db1.com.br/`), traduzido por locale, e link GitHub `https://github.com/db1group`.
-- **Footer**: criação nova, com apenas o copyright DB1 Global Software nos três idiomas (gap g3).
+- **Footer**: criação nova, com apenas o copyright DB1 Itênex nos três idiomas (gap g3).
 - **Página inicial**: `src/index.md` (hero + 3 features) vira `src/pages/index.tsx`, nos três idiomas.
 - **`toc_max_heading_level` global** no lugar de `outline: deep` (71 arquivos).
 - **Conteúdo**: `src/docs/` e `src/dgs-components/` → `docs/`; `src/public/` → `static/`, preservando os caminhos publicados.
@@ -72,7 +72,7 @@ Extraídas de `2123105-engineering-guide-docusaurus.md`:
 | D13 | Codificação UTF-8 sem BOM; o repositório roda com `core.autocrlf=true`. | Varredura do legado + git | Convenção em `AGENTS.md` |
 | D14 | Gerenciador de pacotes: Yarn 4.5.3 (`packageManager: "yarn@4.5.3"`, `.yarnrc.yml`, `yarn.lock`) com `yarn install --immutable` no CI; o `package-lock.json` do scaffold sai do repositório para não haver dois lockfiles. | Gap g1 | Convenção em `AGENTS.md` |
 | D15 | Node.js 20 em `.nvmrc`, `.node-version` e `actions/setup-node`, com `engines.node: ">=20"`. | Gap g2 | Convenção em `AGENTS.md` |
-| D16 | Footer com apenas o copyright DB1 Global Software, traduzido nos três idiomas. | Gap g3 | Domínio `portal-do-guia` |
+| D16 | Footer com apenas o copyright DB1 Itênex, traduzido nos três idiomas. | Gap g3 | Domínio `portal-do-guia` |
 | D17 | Validação automatizada: somente o build com `onBrokenLinks: 'throw'` no workflow de deploy; a comparação lado a lado antes do corte é manual. Não há testes unitários nem e2e. | Gap g4 | Convenção em `AGENTS.md` |
 | D18 | Documentação além do site: `README.md` de contribuição em pt-BR na raiz (rodar localmente, adicionar ou traduzir página, publicação), atualizado junto com mudanças no fluxo de autoria ou publicação. | Gap g5 | Convenção em `AGENTS.md` |
 | D19 | Cada acelerador (Golden Path, Easy Monitor, Easy Docs, Easy Connect) é um domínio próprio. | Gap g6 | Domínio (`functional-map.md`) |
@@ -102,7 +102,7 @@ Nenhum detectado no projeto-alvo nem no legado: não existem `.specify/`, `opens
 |---|---|---|
 | g1 | Gerenciador de pacotes: `npm` (`package-lock.json` do scaffold) ou Yarn 4.5.3 (legado, CI e premissa). | Yarn 4.5.3, como no legado e no CI (D14). |
 | g2 | Versão do Node.js em `engines.node`, `.nvmrc`, `.node-version` e CI. | Node 20, com `engines.node: ">=20"` (D15). |
-| g3 | Conteúdo do footer novo. | Apenas o copyright DB1 Global Software (D16). |
+| g3 | Conteúdo do footer novo. | Apenas o copyright DB1 Itênex (D16). |
 | g4 | Validação automatizada além da comparação lado a lado. | Só o build com `onBrokenLinks: 'throw'` no CI (D17). |
 | g5 | Formas de documentação além do site. | `README.md` de contribuição em pt-BR (D18). |
 | g6 | Aceleradores como quatro domínios ou domínio único. | Um domínio por acelerador (D19). |

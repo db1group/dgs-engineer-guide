@@ -143,7 +143,7 @@ critérios, práticas, níveis e faixas de experiência que a DB1 defende — es
   vocabulário que o site usa nas outras disciplinas: `Jeito DB1` é `DB1 Way` em `en` e em `es`;
   os níveis são `Trainee`, `Junior`, `Mid-Level`, `Senior` e `Lead` em `en`, e `Trainee`,
   `Junior`, `Intermedio`, `Senior` e `Líder` em `es`, sempre precedidos de `DevOps`
-  (`DevOps Mid-Level`, `DevOps Intermedio`). `DB1` e `DB1 Global Software` não são traduzidos.
+  (`DevOps Mid-Level`, `DevOps Intermedio`). `DB1` e `DB1 Itênex` não são traduzidos.
 - **R19.** O primeiro título de nível 1 de cada página é o título exibido no topo da página e na
   aba do navegador; o rótulo do menu segue R10 mesmo quando difere dele.
 - **R20.** O sumário lateral de cada página mostra os títulos de nível 2 a 6.

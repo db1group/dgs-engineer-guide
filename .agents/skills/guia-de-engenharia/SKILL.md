@@ -22,7 +22,7 @@ metadata:
 ## Visão geral do domínio
 
 O Guia de Engenharia é a disciplina **Engenharia** da seção guia (`/docs/`) do Engineering Guide
-da DB1 Global Software. Ele expressa o jeito DB1 de fazer engenharia de software em três
+da DB1 Itênex. Ele expressa o jeito DB1 de fazer engenharia de software em três
 blocos:
 
 - **Jeito DB1** — o que é software saudável para a DB1 e como a saúde de engenharia de um time é

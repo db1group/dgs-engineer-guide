@@ -13,7 +13,7 @@ const copyrightByLocale: Record<string, string> = {
   es: 'Todos los derechos reservados.',
 };
 const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'pt-BR';
-const copyright = `Copyright © ${new Date().getFullYear()} DB1 Global Software. ${
+const copyright = `Copyright © ${new Date().getFullYear()} DB1 Itênex. ${
   copyrightByLocale[currentLocale] ?? copyrightByLocale['pt-BR']
 }`;
 

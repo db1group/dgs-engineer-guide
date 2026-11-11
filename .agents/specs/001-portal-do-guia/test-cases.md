@@ -23,7 +23,7 @@
 2. Observe o hero.
 3. Repita em `<site>/en/` e `<site>/es/`.
 
-**Esperado:** em cada idioma o hero mostra o nome `DB1 Global Software`, o texto, a tagline e os
+**Esperado:** em cada idioma o hero mostra o nome `DB1 Itênex`, o texto, a tagline e os
 botões com os textos literais de P6 no idioma, e nenhuma imagem.
 
 ### TC-2 (obrigatório) — Botão "O Guia" leva ao Jeito DB1
@@ -218,7 +218,7 @@ ambos em nova aba; o rótulo do Radar é `Technology Radar` em `/en/` e `Radar d
 1. Abra `<site>/` e role até o footer.
 2. Repita em `<site>/en/` e `<site>/es/`.
 
-**Esperado:** o footer contém só `Copyright © <ano> DB1 Global Software. Todos os direitos
+**Esperado:** o footer contém só `Copyright © <ano> DB1 Itênex. Todos os direitos
 reservados.`, `... All rights reserved.` e `... Todos los derechos reservados.`, respectivamente,
 com `<ano>` igual ao ano em que o build rodou.
 

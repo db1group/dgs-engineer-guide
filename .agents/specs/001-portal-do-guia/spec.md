@@ -159,7 +159,7 @@ Esta unidade entrega todo o delta entre o scaffold e o portal descrito na skill.
 **História 1 — Página inicial:**
 
 - Dado o build, quando o visitante abre `/`, `/en/` e `/es/`, então vê o hero com o nome
-  `DB1 Global Software`, o texto, a tagline e os botões com os textos literais de P6 no idioma, e
+  `DB1 Itênex`, o texto, a tagline e os botões com os textos literais de P6 no idioma, e
   nenhuma imagem no hero.
 - Dado `/`, quando o visitante clica em "O Guia", então chega em
   `/docs/engineering/db1-way.html`; em "Nossos Aceleradores" e no card Easy Monitor, em
@@ -204,7 +204,7 @@ Esta unidade entrega todo o delta entre o scaffold e o portal descrito na skill.
   busca, seletor de idioma, alternador claro/escuro e GitHub para `https://github.com/db1group`
   em nova aba.
 - Dado o footer, quando exibido, então contém só
-  `Copyright © <ano> DB1 Global Software. Todos os direitos reservados.` (en
+  `Copyright © <ano> DB1 Itênex. Todos os direitos reservados.` (en
   `... All rights reserved.`, es `... Todos los derechos reservados.`), com `<ano>` do build.
 - Dado um visitante sem preferência salva, quando abre o site, então o modo segue a preferência
   do sistema; em modo claro e escuro as cores de marca, os botões do hero, o gradiente do nome do

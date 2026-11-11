@@ -20,7 +20,7 @@ metadata:
 
 ## Visão geral do domínio
 
-O Engineering Guide é o site estático de documentação de engenharia da DB1 Global Software,
+O Engineering Guide é o site estático de documentação de engenharia da DB1 Itênex,
 publicado em `https://engineerguide.db1.com.br`. O portal é a moldura que todo o conteúdo usa:
 identidade do site, página inicial, navbar, footer, idiomas, as duas seções de navegação, tema
 visual, busca, suporte a fórmulas, redirecionamentos das URLs publicadas, publicação e
@@ -100,15 +100,15 @@ A navbar contém:
 
 ### P5. Footer
 
-- O footer contém apenas a linha de copyright da DB1 Global Software, traduzida nos três
+- O footer contém apenas a linha de copyright da DB1 Itênex, traduzida nos três
   idiomas. Não há colunas de links, redes sociais nem menção ao framework.
 - `<ano>` é o ano corrente no momento do build, em algarismos:
 
 | Idioma | Texto |
 |---|---|
-| pt-BR | `Copyright © <ano> DB1 Global Software. Todos os direitos reservados.` |
-| en | `Copyright © <ano> DB1 Global Software. All rights reserved.` |
-| es | `Copyright © <ano> DB1 Global Software. Todos los derechos reservados.` |
+| pt-BR | `Copyright © <ano> DB1 Itênex. Todos os direitos reservados.` |
+| en | `Copyright © <ano> DB1 Itênex. All rights reserved.` |
+| es | `Copyright © <ano> DB1 Itênex. Todos los derechos reservados.` |
 
 ### P6. Página inicial
 
@@ -117,7 +117,7 @@ destaque (features). Os textos são os do site publicado, preservados literalmen
 
 | Elemento | pt-BR | en | es |
 |---|---|---|---|
-| Nome do hero | DB1 Global Software | DB1 Global Software | DB1 Global Software |
+| Nome do hero | DB1 Itênex | DB1 Itênex | DB1 Itênex |
 | Texto do hero | Guia de engenharia | Engineering Guide | Guía de Ingeniería |
 | Tagline | para compartilhar e, além disso, expressar nossa forte opinião sobre como o software deve ser feito | To share and, moreover, express our strong opinion on how software should be made | Para compartir y, además, expresar nuestra fuerte opinión sobre cómo debe hacerse el software |
 | Botão principal | O Guia | The Guide | La Guía |

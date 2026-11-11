@@ -1,6 +1,6 @@
 # Engineering Guide DB1
 
-Site de documentação de engenharia da DB1 Global Software, publicado em
+Site de documentação de engenharia da DB1 Itênex, publicado em
 `https://engineerguide.db1.com.br`, construído com [Docusaurus](https://docusaurus.io/) 3.10.2.
 O conteúdo está em três idiomas: pt-BR na raiz, inglês em `/en/` e espanhol em `/es/`.
 

@@ -22,7 +22,7 @@ metadata:
 ## Visão geral do domínio
 
 O Golden Path é o primeiro acelerador da seção **Aceleradores** (`/dgs-components/`) do
-Engineering Guide da DB1 Global Software. Ele apresenta o scaffold de projeto criado pelo time
+Engineering Guide da DB1 Itênex. Ele apresenta o scaffold de projeto criado pelo time
 de engenharia da DB1 para iniciar novos projetos — três aplicações prontas (frontend React,
 backend .NET Core 8 e servidor de autenticação Keycloak) com estrutura de pastas,
 configurações iniciais e usuários, grupos e permissões de exemplo — e guia quem vai criar um
